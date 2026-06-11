@@ -1,11 +1,11 @@
-# Aqueous Substance Property Data
+# Substance Property Data
 
-Computed density, dynamic viscosity and specific heat capacity grids for common industrial process chemicals and heat-transfer fluids in aqueous solution, as concentration × temperature tables in machine-readable JSON — with freezing-point tables for the freeze-protection fluids and °Brix for sucrose.
+Computed property data for industrial process chemicals, as machine-readable JSON: concentration × temperature grids (density, dynamic viscosity, specific heat capacity) for aqueous solutions — with freezing-point tables for the freeze-protection fluids and °Brix for sucrose — and saturation tables (pressure, liquid and vapour density) for refrigerants and pure fluids.
 
 Published and maintained by [ProcessConvert](https://www.processconvert.com), where each substance has an interactive property explorer:
 https://www.processconvert.com/substances
 
-## Substances
+## Aqueous solutions
 
 | Substance | Formula | CAS | Concentration | Temperature | Properties | Model |
 |---|---|---|---|---|---|---|
@@ -54,17 +54,16 @@ https://www.processconvert.com/substances
 
 T_f = freezing-point table (concentration → freezing temperature) included in the file. °Bx = degrees Brix derived display (sucrose). "See file" = the JSON file's declared ranges are the authority.
 
-Each file declares its own valid concentration and temperature ranges; values are tabulated only inside the published validity region of the underlying model, bounded below saturation for the salts. No extrapolation. Two honest-omission conventions apply: where a property column is absent from the table above, the model provides no usable coefficients for that property over the tabulated range — the value is omitted rather than approximated. And for the sub-zero heat-transfer fluids, grid cells below the solution's freezing line at that concentration are `null` — the solution would be frozen, so no liquid property exists to report.
+## Refrigerants & pure fluids
 
-## Properties
+Saturation tables on a single temperature axis: saturation pressure, saturated liquid density and saturated vapour density. Each file states the fluid's critical point; tables stop short of it. Designation facts (GWP with stated basis, ANSI/ASHRAE Standard 34 safety classification) are included as cited values.
 
-Per substance, on a regular concentration (wt%) × temperature (°C) grid:
+| Fluid | Chemical name | CAS | Temperature | Columns | Source model |
+|---|---|---|---|---|---|
+| R-134a | 1,1,1,2-tetrafluoroethane | 811-97-2 | −40–60 °C | P_sat, ρ_liq, ρ_vap | CoolProp (Helmholtz EoS) |
+| R-290 | Propane | 74-98-6 | −40–60 °C | P_sat, ρ_liq, ρ_vap | CoolProp (Helmholtz EoS) |
 
-- Density (kg/m³)
-- Dynamic viscosity (mPa·s) where the model supports it
-- Specific heat capacity (J/(kg·K)) where the model supports it
-- Freezing point (°C) per concentration, for the Melinder-path fluids where independently validated
-- Derived where applicable: specific gravity, °Baumé, °Brix
+Each file declares its own valid ranges; values are tabulated only inside the published validity region of the underlying model, bounded below saturation for the aqueous salts and below the critical point for the pure fluids. No extrapolation. Honest-omission conventions: where a property column is absent from a table above, the model provides no usable coefficients for that property over the tabulated range — the value is omitted rather than approximated; and for the sub-zero heat-transfer fluids, grid cells below the solution's freezing line at that concentration are `null`.
 
 ## How the values are produced
 
@@ -72,27 +71,37 @@ No value in this repository is hand-authored. Grids are computed by a determinis
 
 - **Laliberté, M. (2009).** "A Model for Calculating the Heat Capacity of Aqueous Solutions, with Updated Density and Viscosity Data." *Journal of Chemical & Engineering Data*, 54(6), 1725–1760 — via the `thermo`/`chemicals` Python libraries.
 - **Melinder, Å. (2010).** *Properties of Secondary Working Fluids for Indirect Systems*, IIR — via CoolProp incompressible solutions.
+- **CoolProp reference Helmholtz-energy equations of state** (Bell et al., 2014, *Ind. Eng. Chem. Res.* 53(6)) for the pure fluids, with saturation points checked against NIST WebBook (SRD 69) published values.
 
-Every file carries `validation` entries: independently cited reference points (property, concentration, temperature, expected value, tolerance, source citation — CRC Handbook 97th ed. concentrative-properties tables, Perry's, ICT, NBS Circular 440 for sucrose) that the generated grid is checked against before publication. A grid that fails its validation points is not published. Full methodology: https://www.processconvert.com/methodology
+Every file carries `validation` entries: independently cited reference points (property, state point, expected value, tolerance, source citation — CRC Handbook 97th ed., Perry's, ICT, NBS Circular 440, NIST WebBook) that the generated data is checked against before publication. A value that fails that check is not published. Full methodology: https://www.processconvert.com/methodology
 
-## File format
+## File formats
 
-One JSON file per substance. Key fields:
+**Aqueous solutions** — one JSON per substance:
 
 ```text
 name, formula, cas, aliases      identification
-axes                             grid axes: concentrations (wt%), temperatures (°C)
+axes                             concentrations (wt%), temperatures (°C)
 grid                             rho / mu / cp arrays, rows = concentration, cols = temperature
                                  (mu/cp absent where the model has no coefficients;
                                   cells are null below the freezing line)
-freeze_points                    concentration -> freezing point (°C), where present,
-                                 with its own cited validation
+freeze_points                    concentration -> freezing point (°C), where present
 concentration_range,
 temperature_range                declared validity window
-model, model_family, sources     provenance
-validation                       cited check points the grid was verified against
-validity_note                    plain-language scope and limitations
-generated                        generation date
+model, sources, validation,
+validity_note, generated         provenance and checks
+```
+
+**Pure fluids** — one JSON per fluid:
+
+```text
+name, formula, cas, designation  identification (refrigerant designation)
+axes.temp_C                      single temperature axis (°C)
+sat                              p_sat_kPa / rho_liq / rho_vap columns
+critical                         critical temperature (°C) and pressure (kPa)
+gwp, ashrae34                    cited designation facts (value, basis, citation)
+model, sources, validation,
+validity_note, generated         provenance and checks
 ```
 
 ### Example (Python)
@@ -100,19 +109,19 @@ generated                        generation date
 ```python
 import json
 
-with open("data/sucrose.json") as f:
+with open("data/r-134a.json") as f:
     s = json.load(f)
 
-conc = s["axes"]["concentrations"]   # wt%  (== degrees Brix for sucrose)
-temp = s["axes"]["temperatures"]     # °C
-rho  = s["grid"]["rho"]              # kg/m3, [i_conc][j_temp]
+temps = s["axes"]["temp_C"]
+p_sat = s["sat"]["p_sat_kPa"]
 
-# density of a 40 °Bx sucrose solution at 20 °C
-i, j = conc.index(40), temp.index(20)
-print(rho[i][j])
+# saturation pressure of R-134a at 25 °C
+i = temps.index(25)
+print(p_sat[i])          # kPa (absolute)
+print(p_sat[i] * 0.14503773773 - 14.6959)   # psig
 ```
 
-Bilinear interpolation between grid points is appropriate inside the declared ranges; do not interpolate across `null` cells and do not extrapolate beyond the declared ranges.
+Interpolation between points is appropriate inside the declared ranges (bilinear for the aqueous grids, linear along the saturation line for pure fluids); do not interpolate across `null` cells and do not extrapolate beyond the declared ranges or toward the critical point.
 
 ## Intended use and limitations
 
@@ -122,7 +131,7 @@ This data is published as an engineering reference for preliminary calculations,
 
 Data is licensed **CC BY 4.0**. You may use, redistribute and adapt it, including commercially, provided you attribute:
 
-> Substance property data from ProcessConvert (https://www.processconvert.com), computed from Laliberté (2009) and Melinder (2010), CC BY 4.0.
+> Substance property data from ProcessConvert (https://www.processconvert.com), computed from Laliberté (2009), Melinder (2010) and CoolProp reference equations of state, CC BY 4.0.
 
 When citing the underlying science, cite the original papers above.
 

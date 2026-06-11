@@ -1,0 +1,176 @@
+{
+  "aliases": [
+    "HFC-134a",
+    "1,1,1,2-tetrafluoroethane",
+    "Norflurane",
+    "R134a"
+  ],
+  "ashrae34": {
+    "basis": "ANSI/ASHRAE Standard 34 safety group classification",
+    "source_citation": "ANSI/ASHRAE Standard 34-2022, Designation and Safety Classification of Refrigerants: R-134a assigned safety group A1.",
+    "source_title": "ANSI/ASHRAE Standard 34 - Designation and Safety Classification of Refrigerants",
+    "value": "A1"
+  },
+  "axes": {
+    "temp_C": [
+      -40,
+      -35,
+      -30,
+      -25,
+      -20,
+      -15,
+      -10,
+      -5,
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60
+    ]
+  },
+  "cas": "811-97-2",
+  "category": "Refrigerants",
+  "chemical_name": "1,1,1,2-tetrafluoroethane",
+  "coolprop_fluid": "R134a",
+  "critical": {
+    "p_kPa": 4059.3,
+    "temp_C": 101.06
+  },
+  "derived": [
+    "p_sat_bar",
+    "p_sat_psig"
+  ],
+  "formula": "CH2FCF3",
+  "generated": "2026-06-07",
+  "gwp": {
+    "basis": "IPCC Fourth Assessment Report (AR4, 2007), 100-year GWP",
+    "source_citation": "U.S. Environmental Protection Agency, Technology Transitions GWP Reference Table: HFC-134a 100-year GWP = 1,430 (basis IPCC 2007 / AR4; the AIM Act exchange values are numerically identical to the 100-year AR4 GWPs). https://www.epa.gov/climate-hfcs-reduction/technology-transitions-gwp-reference-table",
+    "source_title": "U.S. EPA - Technology Transitions GWP Reference Table",
+    "value": 1430
+  },
+  "model": "CoolProp==6.6.0 - reference Helmholtz equation of state for R134a",
+  "model_family": "coolprop_pure",
+  "name": "R-134a",
+  "properties_available": [
+    "saturation_pressure",
+    "saturated_liquid_density",
+    "saturated_vapour_density"
+  ],
+  "refrigerant_designation": "R-134a",
+  "sat": {
+    "p_sat_kPa": [
+      51.21,
+      66.14,
+      84.38,
+      106.4,
+      132.73,
+      163.94,
+      200.6,
+      243.34,
+      292.8,
+      349.66,
+      414.61,
+      488.37,
+      571.71,
+      665.38,
+      770.2,
+      886.98,
+      1016.59,
+      1159.92,
+      1317.91,
+      1491.51,
+      1681.78
+    ],
+    "rho_liq": [
+      1417.7,
+      1403.15,
+      1388.4,
+      1373.45,
+      1358.27,
+      1342.83,
+      1327.13,
+      1311.12,
+      1294.78,
+      1278.07,
+      1260.96,
+      1243.4,
+      1225.33,
+      1206.71,
+      1187.46,
+      1167.5,
+      1146.74,
+      1125.05,
+      1102.31,
+      1078.32,
+      1052.86
+    ],
+    "rho_vap": [
+      2.769,
+      3.521,
+      4.426,
+      5.506,
+      6.784,
+      8.287,
+      10.041,
+      12.077,
+      14.428,
+      17.131,
+      20.226,
+      23.758,
+      27.78,
+      32.35,
+      37.535,
+      43.416,
+      50.085,
+      57.657,
+      66.272,
+      76.104,
+      87.379
+    ]
+  },
+  "slug": "r-134a",
+  "sources": [
+    "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems (REFPROP-derived saturation tables), R-134a (CAS 811-97-2)",
+    "CoolProp 6.6.0 - reference Helmholtz equation of state for R-134a (Tillner-Roth & Baehr, 1994)",
+    "U.S. EPA - Technology Transitions GWP Reference Table (100-year GWP, IPCC AR4 basis)",
+    "ANSI/ASHRAE Standard 34-2022 - Designation and Safety Classification of Refrigerants"
+  ],
+  "temperature_range": {
+    "max_C": 60,
+    "min_C": -40,
+    "step_C": 5
+  },
+  "validation": [
+    {
+      "computed": 665.38,
+      "error_pct": 0.0,
+      "expected": 665.38,
+      "property": "saturation_pressure",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, 1,1,1,2-tetrafluoroethane (R-134a, CAS 811-97-2), saturation curve at 25 degC: saturation pressure = 665.38 kPa. https://webbook.nist.gov/cgi/fluid.cgi?ID=C811972&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 1.0,
+      "unit": "kPa"
+    },
+    {
+      "computed": 1206.71,
+      "error_pct": 0.001,
+      "expected": 1206.7,
+      "property": "saturated_liquid_density",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, 1,1,1,2-tetrafluoroethane (R-134a, CAS 811-97-2), saturation curve at 25 degC: saturated liquid density = 1206.7 kg/m3. https://webbook.nist.gov/cgi/fluid.cgi?ID=C811972&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    }
+  ],
+  "validity_note": "CoolProp reference Helmholtz equation of state (Tillner-Roth & Baehr, 1994) for R-134a. Saturation properties only, tabulated from -40 to +60 degC; superheated and single-phase data are out of scope for this page. The critical point is 101.06 degC / 4059.3 kPa, well above the table top, so every tabulated state is sub-critical. Values are for preliminary design; verify against vendor data for critical service."
+}
