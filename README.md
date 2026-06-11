@@ -1,6 +1,6 @@
 # Aqueous Substance Property Data
 
-Computed density, dynamic viscosity and specific heat capacity grids for common industrial process chemicals and heat-transfer fluids in aqueous solution, as concentration × temperature tables in machine-readable JSON — with freezing-point tables for the freeze-protection fluids.
+Computed density, dynamic viscosity and specific heat capacity grids for common industrial process chemicals and heat-transfer fluids in aqueous solution, as concentration × temperature tables in machine-readable JSON — with freezing-point tables for the freeze-protection fluids and °Brix for sucrose.
 
 Published and maintained by [ProcessConvert](https://www.processconvert.com), where each substance has an interactive property explorer:
 https://www.processconvert.com/substances
@@ -27,6 +27,8 @@ https://www.processconvert.com/substances
 | Lithium chloride | LiCl | 7447-41-8 | 5–20 wt% | −40–40 °C | ρ, μ, cp, T_f | Melinder (2010) via CoolProp |
 | Magnesium chloride | MgCl₂ | 7786-30-3 | 5–20 wt% | −25–40 °C | ρ, cp, T_f | Melinder (2010) via CoolProp |
 | Sodium acetate | CH₃COONa | 127-09-3 | 5–30 wt% | 0–60 °C | ρ, μ, cp | Laliberté (2009) |
+| Sucrose | C₁₂H₂₂O₁₁ | 57-50-1 | 5–50 wt% | 15–55 °C | ρ, μ, °Bx | Laliberté (2009) |
+| Hydrogen peroxide | H₂O₂ | 7722-84-1 | 5–50 wt% | 0–40 °C | ρ | Laliberté (2009) |
 | Copper(II) sulfate | CuSO₄ | 7758-98-7 | 2–12 wt% | 15–60 °C | ρ, μ, cp | Laliberté (2009) |
 | Zinc sulfate | ZnSO₄ | 7733-02-0 | 2–30 wt% | 15–55 °C | ρ, μ | Laliberté (2009) |
 | Nickel sulfate | NiSO₄ | 7786-81-4 | 2–22 wt% | 15–60 °C | ρ, μ, cp | Laliberté (2009) |
@@ -44,8 +46,13 @@ https://www.processconvert.com/substances
 | Zinc chloride | ZnCl₂ | 7646-85-7 | 5–50 wt% | 15–70 °C | ρ | Laliberté (2009) |
 | Sodium nitrate | NaNO₃ | 7631-99-4 | 2–40 wt% | 10–60 °C | ρ, μ, cp | Laliberté (2009) |
 | Potassium nitrate | KNO₃ | 7757-79-1 | 2–18 wt% | 15–60 °C | ρ, μ, cp | Laliberté (2009) |
+| Ammonium nitrate | NH₄NO₃ | 6484-52-2 | see file | 25 °C up — see file | ρ, μ | Laliberté (2009) |
+| Calcium nitrate | Ca(NO₃)₂ | 10124-37-5 | see file | 25 °C up — see file | ρ, μ | Laliberté (2009) |
+| Sodium bicarbonate | NaHCO₃ | 144-55-8 | 1–8 wt% | 10–50 °C | ρ | Laliberté (2009) |
+| Manganese sulfate | MnSO₄ | 7785-87-7 | see file | 20–25 °C | ρ, μ | Laliberté (2009) |
+| Barium chloride | BaCl₂ | 10361-37-2 | see file | see file | ρ, μ | Laliberté (2009) |
 
-T_f = freezing-point table (concentration → freezing temperature) included in the file.
+T_f = freezing-point table (concentration → freezing temperature) included in the file. °Bx = degrees Brix derived display (sucrose). "See file" = the JSON file's declared ranges are the authority.
 
 Each file declares its own valid concentration and temperature ranges; values are tabulated only inside the published validity region of the underlying model, bounded below saturation for the salts. No extrapolation. Two honest-omission conventions apply: where a property column is absent from the table above, the model provides no usable coefficients for that property over the tabulated range — the value is omitted rather than approximated. And for the sub-zero heat-transfer fluids, grid cells below the solution's freezing line at that concentration are `null` — the solution would be frozen, so no liquid property exists to report.
 
@@ -57,7 +64,7 @@ Per substance, on a regular concentration (wt%) × temperature (°C) grid:
 - Dynamic viscosity (mPa·s) where the model supports it
 - Specific heat capacity (J/(kg·K)) where the model supports it
 - Freezing point (°C) per concentration, for the Melinder-path fluids where independently validated
-- Derived where applicable: specific gravity, °Baumé
+- Derived where applicable: specific gravity, °Baumé, °Brix
 
 ## How the values are produced
 
@@ -66,7 +73,7 @@ No value in this repository is hand-authored. Grids are computed by a determinis
 - **Laliberté, M. (2009).** "A Model for Calculating the Heat Capacity of Aqueous Solutions, with Updated Density and Viscosity Data." *Journal of Chemical & Engineering Data*, 54(6), 1725–1760 — via the `thermo`/`chemicals` Python libraries.
 - **Melinder, Å. (2010).** *Properties of Secondary Working Fluids for Indirect Systems*, IIR — via CoolProp incompressible solutions.
 
-Every file carries `validation` entries: independently cited reference points (property, concentration, temperature, expected value, tolerance, source citation — CRC Handbook 97th ed. concentrative-properties tables, Perry's, ICT) that the generated grid is checked against before publication. A grid that fails its validation points is not published. Full methodology: https://www.processconvert.com/methodology
+Every file carries `validation` entries: independently cited reference points (property, concentration, temperature, expected value, tolerance, source citation — CRC Handbook 97th ed. concentrative-properties tables, Perry's, ICT, NBS Circular 440 for sucrose) that the generated grid is checked against before publication. A grid that fails its validation points is not published. Full methodology: https://www.processconvert.com/methodology
 
 ## File format
 
@@ -93,15 +100,15 @@ generated                        generation date
 ```python
 import json
 
-with open("data/potassium-hydroxide.json") as f:
+with open("data/sucrose.json") as f:
     s = json.load(f)
 
-conc = s["axes"]["concentrations"]   # wt%
+conc = s["axes"]["concentrations"]   # wt%  (== degrees Brix for sucrose)
 temp = s["axes"]["temperatures"]     # °C
-rho  = s["grid"]["rho"]              # kg/m3, [i_conc][j_temp]; None below freeze line
+rho  = s["grid"]["rho"]              # kg/m3, [i_conc][j_temp]
 
-# density of 50 wt% caustic potash at 25 °C
-i, j = conc.index(50), temp.index(25)
+# density of a 40 °Bx sucrose solution at 20 °C
+i, j = conc.index(40), temp.index(20)
 print(rho[i][j])
 ```
 
