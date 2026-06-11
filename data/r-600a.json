@@ -1,0 +1,177 @@
+{
+  "aliases": [
+    "Isobutane",
+    "2-Methylpropane",
+    "HC-600a",
+    "R600a",
+    "i-butane"
+  ],
+  "ashrae34": {
+    "basis": "ANSI/ASHRAE Standard 34 safety group classification",
+    "source_citation": "ANSI/ASHRAE Standard 34-2022, Designation and Safety Classification of Refrigerants: R-600a (isobutane) assigned safety group A3.",
+    "source_title": "ANSI/ASHRAE Standard 34 - Designation and Safety Classification of Refrigerants",
+    "value": "A3"
+  },
+  "axes": {
+    "temp_C": [
+      -40,
+      -35,
+      -30,
+      -25,
+      -20,
+      -15,
+      -10,
+      -5,
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60
+    ]
+  },
+  "cas": "75-28-5",
+  "category": "Refrigerants",
+  "chemical_name": "isobutane (2-methylpropane)",
+  "coolprop_fluid": "IsoButane",
+  "critical": {
+    "p_kPa": 3629.0,
+    "temp_C": 134.67
+  },
+  "derived": [
+    "p_sat_bar",
+    "p_sat_psig"
+  ],
+  "formula": "C4H10",
+  "generated": "2026-06-07",
+  "gwp": {
+    "basis": "WMO 2022 100-year GWP (basis attributed by the U.S. EPA Technology Transitions GWP Reference Table)",
+    "source_citation": "U.S. Environmental Protection Agency, Technology Transitions GWP Reference Table: R-600a (isobutane) 100-year GWP = 1 (table reference WMO 2022). https://www.epa.gov/climate-hfcs-reduction/technology-transitions-gwp-reference-table",
+    "source_title": "U.S. EPA - Technology Transitions GWP Reference Table",
+    "value": 1
+  },
+  "model": "CoolProp==6.6.0 - reference Helmholtz equation of state for IsoButane",
+  "model_family": "coolprop_pure",
+  "name": "R-600a (isobutane)",
+  "properties_available": [
+    "saturation_pressure",
+    "saturated_liquid_density",
+    "saturated_vapour_density"
+  ],
+  "refrigerant_designation": "R-600a",
+  "sat": {
+    "p_sat_kPa": [
+      28.7,
+      36.8,
+      46.62,
+      58.43,
+      72.48,
+      89.05,
+      108.45,
+      130.98,
+      156.96,
+      186.72,
+      220.61,
+      258.99,
+      302.22,
+      350.67,
+      404.72,
+      464.77,
+      531.21,
+      604.45,
+      684.9,
+      772.99,
+      869.16
+    ],
+    "rho_liq": [
+      624.12,
+      618.89,
+      613.61,
+      608.27,
+      602.88,
+      597.41,
+      591.88,
+      586.27,
+      580.58,
+      574.8,
+      568.92,
+      562.95,
+      556.86,
+      550.65,
+      544.31,
+      537.83,
+      531.19,
+      524.37,
+      517.37,
+      510.16,
+      502.71
+    ],
+    "rho_vap": [
+      0.875,
+      1.102,
+      1.373,
+      1.693,
+      2.069,
+      2.506,
+      3.012,
+      3.593,
+      4.257,
+      5.012,
+      5.867,
+      6.831,
+      7.913,
+      9.126,
+      10.48,
+      11.988,
+      13.666,
+      15.529,
+      17.595,
+      19.886,
+      22.426
+    ]
+  },
+  "slug": "r-600a",
+  "sources": [
+    "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems (REFPROP-derived saturation tables), isobutane (CAS 75-28-5)",
+    "CoolProp 6.6.0 - reference Helmholtz equation of state for isobutane (Buecker & Wagner, 2006)",
+    "U.S. EPA - Technology Transitions GWP Reference Table (100-year GWP, WMO 2022 reference)",
+    "ANSI/ASHRAE Standard 34-2022 - Designation and Safety Classification of Refrigerants"
+  ],
+  "temperature_range": {
+    "max_C": 60,
+    "min_C": -40,
+    "step_C": 5
+  },
+  "validation": [
+    {
+      "computed": 350.67,
+      "error_pct": 0.0,
+      "expected": 350.67,
+      "property": "saturation_pressure",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, isobutane (R-600a, 2-methylpropane) (CAS 75-28-5), saturation curve at 25 degC: saturation pressure = 350.67 kPa. https://webbook.nist.gov/cgi/fluid.cgi?ID=C75285&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 1.0,
+      "unit": "kPa"
+    },
+    {
+      "computed": 550.65,
+      "error_pct": 0.0,
+      "expected": 550.65,
+      "property": "saturated_liquid_density",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, isobutane (R-600a, 2-methylpropane) (CAS 75-28-5), saturation curve at 25 degC: saturated liquid density = 550.65 kg/m3. https://webbook.nist.gov/cgi/fluid.cgi?ID=C75285&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    }
+  ],
+  "validity_note": "CoolProp reference Helmholtz equation of state (Buecker & Wagner, 2006) for isobutane. Saturation properties only, tabulated from -40 to +60 degC; superheated and single-phase data are out of scope for this page. The critical point is 134.67 degC / 3629.0 kPa, well above the table top, so every tabulated state is sub-critical. Values are for preliminary design; verify against vendor data for critical service."
+}

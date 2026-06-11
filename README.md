@@ -1,6 +1,6 @@
 # Substance Property Data
 
-Computed property data for industrial process chemicals, as machine-readable JSON: concentration × temperature grids (density, dynamic viscosity, specific heat capacity) for aqueous solutions — with freezing-point tables for the freeze-protection fluids and °Brix for sucrose — and saturation tables (pressure, liquid and vapour density) for refrigerants and pure fluids.
+Computed property data for industrial process chemicals, as machine-readable JSON: concentration × temperature grids (density, dynamic viscosity, specific heat capacity) for aqueous solutions — with freezing-point tables for the freeze-protection fluids and °Brix for sucrose — and saturation tables (pressure, liquid and vapour density) for refrigerants and pure fluids, including bubble/dew-point data for zeotropic blends.
 
 Published and maintained by [ProcessConvert](https://www.processconvert.com), where each substance has an interactive property explorer:
 https://www.processconvert.com/substances
@@ -56,12 +56,21 @@ T_f = freezing-point table (concentration → freezing temperature) included in 
 
 ## Refrigerants & pure fluids
 
-Saturation tables on a single temperature axis: saturation pressure, saturated liquid density and saturated vapour density. Each file states the fluid's critical point; tables stop short of it. Designation facts (GWP with stated basis, ANSI/ASHRAE Standard 34 safety classification) are included as cited values.
+Saturation tables on a single temperature axis. Single-component fluids carry one saturation pressure column; **zeotropic blends carry separate bubble-point and dew-point pressure columns** with the computed temperature glide stated — a distinction most published PT charts silently omit. Each file states the fluid's critical point; tables stop short of it. Designation facts (GWP with stated basis per the U.S. EPA Technology Transitions reference table, ANSI/ASHRAE Standard 34 safety classification) are included as cited values.
 
-| Fluid | Chemical name | CAS | Temperature | Columns | Source model |
+| Fluid | Composition / name | CAS | Temperature | Pressure columns | Glide (1 atm) |
 |---|---|---|---|---|---|
-| R-134a | 1,1,1,2-tetrafluoroethane | 811-97-2 | −40–60 °C | P_sat, ρ_liq, ρ_vap | CoolProp (Helmholtz EoS) |
-| R-290 | Propane | 74-98-6 | −40–60 °C | P_sat, ρ_liq, ρ_vap | CoolProp (Helmholtz EoS) |
+| R-134a | 1,1,1,2-tetrafluoroethane | 811-97-2 | −40–60 °C | P_sat | — |
+| R-290 | Propane | 74-98-6 | −40–60 °C | P_sat | — |
+| R-32 | Difluoromethane | 75-10-5 | −40–60 °C | P_sat | — |
+| R-744 | Carbon dioxide | 124-38-9 | −40–25 °C (critical 30.98 °C — see file note) | P_sat | — |
+| R-717 | Ammonia (anhydrous) | 7664-41-7 | −40–60 °C | P_sat | — |
+| R-600a | Isobutane | 75-28-5 | −40–60 °C | P_sat | — |
+| R-410A | R-32/125 (50/50) blend | blend | −40–60 °C | P_bubble, P_dew | 0.08 K |
+| R-404A | R-125/143a/134a blend | blend | −40–60 °C | P_bubble, P_dew | 0.75 K |
+| R-407C | R-32/125/134a blend | blend | −40–60 °C | P_bubble, P_dew | 7.0 K |
+
+All files also carry saturated liquid and vapour density columns (bubble-point liquid / dew-point vapour for blends).
 
 Each file declares its own valid ranges; values are tabulated only inside the published validity region of the underlying model, bounded below saturation for the aqueous salts and below the critical point for the pure fluids. No extrapolation. Honest-omission conventions: where a property column is absent from a table above, the model provides no usable coefficients for that property over the tabulated range — the value is omitted rather than approximated; and for the sub-zero heat-transfer fluids, grid cells below the solution's freezing line at that concentration are `null`.
 
@@ -71,9 +80,9 @@ No value in this repository is hand-authored. Grids are computed by a determinis
 
 - **Laliberté, M. (2009).** "A Model for Calculating the Heat Capacity of Aqueous Solutions, with Updated Density and Viscosity Data." *Journal of Chemical & Engineering Data*, 54(6), 1725–1760 — via the `thermo`/`chemicals` Python libraries.
 - **Melinder, Å. (2010).** *Properties of Secondary Working Fluids for Indirect Systems*, IIR — via CoolProp incompressible solutions.
-- **CoolProp reference Helmholtz-energy equations of state** (Bell et al., 2014, *Ind. Eng. Chem. Res.* 53(6)) for the pure fluids, with saturation points checked against NIST WebBook (SRD 69) published values.
+- **CoolProp reference Helmholtz-energy equations of state and mixture models** (Bell et al., 2014, *Ind. Eng. Chem. Res.* 53(6)) for the pure fluids and refrigerant blends, with saturation points checked against NIST WebBook (SRD 69) published values for single-component fluids and named manufacturer engineering tables (REFPROP-derived) for blends.
 
-Every file carries `validation` entries: independently cited reference points (property, state point, expected value, tolerance, source citation — CRC Handbook 97th ed., Perry's, ICT, NBS Circular 440, NIST WebBook) that the generated data is checked against before publication. A value that fails that check is not published. Full methodology: https://www.processconvert.com/methodology
+Every file carries `validation` entries: independently cited reference points (property, state point, expected value, tolerance, source citation — CRC Handbook 97th ed., Perry's, ICT, NBS Circular 440, NIST WebBook, named manufacturer saturation tables) that the generated data is checked against before publication. A value that fails that check is not published. Full methodology: https://www.processconvert.com/methodology
 
 ## File formats
 
@@ -97,7 +106,9 @@ validity_note, generated         provenance and checks
 ```text
 name, formula, cas, designation  identification (refrigerant designation)
 axes.temp_C                      single temperature axis (°C)
-sat                              p_sat_kPa / rho_liq / rho_vap columns
+sat                              single-component: p_sat_kPa / rho_liq / rho_vap
+                                 blends: p_bubble_kPa / p_dew_kPa / rho_liq / rho_vap
+blend                            blends only: components, composition, computed glide (K)
 critical                         critical temperature (°C) and pressure (kPa)
 gwp, ashrae34                    cited designation facts (value, basis, citation)
 model, sources, validation,
@@ -109,16 +120,14 @@ validity_note, generated         provenance and checks
 ```python
 import json
 
-with open("data/r-134a.json") as f:
+with open("data/r-410a.json") as f:
     s = json.load(f)
 
 temps = s["axes"]["temp_C"]
-p_sat = s["sat"]["p_sat_kPa"]
-
-# saturation pressure of R-134a at 25 °C
 i = temps.index(25)
-print(p_sat[i])          # kPa (absolute)
-print(p_sat[i] * 0.14503773773 - 14.6959)   # psig
+
+# R-410A at 25 °C: bubble and dew pressure (kPa absolute)
+print(s["sat"]["p_bubble_kPa"][i], s["sat"]["p_dew_kPa"][i])
 ```
 
 Interpolation between points is appropriate inside the declared ranges (bilinear for the aqueous grids, linear along the saturation line for pure fluids); do not interpolate across `null` cells and do not extrapolate beyond the declared ranges or toward the critical point.

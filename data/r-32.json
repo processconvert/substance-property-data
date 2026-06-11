@@ -1,0 +1,176 @@
+{
+  "aliases": [
+    "HFC-32",
+    "Difluoromethane",
+    "Methylene fluoride",
+    "R32"
+  ],
+  "ashrae34": {
+    "basis": "ANSI/ASHRAE Standard 34 safety group classification",
+    "source_citation": "ANSI/ASHRAE Standard 34-2022, Designation and Safety Classification of Refrigerants: R-32 assigned safety group A2L.",
+    "source_title": "ANSI/ASHRAE Standard 34 - Designation and Safety Classification of Refrigerants",
+    "value": "A2L"
+  },
+  "axes": {
+    "temp_C": [
+      -40,
+      -35,
+      -30,
+      -25,
+      -20,
+      -15,
+      -10,
+      -5,
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60
+    ]
+  },
+  "cas": "75-10-5",
+  "category": "Refrigerants",
+  "chemical_name": "difluoromethane",
+  "coolprop_fluid": "R32",
+  "critical": {
+    "p_kPa": 5782.0,
+    "temp_C": 78.11
+  },
+  "derived": [
+    "p_sat_bar",
+    "p_sat_psig"
+  ],
+  "formula": "CH2F2",
+  "generated": "2026-06-07",
+  "gwp": {
+    "basis": "IPCC Fourth Assessment Report (AR4, 2007), 100-year GWP",
+    "source_citation": "U.S. Environmental Protection Agency, Technology Transitions GWP Reference Table: HFC-32 (R-32) 100-year GWP = 675 (table reference IPCC 2007 / AR4). https://www.epa.gov/climate-hfcs-reduction/technology-transitions-gwp-reference-table",
+    "source_title": "U.S. EPA - Technology Transitions GWP Reference Table",
+    "value": 675
+  },
+  "model": "CoolProp==6.6.0 - reference Helmholtz equation of state for R32",
+  "model_family": "coolprop_pure",
+  "name": "R-32",
+  "properties_available": [
+    "saturation_pressure",
+    "saturated_liquid_density",
+    "saturated_vapour_density"
+  ],
+  "refrigerant_designation": "R-32",
+  "sat": {
+    "p_sat_kPa": [
+      177.41,
+      221.38,
+      273.44,
+      334.56,
+      405.75,
+      488.07,
+      582.63,
+      690.58,
+      813.1,
+      951.45,
+      1106.91,
+      1280.81,
+      1474.57,
+      1689.62,
+      1927.51,
+      2189.83,
+      2478.31,
+      2794.78,
+      3141.23,
+      3519.88,
+      3933.23
+    ],
+    "rho_liq": [
+      1180.16,
+      1165.69,
+      1150.95,
+      1135.92,
+      1120.56,
+      1104.86,
+      1088.76,
+      1072.25,
+      1055.26,
+      1037.75,
+      1019.65,
+      1000.89,
+      981.38,
+      961.01,
+      939.62,
+      917.05,
+      893.04,
+      867.26,
+      839.26,
+      808.31,
+      773.31
+    ],
+    "rho_vap": [
+      5.065,
+      6.248,
+      7.639,
+      9.266,
+      11.157,
+      13.346,
+      15.87,
+      18.769,
+      22.091,
+      25.891,
+      30.232,
+      35.19,
+      40.856,
+      47.339,
+      54.776,
+      63.343,
+      73.268,
+      84.859,
+      98.55,
+      114.989,
+      135.213
+    ]
+  },
+  "slug": "r-32",
+  "sources": [
+    "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems (REFPROP-derived saturation tables), R-32 (CAS 75-10-5)",
+    "CoolProp 6.6.0 - reference Helmholtz equation of state for R-32 (Tillner-Roth & Yokozeki, 1997)",
+    "U.S. EPA - Technology Transitions GWP Reference Table (100-year GWP, IPCC AR4 basis)",
+    "ANSI/ASHRAE Standard 34-2022 - Designation and Safety Classification of Refrigerants"
+  ],
+  "temperature_range": {
+    "max_C": 60,
+    "min_C": -40,
+    "step_C": 5
+  },
+  "validation": [
+    {
+      "computed": 1689.62,
+      "error_pct": 0.001,
+      "expected": 1689.6,
+      "property": "saturation_pressure",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, difluoromethane (R-32) (CAS 75-10-5), saturation curve at 25 degC: saturation pressure = 1689.6 kPa. https://webbook.nist.gov/cgi/fluid.cgi?ID=C75105&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 1.0,
+      "unit": "kPa"
+    },
+    {
+      "computed": 961.01,
+      "error_pct": 0.0,
+      "expected": 961.01,
+      "property": "saturated_liquid_density",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, difluoromethane (R-32) (CAS 75-10-5), saturation curve at 25 degC: saturated liquid density = 961.01 kg/m3. https://webbook.nist.gov/cgi/fluid.cgi?ID=C75105&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    }
+  ],
+  "validity_note": "CoolProp reference Helmholtz equation of state (Tillner-Roth & Yokozeki, 1997) for R-32. Saturation properties only, tabulated from -40 to +60 degC; superheated and single-phase data are out of scope for this page. The critical point is 78.11 degC / 5782.0 kPa, well above the table top, so every tabulated state is sub-critical. Values are for preliminary design; verify against vendor data for critical service."
+}

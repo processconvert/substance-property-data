@@ -1,0 +1,148 @@
+{
+  "aliases": [
+    "Carbon dioxide",
+    "CO2",
+    "R744",
+    "Carbonic anhydride"
+  ],
+  "ashrae34": {
+    "basis": "ANSI/ASHRAE Standard 34 safety group classification",
+    "source_citation": "ANSI/ASHRAE Standard 34-2022, Designation and Safety Classification of Refrigerants: R-744 (carbon dioxide) assigned safety group A1.",
+    "source_title": "ANSI/ASHRAE Standard 34 - Designation and Safety Classification of Refrigerants",
+    "value": "A1"
+  },
+  "axes": {
+    "temp_C": [
+      -40,
+      -35,
+      -30,
+      -25,
+      -20,
+      -15,
+      -10,
+      -5,
+      0,
+      5,
+      10,
+      15,
+      20,
+      25
+    ]
+  },
+  "cas": "124-38-9",
+  "category": "Refrigerants",
+  "chemical_name": "carbon dioxide",
+  "coolprop_fluid": "CO2",
+  "critical": {
+    "p_kPa": 7377.3,
+    "temp_C": 30.98
+  },
+  "derived": [
+    "p_sat_bar",
+    "p_sat_psig"
+  ],
+  "formula": "CO2",
+  "generated": "2026-06-07",
+  "gwp": {
+    "basis": "IPCC Fourth Assessment Report (AR4, 2007), 100-year GWP",
+    "source_citation": "U.S. Environmental Protection Agency, Technology Transitions GWP Reference Table: R-744 (carbon dioxide, the reference gas) 100-year GWP = 1 (table reference IPCC 2007 / AR4). https://www.epa.gov/climate-hfcs-reduction/technology-transitions-gwp-reference-table",
+    "source_title": "U.S. EPA - Technology Transitions GWP Reference Table",
+    "value": 1
+  },
+  "model": "CoolProp==6.6.0 - reference Helmholtz equation of state for CO2",
+  "model_family": "coolprop_pure",
+  "name": "R-744 (carbon dioxide)",
+  "properties_available": [
+    "saturation_pressure",
+    "saturated_liquid_density",
+    "saturated_vapour_density"
+  ],
+  "refrigerant_designation": "R-744",
+  "sat": {
+    "p_sat_kPa": [
+      1004.5,
+      1202.42,
+      1427.76,
+      1682.74,
+      1969.63,
+      2290.79,
+      2648.68,
+      3045.88,
+      3485.14,
+      3969.47,
+      4502.18,
+      5087.15,
+      5729.05,
+      6434.24
+    ],
+    "rho_liq": [
+      1116.43,
+      1096.44,
+      1075.73,
+      1054.18,
+      1031.66,
+      1007.98,
+      982.93,
+      956.21,
+      927.43,
+      896.03,
+      861.12,
+      821.21,
+      773.39,
+      710.5
+    ],
+    "rho_vap": [
+      26.121,
+      31.216,
+      37.098,
+      43.88,
+      51.7,
+      60.728,
+      71.185,
+      83.359,
+      97.647,
+      114.621,
+      135.156,
+      160.73,
+      194.202,
+      242.732
+    ]
+  },
+  "slug": "r-744",
+  "sources": [
+    "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems (REFPROP-derived saturation tables), carbon dioxide (CAS 124-38-9)",
+    "CoolProp 6.6.0 - reference Helmholtz equation of state for carbon dioxide (Span & Wagner, 1996)",
+    "U.S. EPA - Technology Transitions GWP Reference Table (100-year GWP, IPCC AR4 basis)",
+    "ANSI/ASHRAE Standard 34-2022 - Designation and Safety Classification of Refrigerants"
+  ],
+  "temperature_range": {
+    "max_C": 25,
+    "min_C": -40,
+    "step_C": 5
+  },
+  "validation": [
+    {
+      "computed": 3485.14,
+      "error_pct": 0.001,
+      "expected": 3485.1,
+      "property": "saturation_pressure",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, carbon dioxide (R-744) (CAS 124-38-9), saturation curve at 0 degC: saturation pressure = 3485.1 kPa. https://webbook.nist.gov/cgi/fluid.cgi?ID=C124389&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 0,
+      "tol_pct": 1.0,
+      "unit": "kPa"
+    },
+    {
+      "computed": 927.43,
+      "error_pct": 0.0,
+      "expected": 927.43,
+      "property": "saturated_liquid_density",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, carbon dioxide (R-744) (CAS 124-38-9), saturation curve at 0 degC: saturated liquid density = 927.43 kg/m3. https://webbook.nist.gov/cgi/fluid.cgi?ID=C124389&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 0,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    }
+  ],
+  "validity_note": "CoolProp reference Helmholtz equation of state (Span & Wagner, 1996) for carbon dioxide. Saturation properties only, tabulated from -40 to +25 degC. The critical point is 30.98 degC / 7377.3 kPa, just above the table top: this short table ends at +25 degC by design, because vapour-compression saturation (two-phase) data above the critical point does not exist - carbon dioxide operates transcritically there, as a single supercritical phase with no distinct saturation pressure. Values are for preliminary design; verify against vendor data for critical service."
+}

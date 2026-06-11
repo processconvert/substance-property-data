@@ -1,0 +1,208 @@
+{
+  "aliases": [
+    "R410A",
+    "HFC blend R-32/R-125",
+    "R-410a"
+  ],
+  "ashrae34": {
+    "basis": "ANSI/ASHRAE Standard 34 safety group classification",
+    "source_citation": "ANSI/ASHRAE Standard 34-2022, Designation and Safety Classification of Refrigerants: R-410A assigned safety group A1.",
+    "source_title": "ANSI/ASHRAE Standard 34 - Designation and Safety Classification of Refrigerants",
+    "value": "A1"
+  },
+  "axes": {
+    "temp_C": [
+      -40,
+      -35,
+      -30,
+      -25,
+      -20,
+      -15,
+      -10,
+      -5,
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60
+    ]
+  },
+  "blend": {
+    "components": "R-32 / R-125 (50 / 50 wt%)",
+    "composition_prose": "a 50/50 blend of R-32 and R-125",
+    "glide_K": 0.08,
+    "glide_basis": "temperature glide at 1 atm (101.325 kPa), computed as the dew-point temperature minus the bubble-point temperature at constant pressure"
+  },
+  "cas": "75-10-5 (R-32), 354-33-6 (R-125)",
+  "category": "Refrigerants",
+  "chemical_name": "R-32/R-125 (50/50 wt%)",
+  "coolprop_fluid": "R410A",
+  "critical": {
+    "p_kPa": 4901.2,
+    "temp_C": 71.34
+  },
+  "derived": [
+    "p_bubble_bar",
+    "p_dew_bar",
+    "p_bubble_psig",
+    "p_dew_psig"
+  ],
+  "fluid_kind": "blend",
+  "formula": "R-32/R-125",
+  "generated": "2026-06-07",
+  "gwp": {
+    "basis": "Calculated 100-year GWP, mass-weighted from the AR4 component values (basis attributed by the U.S. EPA Technology Transitions GWP Reference Table)",
+    "source_citation": "U.S. Environmental Protection Agency, Technology Transitions GWP Reference Table: R-410A 100-year GWP = 2,088 (table reference: Calculated). https://www.epa.gov/climate-hfcs-reduction/technology-transitions-gwp-reference-table",
+    "source_title": "U.S. EPA - Technology Transitions GWP Reference Table",
+    "value": 2088
+  },
+  "model": "CoolProp==6.6.0 - multi-fluid Helmholtz-energy mixture model for the predefined blend R410A",
+  "model_family": "coolprop_pure",
+  "name": "R-410A",
+  "properties_available": [
+    "bubble_pressure",
+    "dew_pressure",
+    "saturated_liquid_density",
+    "saturated_vapour_density"
+  ],
+  "refrigerant_designation": "R-410A",
+  "sat": {
+    "p_bubble_kPa": [
+      175.5,
+      218.93,
+      270.31,
+      330.57,
+      400.69,
+      481.68,
+      574.6,
+      680.57,
+      800.71,
+      936.21,
+      1088.3,
+      1258.27,
+      1447.45,
+      1657.25,
+      1889.15,
+      2144.71,
+      2425.64,
+      2733.76,
+      3071.07,
+      3439.84,
+      3842.65
+    ],
+    "p_dew_kPa": [
+      174.85,
+      218.14,
+      269.35,
+      329.41,
+      399.3,
+      480.04,
+      572.68,
+      678.31,
+      798.08,
+      933.18,
+      1084.82,
+      1254.29,
+      1442.93,
+      1652.14,
+      1883.41,
+      2138.33,
+      2418.61,
+      2726.13,
+      3062.99,
+      3431.6,
+      3834.83
+    ],
+    "rho_liq": [
+      1312.92,
+      1296.46,
+      1279.68,
+      1262.55,
+      1245.02,
+      1227.06,
+      1208.6,
+      1189.58,
+      1169.95,
+      1149.6,
+      1128.46,
+      1106.39,
+      1083.26,
+      1058.9,
+      1033.07,
+      1005.48,
+      975.72,
+      943.19,
+      906.97,
+      865.44,
+      815.37
+    ],
+    "rho_vap": [
+      6.99,
+      8.625,
+      10.549,
+      12.799,
+      15.416,
+      18.447,
+      21.942,
+      25.962,
+      30.575,
+      35.859,
+      41.911,
+      48.844,
+      56.798,
+      65.948,
+      76.52,
+      88.813,
+      103.236,
+      120.38,
+      141.147,
+      167.045,
+      200.954
+    ]
+  },
+  "slug": "r-410a",
+  "sources": [
+    "Arkema Forane 410A - Thermodynamic Properties (Saturation), SI (data generated with NIST REFPROP v9.0); blend bubble/dew pressures and densities",
+    "CoolProp 6.6.0 - multi-fluid Helmholtz-energy mixture model for the predefined blend R410A",
+    "U.S. EPA - Technology Transitions GWP Reference Table (100-year GWP, calculated from AR4 component values)",
+    "ANSI/ASHRAE Standard 34-2022 - Designation and Safety Classification of Refrigerants"
+  ],
+  "temperature_range": {
+    "max_C": 60,
+    "min_C": -40,
+    "step_C": 5
+  },
+  "validation": [
+    {
+      "computed": 1657.25,
+      "error_pct": 0.009,
+      "expected": 1657.4,
+      "property": "bubble_pressure",
+      "source_citation": "Arkema, Forane 410A Thermodynamic Properties (Saturation) - SI (data generated with NIST REFPROP Database 23, v9.0), R-410A saturation table at 25 degC: bubble-point (liquid) pressure = 1657.4 kPa. https://www.arkema.com/files/live/sites/shared_arkema/files/downloads/fluorochemicals/forane-410a-thermodynamic-properties-si.pdf",
+      "source_title": "Arkema Forane 410A - Thermodynamic Properties (Saturation), SI (REFPROP v9.0)",
+      "temp_C": 25,
+      "tol_pct": 1.5,
+      "unit": "kPa"
+    },
+    {
+      "computed": 1058.9,
+      "error_pct": 0.028,
+      "expected": 1058.6,
+      "property": "saturated_liquid_density",
+      "source_citation": "Arkema, Forane 410A Thermodynamic Properties (Saturation) - SI (data generated with NIST REFPROP Database 23, v9.0), R-410A saturation table at 25 degC: bubble-point (liquid) density = 1058.6 kg/m3. https://www.arkema.com/files/live/sites/shared_arkema/files/downloads/fluorochemicals/forane-410a-thermodynamic-properties-si.pdf",
+      "source_title": "Arkema Forane 410A - Thermodynamic Properties (Saturation), SI (REFPROP v9.0)",
+      "temp_C": 25,
+      "tol_pct": 1.5,
+      "unit": "kg/m3"
+    }
+  ],
+  "validity_note": "CoolProp multi-fluid Helmholtz-energy mixture model for the predefined blend R-410A (a 50/50 wt% blend of R-32 and R-125). Saturation properties only, tabulated from -40 to +60 degC; superheated and single-phase data are out of scope for this page. R-410A is a near-azeotropic blend: at a given temperature its bubble-point and dew-point pressures differ by only a small margin. The critical point is 71.34 degC / 4901.2 kPa, well above the table top, so every tabulated state is sub-critical. Values are for preliminary design; verify against vendor data for critical service. Temperature glide at 1 atm (101.325 kPa), computed as the dew-point temperature minus the bubble-point temperature at constant pressure is 0.08 K."
+}

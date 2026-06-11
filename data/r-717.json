@@ -1,0 +1,183 @@
+{
+  "aliases": [
+    "Anhydrous ammonia",
+    "Ammonia",
+    "R717",
+    "Azane"
+  ],
+  "ashrae34": {
+    "basis": "ANSI/ASHRAE Standard 34 safety group classification",
+    "source_citation": "ANSI/ASHRAE Standard 34-2022, Designation and Safety Classification of Refrigerants: R-717 (ammonia) assigned safety group B2L.",
+    "source_title": "ANSI/ASHRAE Standard 34 - Designation and Safety Classification of Refrigerants",
+    "value": "B2L"
+  },
+  "axes": {
+    "temp_C": [
+      -40,
+      -35,
+      -30,
+      -25,
+      -20,
+      -15,
+      -10,
+      -5,
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60
+    ]
+  },
+  "cas": "7664-41-7",
+  "category": "Refrigerants",
+  "chemical_name": "anhydrous ammonia",
+  "coolprop_fluid": "Ammonia",
+  "critical": {
+    "p_kPa": 11363.4,
+    "temp_C": 132.41
+  },
+  "derived": [
+    "p_sat_bar",
+    "p_sat_psig"
+  ],
+  "formula": "NH3",
+  "generated": "2026-06-07",
+  "gwp": {
+    "basis": "WMO 2022 100-year GWP (basis attributed by the U.S. EPA Technology Transitions GWP Reference Table)",
+    "source_citation": "U.S. Environmental Protection Agency, Technology Transitions GWP Reference Table: R-717 (ammonia) 100-year GWP = 1 (table reference WMO 2022). https://www.epa.gov/climate-hfcs-reduction/technology-transitions-gwp-reference-table",
+    "source_title": "U.S. EPA - Technology Transitions GWP Reference Table",
+    "value": 1
+  },
+  "model": "CoolProp==6.6.0 - reference Helmholtz equation of state for Ammonia",
+  "model_family": "coolprop_pure",
+  "name": "R-717 (ammonia)",
+  "properties_available": [
+    "saturation_pressure",
+    "saturated_liquid_density",
+    "saturated_vapour_density"
+  ],
+  "refrigerant_designation": "R-717",
+  "related_substances": [
+    {
+      "label": "Aqueous ammonia (NH3) solution properties",
+      "note": "Density and specific gravity of ammonia dissolved in water vs concentration and temperature - the aqueous solution, not this anhydrous refrigerant.",
+      "slug": "ammonia"
+    }
+  ],
+  "sat": {
+    "p_sat_kPa": [
+      71.63,
+      93.04,
+      119.38,
+      151.42,
+      190.03,
+      236.11,
+      290.64,
+      354.66,
+      429.25,
+      515.56,
+      614.79,
+      728.19,
+      857.04,
+      1002.69,
+      1166.54,
+      1349.99,
+      1554.53,
+      1781.67,
+      2032.97,
+      2310.03,
+      2614.49
+    ],
+    "rho_liq": [
+      689.78,
+      683.7,
+      677.54,
+      671.3,
+      664.97,
+      658.54,
+      652.01,
+      645.38,
+      638.64,
+      631.77,
+      624.78,
+      617.66,
+      610.39,
+      602.96,
+      595.36,
+      587.59,
+      579.61,
+      571.42,
+      562.99,
+      554.3,
+      545.32
+    ],
+    "rho_vap": [
+      0.644,
+      0.822,
+      1.037,
+      1.296,
+      1.604,
+      1.966,
+      2.391,
+      2.885,
+      3.456,
+      4.113,
+      4.866,
+      5.724,
+      6.698,
+      7.801,
+      9.046,
+      10.448,
+      12.024,
+      13.792,
+      15.775,
+      17.996,
+      20.484
+    ]
+  },
+  "slug": "r-717",
+  "sources": [
+    "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems (REFPROP-derived saturation tables), ammonia (CAS 7664-41-7)",
+    "CoolProp 6.6.0 - reference Helmholtz equation of state for ammonia (Tillner-Roth, Harms-Watzenberg & Baehr, 1993)",
+    "U.S. EPA - Technology Transitions GWP Reference Table (100-year GWP, WMO 2022 reference)",
+    "ANSI/ASHRAE Standard 34-2022 - Designation and Safety Classification of Refrigerants"
+  ],
+  "temperature_range": {
+    "max_C": 60,
+    "min_C": -40,
+    "step_C": 5
+  },
+  "validation": [
+    {
+      "computed": 1002.69,
+      "error_pct": 0.001,
+      "expected": 1002.7,
+      "property": "saturation_pressure",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, ammonia (R-717) (CAS 7664-41-7), saturation curve at 25 degC: saturation pressure = 1002.7 kPa. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7664417&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 1.0,
+      "unit": "kPa"
+    },
+    {
+      "computed": 602.96,
+      "error_pct": 0.0,
+      "expected": 602.96,
+      "property": "saturated_liquid_density",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, ammonia (R-717) (CAS 7664-41-7), saturation curve at 25 degC: saturated liquid density = 602.96 kg/m3. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7664417&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    }
+  ],
+  "validity_note": "CoolProp reference Helmholtz equation of state (Tillner-Roth, Harms-Watzenberg & Baehr, 1993) for ammonia. This page is anhydrous ammonia (R-717), the single-component refrigerant; for ammonia dissolved in water (aqueous ammonia / ammonium hydroxide solutions), see the aqueous ammonia hub. Saturation properties only, tabulated from -40 to +60 degC; superheated and single-phase data are out of scope for this page. The critical point is 132.41 degC / 11363.4 kPa, well above the table top, so every tabulated state is sub-critical. Values are for preliminary design; verify against vendor data for critical service."
+}
