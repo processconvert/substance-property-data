@@ -1,0 +1,281 @@
+{
+  "aliases": [
+    "Magnesium dichloride",
+    "Magnesium chloride brine"
+  ],
+  "axes": {
+    "conc_pct": [
+      5,
+      10,
+      15,
+      20
+    ],
+    "temp_C": [
+      -25,
+      -20,
+      -15,
+      -10,
+      -5,
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40
+    ]
+  },
+  "cas": "7786-30-3",
+  "category": "Brines",
+  "concentration_range": {
+    "max_pct": 20,
+    "min_pct": 5,
+    "step_pct": 5
+  },
+  "derived": [
+    "sg"
+  ],
+  "formula": "MgCl2",
+  "freeze_points": {
+    "points": [
+      {
+        "conc_pct": 5,
+        "freeze_C": -3.0
+      },
+      {
+        "conc_pct": 10,
+        "freeze_C": -8.3
+      },
+      {
+        "conc_pct": 15,
+        "freeze_C": -16.8
+      },
+      {
+        "conc_pct": 20,
+        "freeze_C": -28.7
+      }
+    ],
+    "validation": {
+      "computed_C": -3.0,
+      "conc_pct": 5,
+      "error_C": 0.01,
+      "expected_C": -3.01,
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions, Magnesium chloride (MgCl2) table: 5.0 mass % at 20 degC, freezing point depression = 3.01 degC (freezing point about -3.0 degC); the CRC depression column for MgCl2 is tabulated to 5 mass %. The Melinder freeze curve underlying CoolProp's INCOMP::MMG matches it to within 0.1 degC here.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "tol_C": 1.5,
+      "unit": "degC"
+    }
+  },
+  "generated": "2026-06-07",
+  "grid": {
+    "cp": [
+      [
+        null,
+        null,
+        null,
+        2986
+      ],
+      [
+        null,
+        null,
+        null,
+        3000
+      ],
+      [
+        null,
+        null,
+        3260,
+        3013
+      ],
+      [
+        null,
+        null,
+        3273,
+        3027
+      ],
+      [
+        null,
+        3563,
+        3286,
+        3041
+      ],
+      [
+        3874,
+        3573,
+        3298,
+        3055
+      ],
+      [
+        3879,
+        3583,
+        3310,
+        3068
+      ],
+      [
+        3883,
+        3592,
+        3322,
+        3082
+      ],
+      [
+        3888,
+        3600,
+        3333,
+        3096
+      ],
+      [
+        3894,
+        3609,
+        3345,
+        3110
+      ],
+      [
+        3899,
+        3617,
+        3356,
+        3124
+      ],
+      [
+        3905,
+        3625,
+        3368,
+        3138
+      ],
+      [
+        3910,
+        3632,
+        3379,
+        3151
+      ],
+      [
+        3914,
+        3640,
+        3391,
+        3165
+      ]
+    ],
+    "rho": [
+      [
+        null,
+        null,
+        null,
+        1187.5
+      ],
+      [
+        null,
+        null,
+        null,
+        1187.1
+      ],
+      [
+        null,
+        null,
+        1137.4,
+        1186.3
+      ],
+      [
+        null,
+        null,
+        1136.6,
+        1185.3
+      ],
+      [
+        null,
+        1089.9,
+        1135.7,
+        1184.0
+      ],
+      [
+        1043.8,
+        1089.0,
+        1134.5,
+        1182.5
+      ],
+      [
+        1043.2,
+        1087.9,
+        1133.2,
+        1180.8
+      ],
+      [
+        1042.3,
+        1086.6,
+        1131.7,
+        1178.9
+      ],
+      [
+        1041.3,
+        1085.1,
+        1130.0,
+        1177.0
+      ],
+      [
+        1040.0,
+        1083.5,
+        1128.2,
+        1174.9
+      ],
+      [
+        1038.6,
+        1081.7,
+        1126.2,
+        1172.8
+      ],
+      [
+        1037.0,
+        1079.7,
+        1124.1,
+        1170.6
+      ],
+      [
+        1035.2,
+        1077.6,
+        1121.9,
+        1168.5
+      ],
+      [
+        1033.5,
+        1075.4,
+        1119.6,
+        1166.4
+      ]
+    ]
+  },
+  "incomp_code": "MMG",
+  "model": "CoolProp==6.6.0 - incompressible aqueous MMG correlation (Melinder 2010)",
+  "model_family": "coolprop_incomp",
+  "name": "Magnesium chloride",
+  "properties_available": [
+    "density",
+    "heat_capacity",
+    "specific_gravity"
+  ],
+  "slug": "magnesium-chloride",
+  "sources": [
+    "Melinder, A. (2010). Properties of Secondary Working Fluids for Indirect Systems, 2nd ed. International Institute of Refrigeration - the basis of CoolProp's incompressible aqueous magnesium chloride (INCOMP::MMG) correlation.",
+    "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions (density, freezing-point depression and viscosity at 20 degC)"
+  ],
+  "temperature_range": {
+    "max_C": 40,
+    "min_C": -25,
+    "step_C": 5
+  },
+  "validation": [
+    {
+      "computed": 1174.9,
+      "conc_pct": 20,
+      "error_pct": 0.06,
+      "expected": 1174.2,
+      "property": "density",
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions (all data at 20 degC), Magnesium chloride (MgCl2) table: 20.0 mass % at 20 degC = 1.1742 g/cm3. This measured handbook data is independent of the Melinder correlation underlying CoolProp's INCOMP::MMG.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "temp_C": 20,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    }
+  ],
+  "validity_note": "CoolProp's incompressible aqueous magnesium chloride correlation (INCOMP::MMG), built on Melinder (2010). Tabulated for 5-20 wt% MgCl2 over -25 to 40 degC. Magnesium chloride brine is used for deicing, dust suppression and secondary cooling; the Melinder incompressible path is used (over the Laliberte electrolyte correlation) because it carries the freezing line. Each cell sits above the solution's freezing line; cells below it are left blank and the explorer will not interpolate across them. The 20 wt% ceiling stays near the eutectic (about 21 wt%) and below saturation. Density and freezing points are tabulated; viscosity is not, because the correlation's viscosity term for MgCl2 deviates about 10% from independent CRC measured data, and an unreliable property is omitted rather than published with a caveat. Concentrations are anhydrous MgCl2; the commercial hexahydrate (MgCl2.6H2O) is 47% MgCl2 by mass. Values are for preliminary design; verify against vendor data for critical service.",
+  "water_ref_rho": 998.2
+}

@@ -1,0 +1,751 @@
+{
+  "aliases": [
+    "Glycerine",
+    "Glycerin",
+    "Propane-1,2,3-triol",
+    "1,2,3-Propanetriol"
+  ],
+  "axes": {
+    "conc_pct": [
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60
+    ],
+    "temp_C": [
+      -30,
+      -25,
+      -20,
+      -15,
+      -10,
+      -5,
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40
+    ]
+  },
+  "cas": "56-81-5",
+  "category": "Coolants",
+  "concentration_range": {
+    "max_pct": 60,
+    "min_pct": 10,
+    "step_pct": 5
+  },
+  "derived": [
+    "sg"
+  ],
+  "formula": "C3H8O3",
+  "freeze_points": {
+    "points": [
+      {
+        "conc_pct": 10,
+        "freeze_C": -2.3
+      },
+      {
+        "conc_pct": 15,
+        "freeze_C": -3.8
+      },
+      {
+        "conc_pct": 20,
+        "freeze_C": -5.6
+      },
+      {
+        "conc_pct": 25,
+        "freeze_C": -7.5
+      },
+      {
+        "conc_pct": 30,
+        "freeze_C": -9.8
+      },
+      {
+        "conc_pct": 35,
+        "freeze_C": -12.3
+      },
+      {
+        "conc_pct": 40,
+        "freeze_C": -15.3
+      },
+      {
+        "conc_pct": 45,
+        "freeze_C": -18.9
+      },
+      {
+        "conc_pct": 50,
+        "freeze_C": -23.2
+      },
+      {
+        "conc_pct": 55,
+        "freeze_C": -28.4
+      },
+      {
+        "conc_pct": 60,
+        "freeze_C": -34.9
+      }
+    ],
+    "validation": {
+      "computed_C": -15.3,
+      "conc_pct": 40,
+      "error_C": 0.2,
+      "expected_C": -15.5,
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions, Glycerol table: 40.0 mass % glycerol at 20 degC, freezing point depression = 15.50 degC (freezing point about -15.5 degC). The CRC freezing-point-depression column agrees with the Melinder freeze curve underlying CoolProp's INCOMP::MGL to within 0.3 degC here.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "tol_C": 1.5,
+      "unit": "degC"
+    }
+  },
+  "generated": "2026-06-07",
+  "grid": {
+    "cp": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        2684
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        2840,
+        2720
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        3001,
+        2873,
+        2757
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        3294,
+        3161,
+        3030,
+        2907,
+        2794
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        3445,
+        3316,
+        3187,
+        3061,
+        2941,
+        2831
+      ],
+      [
+        null,
+        null,
+        3811,
+        3701,
+        3585,
+        3463,
+        3338,
+        3213,
+        3091,
+        2975,
+        2869
+      ],
+      [
+        4013,
+        3920,
+        3819,
+        3712,
+        3599,
+        3481,
+        3360,
+        3240,
+        3122,
+        3010,
+        2906
+      ],
+      [
+        4017,
+        3925,
+        3827,
+        3723,
+        3613,
+        3499,
+        3383,
+        3266,
+        3153,
+        3045,
+        2944
+      ],
+      [
+        4019,
+        3928,
+        3833,
+        3732,
+        3626,
+        3517,
+        3405,
+        3293,
+        3184,
+        3080,
+        2982
+      ],
+      [
+        4019,
+        3931,
+        3839,
+        3741,
+        3640,
+        3534,
+        3427,
+        3320,
+        3215,
+        3115,
+        3020
+      ],
+      [
+        4018,
+        3933,
+        3844,
+        3751,
+        3653,
+        3552,
+        3450,
+        3347,
+        3247,
+        3150,
+        3058
+      ],
+      [
+        4018,
+        3935,
+        3850,
+        3760,
+        3666,
+        3570,
+        3472,
+        3374,
+        3278,
+        3185,
+        3096
+      ],
+      [
+        4018,
+        3938,
+        3856,
+        3769,
+        3680,
+        3588,
+        3494,
+        3401,
+        3309,
+        3219,
+        3133
+      ],
+      [
+        4019,
+        3942,
+        3862,
+        3780,
+        3694,
+        3606,
+        3517,
+        3427,
+        3339,
+        3253,
+        3170
+      ],
+      [
+        4022,
+        3947,
+        3870,
+        3791,
+        3708,
+        3624,
+        3539,
+        3454,
+        3370,
+        3287,
+        3207
+      ]
+    ],
+    "mu": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        277.317
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        104.971,
+        171.13
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        46.855,
+        69.536,
+        110.147
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        17.641,
+        23.666,
+        32.89,
+        47.82,
+        73.734
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        10.162,
+        13.134,
+        17.424,
+        23.866,
+        34.043,
+        51.188
+      ],
+      [
+        null,
+        null,
+        4.198,
+        5.08,
+        6.255,
+        7.851,
+        10.062,
+        13.211,
+        17.852,
+        25.016,
+        36.748
+      ],
+      [
+        2.447,
+        2.863,
+        3.39,
+        4.078,
+        4.99,
+        6.221,
+        7.911,
+        10.285,
+        13.725,
+        18.919,
+        27.204
+      ],
+      [
+        2.043,
+        2.376,
+        2.797,
+        3.346,
+        4.07,
+        5.042,
+        6.364,
+        8.199,
+        10.815,
+        14.685,
+        20.706
+      ],
+      [
+        1.736,
+        2.009,
+        2.353,
+        2.799,
+        3.386,
+        4.169,
+        5.225,
+        6.674,
+        8.708,
+        11.664,
+        16.159
+      ],
+      [
+        1.498,
+        1.726,
+        2.012,
+        2.382,
+        2.866,
+        3.507,
+        4.366,
+        5.531,
+        7.146,
+        9.453,
+        12.892
+      ],
+      [
+        1.311,
+        1.505,
+        1.746,
+        2.056,
+        2.461,
+        2.993,
+        3.701,
+        4.653,
+        5.958,
+        7.795,
+        10.485
+      ],
+      [
+        1.16,
+        1.328,
+        1.534,
+        1.797,
+        2.138,
+        2.585,
+        3.176,
+        3.964,
+        5.033,
+        6.521,
+        8.669
+      ],
+      [
+        1.037,
+        1.183,
+        1.361,
+        1.585,
+        1.875,
+        2.253,
+        2.749,
+        3.408,
+        4.295,
+        5.518,
+        7.264
+      ],
+      [
+        0.935,
+        1.062,
+        1.216,
+        1.408,
+        1.655,
+        1.976,
+        2.396,
+        2.95,
+        3.693,
+        4.711,
+        6.152
+      ],
+      [
+        0.847,
+        0.959,
+        1.092,
+        1.257,
+        1.467,
+        1.739,
+        2.095,
+        2.563,
+        3.189,
+        4.044,
+        5.252
+      ]
+    ],
+    "rho": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1177.7
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1160.8,
+        1175.6
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1143.6,
+        1158.8,
+        1173.4
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1111.5,
+        1126.7,
+        1141.8,
+        1156.6,
+        1171.2
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        1095.4,
+        1110.1,
+        1124.9,
+        1139.8,
+        1154.4,
+        1168.8
+      ],
+      [
+        null,
+        null,
+        1052.1,
+        1065.9,
+        1079.9,
+        1094.1,
+        1108.5,
+        1123.1,
+        1137.7,
+        1152.2,
+        1166.4
+      ],
+      [
+        1025.3,
+        1038.3,
+        1051.5,
+        1065.0,
+        1078.7,
+        1092.7,
+        1106.8,
+        1121.1,
+        1135.5,
+        1149.8,
+        1164.0
+      ],
+      [
+        1024.8,
+        1037.6,
+        1050.6,
+        1063.9,
+        1077.4,
+        1091.1,
+        1105.0,
+        1119.1,
+        1133.2,
+        1147.4,
+        1161.4
+      ],
+      [
+        1024.1,
+        1036.7,
+        1049.6,
+        1062.6,
+        1075.9,
+        1089.4,
+        1103.1,
+        1116.9,
+        1130.9,
+        1144.9,
+        1158.8
+      ],
+      [
+        1023.2,
+        1035.6,
+        1048.3,
+        1061.1,
+        1074.2,
+        1087.5,
+        1101.0,
+        1114.7,
+        1128.5,
+        1142.4,
+        1156.2
+      ],
+      [
+        1022.0,
+        1034.3,
+        1046.8,
+        1059.5,
+        1072.4,
+        1085.5,
+        1098.9,
+        1112.4,
+        1126.1,
+        1139.8,
+        1153.5
+      ],
+      [
+        1020.7,
+        1032.9,
+        1045.2,
+        1057.7,
+        1070.5,
+        1083.5,
+        1096.7,
+        1110.0,
+        1123.6,
+        1137.2,
+        1150.8
+      ],
+      [
+        1019.2,
+        1031.3,
+        1043.5,
+        1055.9,
+        1068.5,
+        1081.3,
+        1094.4,
+        1107.6,
+        1121.0,
+        1134.5,
+        1148.0
+      ],
+      [
+        1017.6,
+        1029.5,
+        1041.6,
+        1053.9,
+        1066.4,
+        1079.1,
+        1092.0,
+        1105.1,
+        1118.4,
+        1131.8,
+        1145.2
+      ],
+      [
+        1016.0,
+        1027.7,
+        1039.7,
+        1051.8,
+        1064.2,
+        1076.8,
+        1089.6,
+        1102.6,
+        1115.8,
+        1129.1,
+        1142.4
+      ]
+    ]
+  },
+  "incomp_code": "MGL",
+  "model": "CoolProp==6.6.0 - incompressible aqueous MGL correlation (Melinder 2010)",
+  "model_family": "coolprop_incomp",
+  "name": "Glycerol",
+  "properties_available": [
+    "density",
+    "viscosity",
+    "heat_capacity",
+    "specific_gravity"
+  ],
+  "slug": "glycerol",
+  "sources": [
+    "Melinder, A. (2010). Properties of Secondary Working Fluids for Indirect Systems, 2nd ed. International Institute of Refrigeration - the basis of CoolProp's incompressible aqueous glycerol (INCOMP::MGL) correlation.",
+    "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions (density, freezing-point depression and viscosity at 20 degC)"
+  ],
+  "temperature_range": {
+    "max_C": 40,
+    "min_C": -30,
+    "step_C": 5
+  },
+  "validation": [
+    {
+      "computed": 1098.89,
+      "conc_pct": 40,
+      "error_pct": 0.044,
+      "expected": 1098.4,
+      "property": "density",
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions (all data at 20 degC), Glycerol table: 40.0 mass % glycerol at 20 degC = 1.0984 g/cm3. This measured handbook data is independent of the Melinder correlation underlying CoolProp's INCOMP::MGL.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "temp_C": 20,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    },
+    {
+      "computed": 3.701,
+      "conc_pct": 40,
+      "error_pct": 1.32,
+      "expected": 3.653,
+      "property": "viscosity",
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions, Glycerol table: 40.0 mass % glycerol at 20 degC, eta = 3.653 mPa s. Viscosity tolerance is 3% because published solution-viscosity data and the correlation's viscosity term carry larger uncertainty than density.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "temp_C": 20,
+      "tol_pct": 3.0,
+      "unit": "cP"
+    }
+  ],
+  "validity_note": "CoolProp's incompressible aqueous glycerol correlation (INCOMP::MGL), built on Melinder (2010). Tabulated for 10-60 wt% glycerol over -30 to 40 degC. Glycerol is a non-toxic, food- and pharma-grade non-electrolyte coolant, so it is modelled with CoolProp rather than the Laliberte electrolyte correlation; it is markedly more viscous than the glycols at the same strength, which matters for pump and pressure-drop work. Each cell sits above the solution's freezing line; cells below it are left blank and the explorer will not interpolate across them. Values are for preliminary design; verify against vendor data for critical service.",
+  "water_ref_rho": 998.2
+}

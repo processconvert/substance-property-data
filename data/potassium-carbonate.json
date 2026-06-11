@@ -1,0 +1,522 @@
+{
+  "aliases": [
+    "Potash",
+    "Pearl ash",
+    "Dipotassium carbonate"
+  ],
+  "axes": {
+    "conc_pct": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35
+    ],
+    "temp_C": [
+      -25,
+      -20,
+      -15,
+      -10,
+      -5,
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40
+    ]
+  },
+  "cas": "584-08-7",
+  "category": "Brines",
+  "concentration_range": {
+    "max_pct": 35,
+    "min_pct": 5,
+    "step_pct": 5
+  },
+  "derived": [
+    "sg"
+  ],
+  "formula": "K2CO3",
+  "freeze_points": {
+    "points": [
+      {
+        "conc_pct": 5,
+        "freeze_C": -1.6
+      },
+      {
+        "conc_pct": 10,
+        "freeze_C": -3.6
+      },
+      {
+        "conc_pct": 15,
+        "freeze_C": -5.9
+      },
+      {
+        "conc_pct": 20,
+        "freeze_C": -8.8
+      },
+      {
+        "conc_pct": 25,
+        "freeze_C": -12.8
+      },
+      {
+        "conc_pct": 30,
+        "freeze_C": -18.6
+      },
+      {
+        "conc_pct": 35,
+        "freeze_C": -26.7
+      }
+    ],
+    "validation": {
+      "computed_C": -8.8,
+      "conc_pct": 20,
+      "error_C": 0.02,
+      "expected_C": -8.82,
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions, Potassium carbonate (K2CO3) table: 20.0 mass % at 20 degC, freezing point depression = 8.82 degC (freezing point about -8.8 degC). The CRC freezing-point-depression column agrees with the Melinder freeze curve underlying CoolProp's INCOMP::MKC to within 0.1 degC here.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "tol_C": 1.5,
+      "unit": "degC"
+    }
+  },
+  "generated": "2026-06-07",
+  "grid": {
+    "cp": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        2746
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        2754
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        2903,
+        2762
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        3079,
+        2911,
+        2770
+      ],
+      [
+        null,
+        null,
+        3457,
+        3270,
+        3086,
+        2918,
+        2779
+      ],
+      [
+        3886,
+        3660,
+        3466,
+        3278,
+        3094,
+        2926,
+        2788
+      ],
+      [
+        3890,
+        3668,
+        3475,
+        3286,
+        3101,
+        2934,
+        2797
+      ],
+      [
+        3894,
+        3677,
+        3484,
+        3294,
+        3109,
+        2942,
+        2806
+      ],
+      [
+        3899,
+        3686,
+        3493,
+        3301,
+        3116,
+        2950,
+        2815
+      ],
+      [
+        3905,
+        3695,
+        3501,
+        3309,
+        3123,
+        2959,
+        2824
+      ],
+      [
+        3912,
+        3704,
+        3510,
+        3316,
+        3131,
+        2967,
+        2834
+      ],
+      [
+        3919,
+        3712,
+        3518,
+        3323,
+        3138,
+        2976,
+        2844
+      ],
+      [
+        3926,
+        3721,
+        3525,
+        3330,
+        3145,
+        2985,
+        2854
+      ],
+      [
+        3933,
+        3729,
+        3532,
+        3337,
+        3153,
+        2994,
+        2864
+      ]
+    ],
+    "mu": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        15.662
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        12.276
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        7.137,
+        9.831
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        4.618,
+        5.903,
+        8.029
+      ],
+      [
+        null,
+        null,
+        2.813,
+        3.245,
+        3.91,
+        4.967,
+        6.676
+      ],
+      [
+        1.943,
+        2.142,
+        2.41,
+        2.791,
+        3.361,
+        4.245,
+        5.643
+      ],
+      [
+        1.662,
+        1.848,
+        2.093,
+        2.433,
+        2.928,
+        3.677,
+        4.839
+      ],
+      [
+        1.44,
+        1.614,
+        1.84,
+        2.145,
+        2.58,
+        3.224,
+        4.203
+      ],
+      [
+        1.262,
+        1.424,
+        1.633,
+        1.91,
+        2.296,
+        2.855,
+        3.692
+      ],
+      [
+        1.117,
+        1.268,
+        1.462,
+        1.714,
+        2.059,
+        2.55,
+        3.273
+      ],
+      [
+        0.997,
+        1.138,
+        1.318,
+        1.548,
+        1.858,
+        2.292,
+        2.924
+      ],
+      [
+        0.896,
+        1.027,
+        1.193,
+        1.405,
+        1.684,
+        2.071,
+        2.628
+      ],
+      [
+        0.809,
+        0.931,
+        1.085,
+        1.278,
+        1.53,
+        1.876,
+        2.372
+      ],
+      [
+        0.735,
+        0.846,
+        0.987,
+        1.163,
+        1.391,
+        1.702,
+        2.146
+      ]
+    ],
+    "rho": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1373.4
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1372.3
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        1312.6,
+        1370.9
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        1254.9,
+        1311.2,
+        1369.3
+      ],
+      [
+        null,
+        null,
+        1147.4,
+        1199.4,
+        1253.5,
+        1309.6,
+        1367.5
+      ],
+      [
+        1048.2,
+        1096.5,
+        1146.3,
+        1198.0,
+        1251.8,
+        1307.7,
+        1365.4
+      ],
+      [
+        1047.6,
+        1095.5,
+        1144.9,
+        1196.3,
+        1250.0,
+        1305.7,
+        1363.2
+      ],
+      [
+        1046.7,
+        1094.2,
+        1143.3,
+        1194.5,
+        1247.9,
+        1303.5,
+        1360.8
+      ],
+      [
+        1045.5,
+        1092.6,
+        1141.5,
+        1192.5,
+        1245.7,
+        1301.1,
+        1358.3
+      ],
+      [
+        1044.1,
+        1090.9,
+        1139.5,
+        1190.3,
+        1243.4,
+        1298.6,
+        1355.7
+      ],
+      [
+        1042.5,
+        1089.0,
+        1137.4,
+        1188.0,
+        1240.9,
+        1296.0,
+        1353.0
+      ],
+      [
+        1040.7,
+        1086.9,
+        1135.1,
+        1185.6,
+        1238.3,
+        1293.3,
+        1350.3
+      ],
+      [
+        1038.8,
+        1084.8,
+        1132.8,
+        1183.1,
+        1235.7,
+        1290.5,
+        1347.4
+      ],
+      [
+        1036.9,
+        1082.7,
+        1130.4,
+        1180.5,
+        1232.9,
+        1287.7,
+        1344.6
+      ]
+    ]
+  },
+  "incomp_code": "MKC",
+  "model": "CoolProp==6.6.0 - incompressible aqueous MKC correlation (Melinder 2010)",
+  "model_family": "coolprop_incomp",
+  "name": "Potassium carbonate",
+  "properties_available": [
+    "density",
+    "viscosity",
+    "heat_capacity",
+    "specific_gravity"
+  ],
+  "slug": "potassium-carbonate",
+  "sources": [
+    "Melinder, A. (2010). Properties of Secondary Working Fluids for Indirect Systems, 2nd ed. International Institute of Refrigeration - the basis of CoolProp's incompressible aqueous potassium carbonate (INCOMP::MKC) correlation.",
+    "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions (density, freezing-point depression and viscosity at 20 degC)"
+  ],
+  "temperature_range": {
+    "max_C": 40,
+    "min_C": -25,
+    "step_C": 5
+  },
+  "validation": [
+    {
+      "computed": 1190.32,
+      "conc_pct": 20,
+      "error_pct": 0.044,
+      "expected": 1189.8,
+      "property": "density",
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions (all data at 20 degC), Potassium carbonate (K2CO3) table: 20.0 mass % at 20 degC = 1.1898 g/cm3. This measured handbook data is independent of the Melinder correlation underlying CoolProp's INCOMP::MKC.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "temp_C": 20,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    },
+    {
+      "computed": 1.714,
+      "conc_pct": 20,
+      "error_pct": 0.435,
+      "expected": 1.707,
+      "property": "viscosity",
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions, Potassium carbonate (K2CO3) table: 20.0 mass % at 20 degC, eta = 1.707 mPa s. Viscosity tolerance is 3% because published solution-viscosity data and the correlation's viscosity term carry larger uncertainty than density.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "temp_C": 20,
+      "tol_pct": 3.0,
+      "unit": "cP"
+    }
+  ],
+  "validity_note": "CoolProp's incompressible aqueous potassium carbonate correlation (INCOMP::MKC), built on Melinder (2010). Tabulated for 5-35 wt% K2CO3 over -25 to 40 degC. Potassium carbonate brine is a low-corrosion secondary coolant; the Melinder incompressible path is used (over the Laliberte electrolyte correlation) because it carries the freezing line needed for sub-zero service. Each cell sits above the solution's freezing line; cells below it are left blank and the explorer will not interpolate across them. The 35 wt% ceiling stays below saturation (about 53 wt% at 20 degC). Concentrations are anhydrous K2CO3. Values are for preliminary design; verify against vendor data for critical service.",
+  "water_ref_rho": 998.2
+}

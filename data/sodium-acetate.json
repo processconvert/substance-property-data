@@ -1,0 +1,411 @@
+{
+  "aliases": [
+    "Sodium ethanoate",
+    "Anhydrous sodium acetate",
+    "E262"
+  ],
+  "axes": {
+    "conc_pct": [
+      5,
+      10,
+      15,
+      20,
+      25,
+      30
+    ],
+    "temp_C": [
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60
+    ]
+  },
+  "cas": "127-09-3",
+  "category": "Brines",
+  "concentration_range": {
+    "max_pct": 30,
+    "min_pct": 5,
+    "step_pct": 5
+  },
+  "derived": [
+    "sg"
+  ],
+  "formula": "CH3COONa",
+  "generated": "2026-06-07",
+  "grid": {
+    "cp": [
+      [
+        4030,
+        3868,
+        3724,
+        3594,
+        3474,
+        3363
+      ],
+      [
+        4026,
+        3873,
+        3735,
+        3609,
+        3493,
+        3384
+      ],
+      [
+        4026,
+        3880,
+        3748,
+        3626,
+        3512,
+        3405
+      ],
+      [
+        4028,
+        3889,
+        3761,
+        3643,
+        3531,
+        3426
+      ],
+      [
+        4031,
+        3897,
+        3774,
+        3658,
+        3548,
+        3444
+      ],
+      [
+        4034,
+        3905,
+        3784,
+        3671,
+        3563,
+        3460
+      ],
+      [
+        4037,
+        3911,
+        3793,
+        3682,
+        3575,
+        3472
+      ],
+      [
+        4040,
+        3916,
+        3801,
+        3691,
+        3585,
+        3483
+      ],
+      [
+        4042,
+        3921,
+        3807,
+        3698,
+        3593,
+        3491
+      ],
+      [
+        4044,
+        3925,
+        3811,
+        3703,
+        3599,
+        3497
+      ],
+      [
+        4046,
+        3928,
+        3815,
+        3708,
+        3603,
+        3502
+      ],
+      [
+        4049,
+        3930,
+        3819,
+        3711,
+        3607,
+        3506
+      ],
+      [
+        4051,
+        3933,
+        3822,
+        3714,
+        3610,
+        3509
+      ]
+    ],
+    "mu": [
+      [
+        2.294,
+        3.07,
+        4.291,
+        6.266,
+        9.553,
+        15.194
+      ],
+      [
+        1.912,
+        2.503,
+        3.409,
+        4.83,
+        7.113,
+        10.883
+      ],
+      [
+        1.623,
+        2.087,
+        2.784,
+        3.849,
+        5.513,
+        8.174
+      ],
+      [
+        1.397,
+        1.772,
+        2.324,
+        3.15,
+        4.409,
+        6.371
+      ],
+      [
+        1.219,
+        1.528,
+        1.976,
+        2.634,
+        3.618,
+        5.115
+      ],
+      [
+        1.075,
+        1.334,
+        1.706,
+        2.242,
+        3.031,
+        4.208
+      ],
+      [
+        0.956,
+        1.178,
+        1.491,
+        1.937,
+        2.583,
+        3.532
+      ],
+      [
+        0.858,
+        1.05,
+        1.318,
+        1.696,
+        2.234,
+        3.014
+      ],
+      [
+        0.776,
+        0.944,
+        1.176,
+        1.5,
+        1.957,
+        2.609
+      ],
+      [
+        0.706,
+        0.854,
+        1.058,
+        1.34,
+        1.732,
+        2.287
+      ],
+      [
+        0.646,
+        0.779,
+        0.959,
+        1.206,
+        1.548,
+        2.025
+      ],
+      [
+        0.594,
+        0.713,
+        0.875,
+        1.094,
+        1.394,
+        1.81
+      ],
+      [
+        0.548,
+        0.657,
+        0.802,
+        0.998,
+        1.265,
+        1.631
+      ]
+    ],
+    "rho": [
+      [
+        1026.0,
+        1051.8,
+        1078.6,
+        1106.6,
+        1136.1,
+        1167.0
+      ],
+      [
+        1026.0,
+        1051.7,
+        1078.4,
+        1106.3,
+        1135.6,
+        1166.4
+      ],
+      [
+        1025.6,
+        1051.2,
+        1077.8,
+        1105.6,
+        1134.7,
+        1165.4
+      ],
+      [
+        1024.8,
+        1050.4,
+        1076.8,
+        1104.5,
+        1133.6,
+        1164.1
+      ],
+      [
+        1023.8,
+        1049.2,
+        1075.6,
+        1103.2,
+        1132.1,
+        1162.6
+      ],
+      [
+        1022.5,
+        1047.9,
+        1074.1,
+        1101.6,
+        1130.5,
+        1160.8
+      ],
+      [
+        1021.0,
+        1046.2,
+        1072.4,
+        1099.8,
+        1128.6,
+        1158.8
+      ],
+      [
+        1019.2,
+        1044.4,
+        1070.5,
+        1097.8,
+        1126.4,
+        1156.6
+      ],
+      [
+        1017.3,
+        1042.4,
+        1068.4,
+        1095.6,
+        1124.2,
+        1154.2
+      ],
+      [
+        1015.2,
+        1040.1,
+        1066.1,
+        1093.2,
+        1121.7,
+        1151.7
+      ],
+      [
+        1012.8,
+        1037.8,
+        1063.6,
+        1090.7,
+        1119.1,
+        1149.0
+      ],
+      [
+        1010.4,
+        1035.2,
+        1061.0,
+        1088.0,
+        1116.3,
+        1146.1
+      ],
+      [
+        1007.8,
+        1032.5,
+        1058.2,
+        1085.2,
+        1113.4,
+        1143.2
+      ]
+    ]
+  },
+  "model": "thermo==0.4.0 (chemicals==1.3.0) - Laliberte 2009 electrolyte correlation",
+  "model_family": "laliberte",
+  "name": "Sodium acetate",
+  "properties_available": [
+    "density",
+    "viscosity",
+    "heat_capacity",
+    "specific_gravity"
+  ],
+  "slug": "sodium-acetate",
+  "sources": [
+    "Laliberte, M. (2009). A Model for Calculating the Heat Capacity of Aqueous Solutions, with Updated Density and Viscosity Data. J. Chem. Eng. Data 54(6), 1725-1760. doi:10.1021/je8008123",
+    "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions (density and viscosity at 20 degC)"
+  ],
+  "temperature_range": {
+    "max_C": 60,
+    "min_C": 0,
+    "step_C": 5
+  },
+  "validation": [
+    {
+      "computed": 1103.19,
+      "conc_pct": 20,
+      "error_pct": 0.164,
+      "expected": 1105.0,
+      "property": "density",
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions (all data at 20 degC), Sodium acetate table: 20.0 mass % at 20 degC = 1.1050 g/cm3. This measured handbook data is independent of the Laliberte correlation.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "temp_C": 20,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    },
+    {
+      "computed": 1.528,
+      "conc_pct": 10,
+      "error_pct": 0.707,
+      "expected": 1.539,
+      "property": "viscosity",
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions, Sodium acetate table: 10.0 mass % at 20 degC, eta = 1.539 mPa s. Viscosity tolerance is 3% because published solution-viscosity data and the correlation's viscosity term carry larger uncertainty than density.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "temp_C": 20,
+      "tol_pct": 3.0,
+      "unit": "cP"
+    }
+  ],
+  "validity_note": "Laliberte (2009) aqueous-electrolyte correlation for sodium acetate-water. Tabulated for 5-30 wt% over 0-60 degC, below saturation across the table (sodium acetate is highly soluble). Sodium acetate is a low-corrosion, biodegradable deicer and secondary brine; the Laliberte correlation gives density, viscosity and heat capacity but no freezing point, so the grid is floored at 0 degC and no freezing-point table is shipped (honest omission) rather than computing freeze points from a model that does not provide them. Concentrations are anhydrous sodium acetate; the trihydrate (CH3COONa.3H2O) is 60% anhydrous salt by mass. Values are for preliminary design; verify against vendor data for critical service.",
+  "water_ref_rho": 998.2
+}

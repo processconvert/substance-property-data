@@ -1,6 +1,6 @@
 # Aqueous Substance Property Data
 
-Computed density, dynamic viscosity and specific heat capacity grids for common industrial process chemicals in aqueous solution, as concentration × temperature tables in machine-readable JSON.
+Computed density, dynamic viscosity and specific heat capacity grids for common industrial process chemicals and heat-transfer fluids in aqueous solution, as concentration × temperature tables in machine-readable JSON — with freezing-point tables for the freeze-protection fluids.
 
 Published and maintained by [ProcessConvert](https://www.processconvert.com), where each substance has an interactive property explorer:
 https://www.processconvert.com/substances
@@ -15,7 +15,7 @@ https://www.processconvert.com/substances
 | Nitric acid | HNO₃ | 7697-37-2 | 5–65 wt% | 0–45 °C | ρ, μ, cp | Laliberté (2009) |
 | Phosphoric acid | H₃PO₄ | 7664-38-2 | 5–60 wt% | 0–60 °C | ρ, μ, cp | Laliberté (2009) |
 | Ammonia | NH₃ | 7664-41-7 | 5–30 wt% | 0–50 °C | ρ, μ, cp | Laliberté (2009) |
-| Ethylene glycol | C₂H₆O₂ | 107-21-1 | 10–60 wt% | 0–100 °C | ρ, μ, cp | Melinder (2010) via CoolProp |
+| Ethylene glycol | C₂H₆O₂ | 107-21-1 | 10–60 wt% | 0–100 °C | ρ, μ, cp, T_f | Melinder (2010) via CoolProp |
 | Propylene glycol | C₃H₈O₂ | 57-55-6 | 10–60 wt% | 0–100 °C | ρ, μ, cp | Melinder (2010) via CoolProp |
 | Copper(II) sulfate | CuSO₄ | 7758-98-7 | 2–12 wt% | 15–60 °C | ρ, μ, cp | Laliberté (2009) |
 | Zinc sulfate | ZnSO₄ | 7733-02-0 | 2–30 wt% | 15–55 °C | ρ, μ | Laliberté (2009) |
@@ -27,16 +27,26 @@ https://www.processconvert.com/substances
 | Magnesium sulfate | MgSO₄ | 7487-88-9 | 2–20 wt% | 15–60 °C | ρ, μ, cp | Laliberté (2009) |
 | Sodium carbonate | Na₂CO₃ | 497-19-8 | 2–14 wt% | 20–40 °C | ρ, μ, cp | Laliberté (2009) |
 | Ammonium sulfate | (NH₄)₂SO₄ | 7783-20-2 | 2–40 wt% | 15–55 °C | ρ, μ | Laliberté (2009) |
+| Methanol | CH₃OH | 67-56-1 | 10–50 wt% | −45–40 °C | ρ, μ, cp, T_f | Melinder (2010) via CoolProp |
+| Ethanol | C₂H₅OH | 64-17-5 | 10–50 wt% | −35–40 °C | ρ, μ, cp, T_f | Melinder (2010) via CoolProp |
+| Glycerol | C₃H₈O₃ | 56-81-5 | 10–60 wt% | −30–40 °C | ρ, μ, cp, T_f | Melinder (2010) via CoolProp |
+| Potassium carbonate | K₂CO₃ | 584-08-7 | 5–35 wt% | −25–40 °C | ρ, μ, cp, T_f | Melinder (2010) via CoolProp |
+| Lithium chloride | LiCl | 7447-41-8 | 5–20 wt% | −40–40 °C | ρ, μ, cp, T_f | Melinder (2010) via CoolProp |
+| Magnesium chloride | MgCl₂ | 7786-30-3 | 5–20 wt% | −25–40 °C | ρ, cp, T_f | Melinder (2010) via CoolProp |
+| Sodium acetate | CH₃COONa | 127-09-3 | 5–30 wt% | 0–60 °C | ρ, μ, cp | Laliberté (2009) |
 
-Each file declares its own valid concentration and temperature ranges; values are tabulated only inside the published validity region of the underlying model, bounded below saturation for the salts. No extrapolation. Where a property column is absent (ZnSO₄, FeCl₃, (NH₄)₂SO₄ ship density and viscosity only), the model provides no heat-capacity coefficients for that solute — the value is omitted rather than approximated.
+T_f = freezing-point table (concentration → freezing temperature) included in the file.
+
+Each file declares its own valid concentration and temperature ranges; values are tabulated only inside the published validity region of the underlying model, bounded below saturation for the salts. No extrapolation. Two honest-omission conventions apply: where a property column is absent (ZnSO₄, FeCl₃ and (NH₄)₂SO₄ ship without cp; MgCl₂ ships without μ), the model provides no usable coefficients for that property — the value is omitted rather than approximated. And for the sub-zero heat-transfer fluids, grid cells below the solution's freezing line at that concentration are `null` — the solution would be frozen, so no liquid property exists to report.
 
 ## Properties
 
 Per substance, on a regular concentration (wt%) × temperature (°C) grid:
 
 - Density (kg/m³)
-- Dynamic viscosity (mPa·s)
+- Dynamic viscosity (mPa·s) where the model supports it
 - Specific heat capacity (J/(kg·K)) where the model supports it
+- Freezing point (°C) per concentration, for the Melinder-path fluids where independently validated
 - Derived where applicable: specific gravity, °Baumé
 
 ## How the values are produced
@@ -56,7 +66,10 @@ One JSON file per substance. Key fields:
 name, formula, cas, aliases      identification
 axes                             grid axes: concentrations (wt%), temperatures (°C)
 grid                             rho / mu / cp arrays, rows = concentration, cols = temperature
-                                 (cp absent where the model has no coefficients)
+                                 (mu/cp absent where the model has no coefficients;
+                                  cells are null below the freezing line)
+freeze_points                    concentration -> freezing point (°C), where present,
+                                 with its own cited validation
 concentration_range,
 temperature_range                declared validity window
 model, model_family, sources     provenance
@@ -70,19 +83,23 @@ generated                        generation date
 ```python
 import json
 
-with open("data/calcium-chloride.json") as f:
+with open("data/methanol.json") as f:
     s = json.load(f)
 
 conc = s["axes"]["concentrations"]   # wt%
 temp = s["axes"]["temperatures"]     # °C
-rho  = s["grid"]["rho"]              # kg/m3, [i_conc][j_temp]
+rho  = s["grid"]["rho"]              # kg/m3, [i_conc][j_temp]; None below freeze line
 
-# density of 26 wt% CaCl2 brine at 25 °C
-i, j = conc.index(26), temp.index(25)
+# density of 30 wt% methanol at -10 °C
+i, j = conc.index(30), temp.index(-10)
 print(rho[i][j])
+
+# freezing point of 40 wt% methanol
+fp = {p["conc"]: p["freeze_C"] for p in s["freeze_points"]["points"]}
+print(fp[40])
 ```
 
-Bilinear interpolation between grid points is appropriate inside the declared ranges; do not extrapolate beyond them.
+Bilinear interpolation between grid points is appropriate inside the declared ranges; do not interpolate across `null` cells and do not extrapolate beyond the declared ranges.
 
 ## Intended use and limitations
 

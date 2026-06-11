@@ -1,0 +1,436 @@
+{
+  "aliases": [
+    "Lithium muriate"
+  ],
+  "axes": {
+    "conc_pct": [
+      5,
+      10,
+      15,
+      20
+    ],
+    "temp_C": [
+      -40,
+      -35,
+      -30,
+      -25,
+      -20,
+      -15,
+      -10,
+      -5,
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40
+    ]
+  },
+  "cas": "7447-41-8",
+  "category": "Brines",
+  "concentration_range": {
+    "max_pct": 20,
+    "min_pct": 5,
+    "step_pct": 5
+  },
+  "derived": [
+    "sg"
+  ],
+  "formula": "LiCl",
+  "freeze_points": {
+    "points": [
+      {
+        "conc_pct": 5,
+        "freeze_C": -5.1
+      },
+      {
+        "conc_pct": 10,
+        "freeze_C": -12.2
+      },
+      {
+        "conc_pct": 15,
+        "freeze_C": -23.9
+      },
+      {
+        "conc_pct": 20,
+        "freeze_C": -43.9
+      }
+    ],
+    "validation": {
+      "computed_C": -12.2,
+      "conc_pct": 10,
+      "error_C": 0.41,
+      "expected_C": -12.61,
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions, Lithium chloride (LiCl) table: 10.0 mass % at 20 degC, freezing point depression = 12.61 degC (freezing point about -12.6 degC). The CRC freezing-point-depression column agrees with the Melinder freeze curve underlying CoolProp's INCOMP::MLI to within 0.5 degC here.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "tol_C": 1.5,
+      "unit": "degC"
+    }
+  },
+  "generated": "2026-06-07",
+  "grid": {
+    "cp": [
+      [
+        null,
+        null,
+        null,
+        2899
+      ],
+      [
+        null,
+        null,
+        null,
+        2929
+      ],
+      [
+        null,
+        null,
+        null,
+        2958
+      ],
+      [
+        null,
+        null,
+        null,
+        2988
+      ],
+      [
+        null,
+        null,
+        3286,
+        3018
+      ],
+      [
+        null,
+        null,
+        3306,
+        3048
+      ],
+      [
+        null,
+        3615,
+        3326,
+        3078
+      ],
+      [
+        3917,
+        3624,
+        3347,
+        3108
+      ],
+      [
+        3914,
+        3633,
+        3367,
+        3138
+      ],
+      [
+        3913,
+        3642,
+        3387,
+        3168
+      ],
+      [
+        3913,
+        3651,
+        3407,
+        3197
+      ],
+      [
+        3913,
+        3661,
+        3428,
+        3227
+      ],
+      [
+        3914,
+        3670,
+        3448,
+        3257
+      ],
+      [
+        3916,
+        3680,
+        3468,
+        3287
+      ],
+      [
+        3919,
+        3690,
+        3488,
+        3317
+      ],
+      [
+        3921,
+        3699,
+        3508,
+        3347
+      ],
+      [
+        3924,
+        3709,
+        3528,
+        3376
+      ]
+    ],
+    "mu": [
+      [
+        null,
+        null,
+        null,
+        22.261
+      ],
+      [
+        null,
+        null,
+        null,
+        16.43
+      ],
+      [
+        null,
+        null,
+        null,
+        12.425
+      ],
+      [
+        null,
+        null,
+        null,
+        9.613
+      ],
+      [
+        null,
+        null,
+        6.303,
+        7.6
+      ],
+      [
+        null,
+        null,
+        5.041,
+        6.129
+      ],
+      [
+        null,
+        3.424,
+        4.118,
+        5.036
+      ],
+      [
+        2.42,
+        2.848,
+        3.43,
+        4.209
+      ],
+      [
+        2.046,
+        2.41,
+        2.907,
+        3.574
+      ],
+      [
+        1.755,
+        2.071,
+        2.502,
+        3.078
+      ],
+      [
+        1.524,
+        1.804,
+        2.181,
+        2.685
+      ],
+      [
+        1.339,
+        1.589,
+        1.924,
+        2.369
+      ],
+      [
+        1.187,
+        1.412,
+        1.712,
+        2.112
+      ],
+      [
+        1.061,
+        1.263,
+        1.535,
+        1.898
+      ],
+      [
+        0.953,
+        1.136,
+        1.383,
+        1.719
+      ],
+      [
+        0.861,
+        1.024,
+        1.25,
+        1.565
+      ],
+      [
+        0.779,
+        0.924,
+        1.131,
+        1.431
+      ]
+    ],
+    "rho": [
+      [
+        null,
+        null,
+        null,
+        1125.9
+      ],
+      [
+        null,
+        null,
+        null,
+        1125.6
+      ],
+      [
+        null,
+        null,
+        null,
+        1125.2
+      ],
+      [
+        null,
+        null,
+        null,
+        1124.7
+      ],
+      [
+        null,
+        null,
+        1091.8,
+        1124.0
+      ],
+      [
+        null,
+        null,
+        1091.4,
+        1123.3
+      ],
+      [
+        null,
+        1060.4,
+        1090.9,
+        1122.5
+      ],
+      [
+        1030.0,
+        1060.1,
+        1090.3,
+        1121.6
+      ],
+      [
+        1029.9,
+        1059.6,
+        1089.5,
+        1120.6
+      ],
+      [
+        1029.5,
+        1058.9,
+        1088.6,
+        1119.4
+      ],
+      [
+        1028.9,
+        1058.0,
+        1087.5,
+        1118.2
+      ],
+      [
+        1028.0,
+        1057.0,
+        1086.3,
+        1116.9
+      ],
+      [
+        1026.9,
+        1055.8,
+        1085.1,
+        1115.5
+      ],
+      [
+        1025.6,
+        1054.5,
+        1083.7,
+        1113.9
+      ],
+      [
+        1024.2,
+        1053.0,
+        1082.1,
+        1112.3
+      ],
+      [
+        1022.6,
+        1051.5,
+        1080.5,
+        1110.5
+      ],
+      [
+        1021.0,
+        1049.8,
+        1078.8,
+        1108.7
+      ]
+    ]
+  },
+  "incomp_code": "MLI",
+  "model": "CoolProp==6.6.0 - incompressible aqueous MLI correlation (Melinder 2010)",
+  "model_family": "coolprop_incomp",
+  "name": "Lithium chloride",
+  "properties_available": [
+    "density",
+    "viscosity",
+    "heat_capacity",
+    "specific_gravity"
+  ],
+  "slug": "lithium-chloride",
+  "sources": [
+    "Melinder, A. (2010). Properties of Secondary Working Fluids for Indirect Systems, 2nd ed. International Institute of Refrigeration - the basis of CoolProp's incompressible aqueous lithium chloride (INCOMP::MLI) correlation.",
+    "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions (density, freezing-point depression and viscosity at 20 degC)"
+  ],
+  "temperature_range": {
+    "max_C": 40,
+    "min_C": -40,
+    "step_C": 5
+  },
+  "validation": [
+    {
+      "computed": 1115.46,
+      "conc_pct": 20,
+      "error_pct": 0.041,
+      "expected": 1115.0,
+      "property": "density",
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions (all data at 20 degC), Lithium chloride (LiCl) table: 20.0 mass % at 20 degC = 1.1150 g/cm3. This measured handbook data is independent of the Melinder correlation underlying CoolProp's INCOMP::MLI.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "temp_C": 20,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    },
+    {
+      "computed": 2.112,
+      "conc_pct": 20,
+      "error_pct": 0.76,
+      "expected": 2.128,
+      "property": "viscosity",
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions, Lithium chloride (LiCl) table: 20.0 mass % at 20 degC, eta = 2.128 mPa s. Viscosity tolerance is 3% because published solution-viscosity data and the correlation's viscosity term carry larger uncertainty than density.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "temp_C": 20,
+      "tol_pct": 3.0,
+      "unit": "cP"
+    }
+  ],
+  "validity_note": "CoolProp's incompressible aqueous lithium chloride correlation (INCOMP::MLI), built on Melinder (2010). Tabulated for 5-20 wt% LiCl over -40 to 40 degC. Lithium chloride is a deep-cold secondary brine and desiccant; the Melinder incompressible path is used (over the Laliberte electrolyte correlation) because it carries the freezing line. The freezing point falls steeply with strength, so the table is mostly blank at low concentration and cold temperature: each blank cell sits below the freezing line at that strength, where the solution is no longer liquid, and the explorer will not interpolate across it. The 20 wt% ceiling stays below the model window (about 24 wt%) and below saturation. Concentrations are anhydrous LiCl. Values are for preliminary design; verify against vendor data for critical service.",
+  "water_ref_rho": 998.2
+}

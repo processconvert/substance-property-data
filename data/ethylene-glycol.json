@@ -54,6 +54,64 @@
     "sg"
   ],
   "formula": "C2H6O2",
+  "freeze_points": {
+    "points": [
+      {
+        "conc_pct": 10,
+        "freeze_C": -3.4
+      },
+      {
+        "conc_pct": 15,
+        "freeze_C": -5.4
+      },
+      {
+        "conc_pct": 20,
+        "freeze_C": -7.9
+      },
+      {
+        "conc_pct": 25,
+        "freeze_C": -11.0
+      },
+      {
+        "conc_pct": 30,
+        "freeze_C": -14.6
+      },
+      {
+        "conc_pct": 35,
+        "freeze_C": -18.8
+      },
+      {
+        "conc_pct": 40,
+        "freeze_C": -23.8
+      },
+      {
+        "conc_pct": 45,
+        "freeze_C": -29.5
+      },
+      {
+        "conc_pct": 50,
+        "freeze_C": -36.0
+      },
+      {
+        "conc_pct": 55,
+        "freeze_C": -43.2
+      },
+      {
+        "conc_pct": 60,
+        "freeze_C": -51.2
+      }
+    ],
+    "validation": {
+      "computed_C": -23.8,
+      "conc_pct": 40,
+      "error_C": 0.04,
+      "expected_C": -23.84,
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions (all data at 20 degC), Ethylene glycol table: 40.0 mass % at 20 degC, freezing point depression = 23.84 degC (freezing point about -23.8 degC). This measured handbook freezing-point data is independent of the Melinder correlation underlying CoolProp's INCOMP::MEG, and the two agree to within 0.1 degC here.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "tol_C": 1.5,
+      "unit": "degC"
+    }
+  },
   "generated": "2026-06-07",
   "grid": {
     "cp": [

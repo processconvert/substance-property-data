@@ -1,0 +1,753 @@
+{
+  "aliases": [
+    "Methyl alcohol",
+    "Wood alcohol",
+    "Carbinol",
+    "MeOH"
+  ],
+  "axes": {
+    "conc_pct": [
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50
+    ],
+    "temp_C": [
+      -45,
+      -40,
+      -35,
+      -30,
+      -25,
+      -20,
+      -15,
+      -10,
+      -5,
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40
+    ]
+  },
+  "cas": "67-56-1",
+  "category": "Coolants",
+  "concentration_range": {
+    "max_pct": 50,
+    "min_pct": 10,
+    "step_pct": 5
+  },
+  "derived": [
+    "sg"
+  ],
+  "formula": "CH3OH",
+  "freeze_points": {
+    "points": [
+      {
+        "conc_pct": 10,
+        "freeze_C": -6.5
+      },
+      {
+        "conc_pct": 15,
+        "freeze_C": -10.6
+      },
+      {
+        "conc_pct": 20,
+        "freeze_C": -15.1
+      },
+      {
+        "conc_pct": 25,
+        "freeze_C": -20.1
+      },
+      {
+        "conc_pct": 30,
+        "freeze_C": -25.7
+      },
+      {
+        "conc_pct": 35,
+        "freeze_C": -31.9
+      },
+      {
+        "conc_pct": 40,
+        "freeze_C": -38.7
+      },
+      {
+        "conc_pct": 45,
+        "freeze_C": -46.2
+      },
+      {
+        "conc_pct": 50,
+        "freeze_C": -54.5
+      }
+    ],
+    "validation": {
+      "computed_C": -15.1,
+      "conc_pct": 20,
+      "error_C": 0.08,
+      "expected_C": -15.02,
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions, Methanol table: 20.0 mass % methanol at 20 degC, freezing point depression = 15.02 degC (freezing point about -15.0 degC). The CRC freezing-point-depression column agrees with the Melinder freeze curve underlying CoolProp's INCOMP::MMA to within 0.1 degC across this range.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "tol_C": 1.5,
+      "unit": "degC"
+    }
+  },
+  "generated": "2026-06-07",
+  "grid": {
+    "cp": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        2982,
+        2874
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        3056,
+        2947
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        3242,
+        3129,
+        3018
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        3435,
+        3312,
+        3199,
+        3088
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        3633,
+        3499,
+        3380,
+        3268,
+        3155
+      ],
+      [
+        null,
+        null,
+        null,
+        3828,
+        3687,
+        3561,
+        3445,
+        3334,
+        3220
+      ],
+      [
+        null,
+        null,
+        4006,
+        3868,
+        3738,
+        3619,
+        3507,
+        3397,
+        3282
+      ],
+      [
+        null,
+        4154,
+        4030,
+        3905,
+        3786,
+        3674,
+        3566,
+        3456,
+        3341
+      ],
+      [
+        4251,
+        4159,
+        4050,
+        3938,
+        3830,
+        3725,
+        3621,
+        3512,
+        3396
+      ],
+      [
+        4241,
+        4163,
+        4068,
+        3969,
+        3870,
+        3772,
+        3671,
+        3563,
+        3447
+      ],
+      [
+        4230,
+        4165,
+        4083,
+        3996,
+        3907,
+        3815,
+        3717,
+        3610,
+        3494
+      ],
+      [
+        4219,
+        4165,
+        4095,
+        4019,
+        3938,
+        3852,
+        3758,
+        3652,
+        3535
+      ],
+      [
+        4208,
+        4164,
+        4104,
+        4037,
+        3965,
+        3885,
+        3793,
+        3688,
+        3572
+      ],
+      [
+        4198,
+        4161,
+        4110,
+        4052,
+        3986,
+        3911,
+        3822,
+        3719,
+        3603
+      ],
+      [
+        4187,
+        4156,
+        4112,
+        4062,
+        4003,
+        3932,
+        3845,
+        3743,
+        3628
+      ],
+      [
+        4177,
+        4149,
+        4111,
+        4067,
+        4013,
+        3946,
+        3862,
+        3760,
+        3646
+      ],
+      [
+        4168,
+        4141,
+        4107,
+        4066,
+        4017,
+        3953,
+        3871,
+        3771,
+        3658
+      ],
+      [
+        4159,
+        4130,
+        4098,
+        4061,
+        4014,
+        3953,
+        3873,
+        3774,
+        3662
+      ]
+    ],
+    "mu": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        35.62,
+        30.271
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        25.562,
+        22.059
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        20.86,
+        18.737,
+        16.406
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        16.392,
+        15.4,
+        14.012,
+        12.439
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        12.405,
+        12.215,
+        11.597,
+        10.68,
+        9.603
+      ],
+      [
+        null,
+        null,
+        null,
+        9.071,
+        9.356,
+        9.283,
+        8.899,
+        8.287,
+        7.541
+      ],
+      [
+        null,
+        null,
+        6.449,
+        6.946,
+        7.195,
+        7.187,
+        6.95,
+        6.538,
+        6.017
+      ],
+      [
+        null,
+        4.497,
+        5.03,
+        5.421,
+        5.635,
+        5.662,
+        5.518,
+        5.24,
+        4.873
+      ],
+      [
+        3.107,
+        3.582,
+        3.996,
+        4.308,
+        4.49,
+        4.534,
+        4.45,
+        4.261,
+        4.0
+      ],
+      [
+        2.535,
+        2.905,
+        3.23,
+        3.48,
+        3.635,
+        3.686,
+        3.64,
+        3.512,
+        3.326
+      ],
+      [
+        2.103,
+        2.395,
+        2.653,
+        2.855,
+        2.986,
+        3.039,
+        3.017,
+        2.931,
+        2.797
+      ],
+      [
+        1.771,
+        2.004,
+        2.211,
+        2.377,
+        2.487,
+        2.538,
+        2.531,
+        2.473,
+        2.376
+      ],
+      [
+        1.512,
+        1.7,
+        1.868,
+        2.004,
+        2.097,
+        2.144,
+        2.146,
+        2.108,
+        2.038
+      ],
+      [
+        1.307,
+        1.46,
+        1.598,
+        1.71,
+        1.789,
+        1.832,
+        1.839,
+        1.813,
+        1.762
+      ],
+      [
+        1.143,
+        1.268,
+        1.382,
+        1.474,
+        1.541,
+        1.579,
+        1.589,
+        1.572,
+        1.534
+      ],
+      [
+        1.008,
+        1.112,
+        1.206,
+        1.284,
+        1.34,
+        1.373,
+        1.383,
+        1.372,
+        1.343
+      ],
+      [
+        0.897,
+        0.984,
+        1.062,
+        1.127,
+        1.174,
+        1.203,
+        1.212,
+        1.205,
+        1.182
+      ],
+      [
+        0.803,
+        0.876,
+        0.942,
+        0.996,
+        1.036,
+        1.06,
+        1.068,
+        1.063,
+        1.044
+      ]
+    ],
+    "rho": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        962.0,
+        955.7
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        959.4,
+        952.8
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        962.7,
+        956.9,
+        949.9
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        965.7,
+        960.5,
+        954.2,
+        947.0
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        968.5,
+        963.9,
+        958.2,
+        951.6,
+        944.0
+      ],
+      [
+        null,
+        null,
+        null,
+        971.5,
+        967.1,
+        961.9,
+        955.8,
+        948.8,
+        941.0
+      ],
+      [
+        null,
+        null,
+        974.9,
+        970.5,
+        965.6,
+        959.9,
+        953.4,
+        946.1,
+        938.0
+      ],
+      [
+        null,
+        979.1,
+        974.3,
+        969.3,
+        963.9,
+        957.8,
+        950.9,
+        943.3,
+        934.9
+      ],
+      [
+        984.5,
+        978.8,
+        973.5,
+        968.0,
+        962.1,
+        955.6,
+        948.4,
+        940.4,
+        931.8
+      ],
+      [
+        984.4,
+        978.3,
+        972.5,
+        966.6,
+        960.2,
+        953.3,
+        945.7,
+        937.5,
+        928.6
+      ],
+      [
+        984.1,
+        977.6,
+        971.4,
+        965.0,
+        958.2,
+        950.9,
+        943.0,
+        934.6,
+        925.5
+      ],
+      [
+        983.5,
+        976.6,
+        970.0,
+        963.2,
+        956.1,
+        948.5,
+        940.3,
+        931.6,
+        922.2
+      ],
+      [
+        982.6,
+        975.5,
+        968.5,
+        961.3,
+        953.8,
+        945.9,
+        937.5,
+        928.5,
+        919.0
+      ],
+      [
+        981.5,
+        974.1,
+        966.8,
+        959.3,
+        951.5,
+        943.3,
+        934.6,
+        925.4,
+        915.7
+      ],
+      [
+        980.2,
+        972.6,
+        964.9,
+        957.1,
+        949.0,
+        940.5,
+        931.6,
+        922.2,
+        912.4
+      ],
+      [
+        978.7,
+        970.8,
+        962.9,
+        954.8,
+        946.4,
+        937.7,
+        928.6,
+        919.0,
+        909.0
+      ],
+      [
+        977.0,
+        968.9,
+        960.7,
+        952.4,
+        943.7,
+        934.8,
+        925.5,
+        915.8,
+        905.6
+      ],
+      [
+        975.0,
+        966.7,
+        958.4,
+        949.8,
+        940.9,
+        931.7,
+        922.3,
+        912.5,
+        902.2
+      ]
+    ]
+  },
+  "incomp_code": "MMA",
+  "model": "CoolProp==6.6.0 - incompressible aqueous MMA correlation (Melinder 2010)",
+  "model_family": "coolprop_incomp",
+  "name": "Methanol",
+  "properties_available": [
+    "density",
+    "viscosity",
+    "heat_capacity",
+    "specific_gravity"
+  ],
+  "slug": "methanol",
+  "sources": [
+    "Melinder, A. (2010). Properties of Secondary Working Fluids for Indirect Systems, 2nd ed. International Institute of Refrigeration - the basis of CoolProp's incompressible aqueous methanol (INCOMP::MMA) correlation.",
+    "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions (density, freezing-point depression and viscosity at 20 degC; primary data Wolf 1966, Sohnel & Novotny 1985)"
+  ],
+  "temperature_range": {
+    "max_C": 40,
+    "min_C": -45,
+    "step_C": 5
+  },
+  "validation": [
+    {
+      "computed": 966.79,
+      "conc_pct": 20,
+      "error_pct": 0.019,
+      "expected": 966.6,
+      "property": "density",
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions: Density, Refractive Index, Freezing Point Depression, and Viscosity (all data at 20 degC; primary data Wolf 1966, Sohnel & Novotny 1985), Methanol table: 20.0 mass % methanol at 20 degC = 0.9666 g/cm3. This measured handbook data is independent of the Melinder correlation underlying CoolProp's INCOMP::MMA, so the check is a genuine cross-validation.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "temp_C": 20,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    },
+    {
+      "computed": 1.598,
+      "conc_pct": 20,
+      "error_pct": 0.38,
+      "expected": 1.604,
+      "property": "viscosity",
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions, Methanol table: 20.0 mass % methanol at 20 degC, eta = 1.604 mPa s. Viscosity tolerance is 3% because published solution-viscosity data and the correlation's viscosity term carry larger uncertainty than density.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "temp_C": 20,
+      "tol_pct": 3.0,
+      "unit": "cP"
+    }
+  ],
+  "validity_note": "CoolProp's incompressible aqueous methanol correlation (INCOMP::MMA), built on Melinder (2010). Tabulated for 10-50 wt% methanol over -45 to 40 degC. Methanol is a non-electrolyte freeze-protection brine, so it is modelled with CoolProp rather than the Laliberte electrolyte correlation. Each cell sits above the solution's freezing line at that strength: cells below it (where the solution is no longer liquid) are left blank rather than tabulated, and the explorer will not interpolate across them. Methanol is volatile and flammable, so closed handling is assumed. Values are for preliminary design; verify against vendor data for critical service.",
+  "water_ref_rho": 998.2
+}

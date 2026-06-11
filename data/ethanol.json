@@ -1,0 +1,684 @@
+{
+  "aliases": [
+    "Ethyl alcohol",
+    "Grain alcohol",
+    "EtOH"
+  ],
+  "axes": {
+    "conc_pct": [
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50
+    ],
+    "temp_C": [
+      -35,
+      -30,
+      -25,
+      -20,
+      -15,
+      -10,
+      -5,
+      0,
+      5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40
+    ]
+  },
+  "cas": "64-17-5",
+  "category": "Coolants",
+  "concentration_range": {
+    "max_pct": 50,
+    "min_pct": 10,
+    "step_pct": 5
+  },
+  "derived": [
+    "sg"
+  ],
+  "formula": "C2H5OH",
+  "freeze_points": {
+    "points": [
+      {
+        "conc_pct": 10,
+        "freeze_C": -4.4
+      },
+      {
+        "conc_pct": 15,
+        "freeze_C": -7.4
+      },
+      {
+        "conc_pct": 20,
+        "freeze_C": -11.1
+      },
+      {
+        "conc_pct": 25,
+        "freeze_C": -15.4
+      },
+      {
+        "conc_pct": 30,
+        "freeze_C": -20.1
+      },
+      {
+        "conc_pct": 35,
+        "freeze_C": -24.9
+      },
+      {
+        "conc_pct": 40,
+        "freeze_C": -29.5
+      },
+      {
+        "conc_pct": 45,
+        "freeze_C": -33.8
+      },
+      {
+        "conc_pct": 50,
+        "freeze_C": -37.6
+      }
+    ],
+    "validation": {
+      "computed_C": -20.1,
+      "conc_pct": 30,
+      "error_C": 0.37,
+      "expected_C": -20.47,
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions, Ethanol table: 30.0 mass % ethanol at 20 degC, freezing point depression = 20.47 degC (freezing point about -20.5 degC). The check is taken at 30 wt%, where the CRC depression and the Melinder freeze curve agree closely.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "tol_C": 1.5,
+      "unit": "degC"
+    }
+  },
+  "generated": "2026-06-07",
+  "grid": {
+    "cp": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        3148
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        3396,
+        3228
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        3645,
+        3466,
+        3304
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        4072,
+        3885,
+        3702,
+        3533,
+        3378
+      ],
+      [
+        null,
+        null,
+        null,
+        4259,
+        4100,
+        3927,
+        3755,
+        3595,
+        3447
+      ],
+      [
+        null,
+        null,
+        4383,
+        4270,
+        4124,
+        3964,
+        3804,
+        3654,
+        3513
+      ],
+      [
+        null,
+        4431,
+        4377,
+        4277,
+        4145,
+        3998,
+        3850,
+        3709,
+        3575
+      ],
+      [
+        4402,
+        4413,
+        4369,
+        4282,
+        4163,
+        4029,
+        3893,
+        3761,
+        3634
+      ],
+      [
+        4376,
+        4393,
+        4360,
+        4284,
+        4179,
+        4057,
+        3931,
+        3809,
+        3688
+      ],
+      [
+        4351,
+        4372,
+        4349,
+        4285,
+        4193,
+        4083,
+        3967,
+        3852,
+        3738
+      ],
+      [
+        4326,
+        4353,
+        4338,
+        4286,
+        4205,
+        4106,
+        4000,
+        3892,
+        3783
+      ],
+      [
+        4303,
+        4335,
+        4329,
+        4287,
+        4216,
+        4127,
+        4029,
+        3929,
+        3824
+      ],
+      [
+        4285,
+        4320,
+        4321,
+        4288,
+        4227,
+        4147,
+        4056,
+        3961,
+        3861
+      ],
+      [
+        4272,
+        4310,
+        4316,
+        4291,
+        4238,
+        4164,
+        4080,
+        3989,
+        3893
+      ],
+      [
+        4267,
+        4305,
+        4316,
+        4296,
+        4249,
+        4181,
+        4101,
+        4014,
+        3920
+      ],
+      [
+        4270,
+        4307,
+        4320,
+        4304,
+        4261,
+        4197,
+        4120,
+        4035,
+        3942
+      ]
+    ],
+    "mu": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        59.675
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        47.475,
+        40.327
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        35.834,
+        32.255,
+        28.042
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        25.213,
+        25.578,
+        24.55,
+        22.548,
+        20.029
+      ],
+      [
+        null,
+        null,
+        null,
+        15.854,
+        17.304,
+        17.762,
+        17.312,
+        16.189,
+        14.666
+      ],
+      [
+        null,
+        null,
+        9.564,
+        11.176,
+        12.258,
+        12.701,
+        12.542,
+        11.917,
+        10.991
+      ],
+      [
+        null,
+        5.635,
+        6.977,
+        8.132,
+        8.943,
+        9.332,
+        9.316,
+        8.977,
+        8.414
+      ],
+      [
+        3.317,
+        4.281,
+        5.249,
+        6.093,
+        6.705,
+        7.032,
+        7.083,
+        6.907,
+        6.568
+      ],
+      [
+        2.638,
+        3.349,
+        4.062,
+        4.688,
+        5.154,
+        5.424,
+        5.502,
+        5.42,
+        5.219
+      ],
+      [
+        2.153,
+        2.689,
+        3.224,
+        3.695,
+        4.053,
+        4.273,
+        4.357,
+        4.328,
+        4.213
+      ],
+      [
+        1.797,
+        2.208,
+        2.616,
+        2.976,
+        3.253,
+        3.431,
+        3.512,
+        3.512,
+        3.45
+      ],
+      [
+        1.529,
+        1.849,
+        2.165,
+        2.444,
+        2.66,
+        2.803,
+        2.876,
+        2.89,
+        2.859
+      ],
+      [
+        1.319,
+        1.573,
+        1.821,
+        2.04,
+        2.21,
+        2.325,
+        2.388,
+        2.408,
+        2.395
+      ],
+      [
+        1.151,
+        1.355,
+        1.553,
+        1.727,
+        1.862,
+        1.954,
+        2.006,
+        2.027,
+        2.023
+      ],
+      [
+        1.012,
+        1.178,
+        1.339,
+        1.479,
+        1.587,
+        1.66,
+        1.703,
+        1.721,
+        1.721
+      ],
+      [
+        0.892,
+        1.031,
+        1.164,
+        1.278,
+        1.365,
+        1.424,
+        1.457,
+        1.471,
+        1.471
+      ]
+    ],
+    "rho": [
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        956.6
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        961.4,
+        952.7
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        965.3,
+        957.9,
+        948.9
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        973.1,
+        968.5,
+        962.3,
+        954.4,
+        945.0
+      ],
+      [
+        null,
+        null,
+        null,
+        975.2,
+        971.4,
+        966.1,
+        959.2,
+        950.8,
+        941.1
+      ],
+      [
+        null,
+        null,
+        977.6,
+        974.0,
+        969.4,
+        963.5,
+        956.0,
+        947.2,
+        937.2
+      ],
+      [
+        null,
+        980.7,
+        976.8,
+        972.6,
+        967.3,
+        960.7,
+        952.8,
+        943.6,
+        933.3
+      ],
+      [
+        985.0,
+        980.2,
+        975.8,
+        970.8,
+        965.0,
+        957.8,
+        949.4,
+        939.9,
+        929.4
+      ],
+      [
+        984.7,
+        979.4,
+        974.4,
+        968.9,
+        962.5,
+        954.8,
+        946.0,
+        936.1,
+        925.5
+      ],
+      [
+        984.0,
+        978.4,
+        972.8,
+        966.8,
+        959.8,
+        951.7,
+        942.5,
+        932.4,
+        921.5
+      ],
+      [
+        983.1,
+        977.0,
+        971.0,
+        964.4,
+        957.0,
+        948.5,
+        938.9,
+        928.5,
+        917.6
+      ],
+      [
+        981.8,
+        975.4,
+        968.9,
+        961.9,
+        954.0,
+        945.1,
+        935.3,
+        924.7,
+        913.6
+      ],
+      [
+        980.4,
+        973.5,
+        966.6,
+        959.2,
+        950.9,
+        941.7,
+        931.6,
+        920.8,
+        909.6
+      ],
+      [
+        978.7,
+        971.5,
+        964.2,
+        956.4,
+        947.7,
+        938.2,
+        927.9,
+        916.9,
+        905.6
+      ],
+      [
+        976.8,
+        969.2,
+        961.6,
+        953.4,
+        944.4,
+        934.6,
+        924.1,
+        913.0,
+        901.5
+      ],
+      [
+        974.7,
+        966.8,
+        958.8,
+        950.3,
+        941.0,
+        931.0,
+        920.3,
+        909.0,
+        897.5
+      ]
+    ]
+  },
+  "incomp_code": "MEA",
+  "model": "CoolProp==6.6.0 - incompressible aqueous MEA correlation (Melinder 2010)",
+  "model_family": "coolprop_incomp",
+  "name": "Ethanol",
+  "properties_available": [
+    "density",
+    "viscosity",
+    "heat_capacity",
+    "specific_gravity"
+  ],
+  "slug": "ethanol",
+  "sources": [
+    "Melinder, A. (2010). Properties of Secondary Working Fluids for Indirect Systems, 2nd ed. International Institute of Refrigeration - the basis of CoolProp's incompressible aqueous ethanol (INCOMP::MEA) correlation.",
+    "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions (density, freezing-point depression and viscosity at 20 degC)"
+  ],
+  "temperature_range": {
+    "max_C": 40,
+    "min_C": -35,
+    "step_C": 5
+  },
+  "validation": [
+    {
+      "computed": 968.92,
+      "conc_pct": 20,
+      "error_pct": 0.022,
+      "expected": 968.7,
+      "property": "density",
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions (all data at 20 degC), Ethanol table: 20.0 mass % ethanol at 20 degC = 0.9687 g/cm3. This measured handbook data is independent of the Melinder correlation underlying CoolProp's INCOMP::MEA.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "temp_C": 20,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    },
+    {
+      "computed": 2.165,
+      "conc_pct": 20,
+      "error_pct": 1.062,
+      "expected": 2.142,
+      "property": "viscosity",
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions, Ethanol table: 20.0 mass % ethanol at 20 degC, eta = 2.142 mPa s. Viscosity tolerance is 3% because published solution-viscosity data and the correlation's viscosity term carry larger uncertainty than density.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "temp_C": 20,
+      "tol_pct": 3.0,
+      "unit": "cP"
+    }
+  ],
+  "validity_note": "CoolProp's incompressible aqueous ethanol correlation (INCOMP::MEA), built on Melinder (2010). Tabulated for 10-50 wt% ethanol over -35 to 40 degC. Ethanol is a non-electrolyte, food-adjacent freeze-protection coolant, so it is modelled with CoolProp rather than the Laliberte electrolyte correlation. Each cell sits above the solution's freezing line; cells below it are left blank and the explorer will not interpolate across them. Ethanol is volatile and flammable, so closed handling is assumed. Values are for preliminary design; verify against vendor data for critical service.",
+  "water_ref_rho": 998.2
+}
