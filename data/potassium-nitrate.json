@@ -1,0 +1,430 @@
+{
+  "aliases": [
+    "Saltpetre",
+    "Niter",
+    "Nitre"
+  ],
+  "axes": {
+    "conc_pct": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18
+    ],
+    "temp_C": [
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60
+    ]
+  },
+  "cas": "7757-79-1",
+  "category": "Salts",
+  "concentration_range": {
+    "max_pct": 18,
+    "min_pct": 2,
+    "step_pct": 2
+  },
+  "derived": [
+    "sg"
+  ],
+  "formula": "KNO3",
+  "generated": "2026-06-07",
+  "grid": {
+    "cp": [
+      [
+        4093,
+        4006,
+        3926,
+        3850,
+        3777,
+        3706,
+        3638,
+        3571,
+        3506
+      ],
+      [
+        4091,
+        4006,
+        3926,
+        3850,
+        3777,
+        3706,
+        3637,
+        3570,
+        3504
+      ],
+      [
+        4090,
+        4006,
+        3926,
+        3850,
+        3777,
+        3706,
+        3637,
+        3569,
+        3504
+      ],
+      [
+        4090,
+        4006,
+        3927,
+        3851,
+        3777,
+        3706,
+        3637,
+        3569,
+        3503
+      ],
+      [
+        4090,
+        4007,
+        3928,
+        3852,
+        3778,
+        3706,
+        3637,
+        3569,
+        3503
+      ],
+      [
+        4091,
+        4008,
+        3929,
+        3853,
+        3779,
+        3707,
+        3638,
+        3570,
+        3504
+      ],
+      [
+        4092,
+        4009,
+        3930,
+        3854,
+        3780,
+        3708,
+        3638,
+        3570,
+        3504
+      ],
+      [
+        4093,
+        4011,
+        3932,
+        3855,
+        3781,
+        3710,
+        3640,
+        3571,
+        3505
+      ],
+      [
+        4095,
+        4012,
+        3934,
+        3857,
+        3783,
+        3711,
+        3641,
+        3573,
+        3506
+      ],
+      [
+        4097,
+        4015,
+        3936,
+        3859,
+        3785,
+        3713,
+        3643,
+        3575,
+        3508
+      ]
+    ],
+    "mu": [
+      [
+        1.125,
+        1.113,
+        1.103,
+        1.096,
+        1.091,
+        1.089,
+        1.09,
+        1.092,
+        1.097
+      ],
+      [
+        0.992,
+        0.984,
+        0.977,
+        0.973,
+        0.971,
+        0.971,
+        0.974,
+        0.978,
+        0.984
+      ],
+      [
+        0.883,
+        0.878,
+        0.874,
+        0.871,
+        0.871,
+        0.873,
+        0.877,
+        0.882,
+        0.889
+      ],
+      [
+        0.793,
+        0.789,
+        0.787,
+        0.786,
+        0.788,
+        0.791,
+        0.795,
+        0.801,
+        0.809
+      ],
+      [
+        0.716,
+        0.714,
+        0.714,
+        0.714,
+        0.717,
+        0.72,
+        0.726,
+        0.732,
+        0.741
+      ],
+      [
+        0.652,
+        0.651,
+        0.651,
+        0.653,
+        0.656,
+        0.66,
+        0.666,
+        0.673,
+        0.682
+      ],
+      [
+        0.596,
+        0.596,
+        0.597,
+        0.599,
+        0.603,
+        0.608,
+        0.614,
+        0.621,
+        0.63
+      ],
+      [
+        0.548,
+        0.549,
+        0.55,
+        0.553,
+        0.557,
+        0.562,
+        0.569,
+        0.576,
+        0.585
+      ],
+      [
+        0.506,
+        0.507,
+        0.51,
+        0.513,
+        0.517,
+        0.523,
+        0.529,
+        0.537,
+        0.545
+      ],
+      [
+        0.469,
+        0.471,
+        0.474,
+        0.477,
+        0.482,
+        0.487,
+        0.494,
+        0.501,
+        0.51
+      ]
+    ],
+    "rho": [
+      [
+        1011.7,
+        1024.5,
+        1037.5,
+        1050.8,
+        1064.2,
+        1077.9,
+        1091.9,
+        1106.0,
+        1120.5
+      ],
+      [
+        1010.7,
+        1023.3,
+        1036.2,
+        1049.3,
+        1062.6,
+        1076.1,
+        1089.9,
+        1103.9,
+        1118.2
+      ],
+      [
+        1009.4,
+        1021.9,
+        1034.6,
+        1047.5,
+        1060.7,
+        1074.1,
+        1087.8,
+        1101.6,
+        1115.8
+      ],
+      [
+        1007.8,
+        1020.2,
+        1032.8,
+        1045.6,
+        1058.7,
+        1072.0,
+        1085.5,
+        1099.2,
+        1113.2
+      ],
+      [
+        1006.1,
+        1018.4,
+        1030.9,
+        1043.6,
+        1056.5,
+        1069.7,
+        1083.1,
+        1096.7,
+        1110.6
+      ],
+      [
+        1004.2,
+        1016.4,
+        1028.7,
+        1041.4,
+        1054.2,
+        1067.3,
+        1080.6,
+        1094.1,
+        1107.9
+      ],
+      [
+        1002.1,
+        1014.2,
+        1026.5,
+        1039.0,
+        1051.7,
+        1064.7,
+        1077.9,
+        1091.4,
+        1105.1
+      ],
+      [
+        999.8,
+        1011.8,
+        1024.0,
+        1036.5,
+        1049.2,
+        1062.1,
+        1075.2,
+        1088.6,
+        1102.3
+      ],
+      [
+        997.4,
+        1009.3,
+        1021.5,
+        1033.9,
+        1046.5,
+        1059.3,
+        1072.4,
+        1085.8,
+        1099.4
+      ],
+      [
+        994.9,
+        1006.7,
+        1018.8,
+        1031.1,
+        1043.7,
+        1056.5,
+        1069.5,
+        1082.8,
+        1096.4
+      ]
+    ]
+  },
+  "model": "thermo==0.4.0 (chemicals==1.3.0) - Laliberte 2009 electrolyte correlation",
+  "model_family": "laliberte",
+  "name": "Potassium nitrate",
+  "properties_available": [
+    "density",
+    "viscosity",
+    "heat_capacity",
+    "specific_gravity"
+  ],
+  "slug": "potassium-nitrate",
+  "sources": [
+    "Laliberte, M. (2009). A Model for Calculating the Heat Capacity of Aqueous Solutions, with Updated Density and Viscosity Data. J. Chem. Eng. Data 54(6), 1725-1760. doi:10.1021/je8008123",
+    "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions (density and viscosity at 20 degC; primary data Wolf, A.V., 1966)",
+    "CRC Handbook of Chemistry and Physics - Aqueous Solubility of Inorganic Compounds at Various Temperatures (solubility bounds for the tabulated range)"
+  ],
+  "temperature_range": {
+    "max_C": 60,
+    "min_C": 15,
+    "step_C": 5
+  },
+  "validation": [
+    {
+      "computed": 1062.57,
+      "conc_pct": 10,
+      "error_pct": 0.012,
+      "expected": 1062.7,
+      "property": "density",
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions (all data at 20 degC; primary data Wolf, A.V., Aqueous Solutions and Body Fluids, Hoeber, 1966), potassium nitrate: 10.0 mass % at 20 degC = 1.0627 g/cm3.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "temp_C": 20,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    },
+    {
+      "computed": 0.971,
+      "conc_pct": 10,
+      "error_pct": 0.11,
+      "expected": 0.97,
+      "property": "viscosity",
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions (data at 20 degC; primary data Wolf 1966), potassium nitrate: 10.0 mass % at 20 degC, eta = 0.970 mPa s (below pure water's 1.002 mPa s, the negative viscosity-B-coefficient effect). Viscosity tolerance is 3% because published solution-viscosity data and the correlation's viscosity term carry larger uncertainty than density.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "temp_C": 20,
+      "tol_pct": 3.0,
+      "unit": "cP"
+    }
+  ],
+  "validity_note": "Laliberte (2009) aqueous-electrolyte correlation for KNO3-water. Tabulated for 2-18 wt% over 15-60 degC. Potassium nitrate solubility climbs steeply with temperature, from about 21 wt% at 15 degC to far higher when hot; the 18 wt% ceiling keeps the cold end of the table below saturation. Dilute potassium nitrate is slightly less viscous than water (a known electrolyte effect). Concentrations are KNO3 by mass. Values are for preliminary design; verify against vendor data for critical service.",
+  "water_ref_rho": 998.2
+}

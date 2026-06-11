@@ -1,0 +1,257 @@
+{
+  "aliases": [
+    "Salt cake",
+    "Glauber's salt (decahydrate)",
+    "Disodium sulfate"
+  ],
+  "axes": {
+    "conc_pct": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "temp_C": [
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60
+    ]
+  },
+  "cas": "7757-82-6",
+  "category": "Salts",
+  "concentration_range": {
+    "max_pct": 14,
+    "min_pct": 2,
+    "step_pct": 2
+  },
+  "derived": [
+    "sg"
+  ],
+  "formula": "Na2SO4",
+  "generated": "2026-06-07",
+  "grid": {
+    "mu": [
+      [
+        1.063,
+        1.131,
+        1.209,
+        1.3,
+        1.404,
+        1.524,
+        1.663
+      ],
+      [
+        0.944,
+        1.004,
+        1.073,
+        1.153,
+        1.244,
+        1.349,
+        1.469
+      ],
+      [
+        0.845,
+        0.899,
+        0.961,
+        1.031,
+        1.111,
+        1.203,
+        1.308
+      ],
+      [
+        0.762,
+        0.811,
+        0.866,
+        0.929,
+        1.001,
+        1.082,
+        1.175
+      ],
+      [
+        0.692,
+        0.736,
+        0.786,
+        0.842,
+        0.907,
+        0.98,
+        1.062
+      ],
+      [
+        0.632,
+        0.672,
+        0.717,
+        0.769,
+        0.827,
+        0.892,
+        0.966
+      ],
+      [
+        0.58,
+        0.617,
+        0.658,
+        0.705,
+        0.758,
+        0.817,
+        0.883
+      ],
+      [
+        0.535,
+        0.568,
+        0.607,
+        0.649,
+        0.698,
+        0.752,
+        0.812
+      ],
+      [
+        0.495,
+        0.526,
+        0.562,
+        0.601,
+        0.645,
+        0.695,
+        0.75
+      ]
+    ],
+    "rho": [
+      [
+        1016.3,
+        1034.7,
+        1053.3,
+        1072.1,
+        1091.2,
+        1110.6,
+        1130.2
+      ],
+      [
+        1015.0,
+        1033.2,
+        1051.6,
+        1070.3,
+        1089.3,
+        1108.5,
+        1128.1
+      ],
+      [
+        1013.4,
+        1031.5,
+        1049.8,
+        1068.4,
+        1087.2,
+        1106.4,
+        1125.9
+      ],
+      [
+        1011.7,
+        1029.6,
+        1047.7,
+        1066.2,
+        1085.0,
+        1104.1,
+        1123.5
+      ],
+      [
+        1009.7,
+        1027.5,
+        1045.6,
+        1063.9,
+        1082.7,
+        1101.7,
+        1121.1
+      ],
+      [
+        1007.6,
+        1025.2,
+        1043.2,
+        1061.5,
+        1080.2,
+        1099.2,
+        1118.5
+      ],
+      [
+        1005.3,
+        1022.9,
+        1040.8,
+        1059.0,
+        1077.6,
+        1096.5,
+        1115.8
+      ],
+      [
+        1002.8,
+        1020.3,
+        1038.2,
+        1056.3,
+        1074.9,
+        1093.8,
+        1113.1
+      ],
+      [
+        1000.3,
+        1017.7,
+        1035.4,
+        1053.5,
+        1072.0,
+        1090.9,
+        1110.2
+      ]
+    ]
+  },
+  "model": "thermo==0.4.0 (chemicals==1.3.0) - Laliberte 2009 electrolyte correlation",
+  "model_family": "laliberte",
+  "name": "Sodium sulfate",
+  "properties_available": [
+    "density",
+    "viscosity",
+    "specific_gravity"
+  ],
+  "slug": "sodium-sulfate",
+  "sources": [
+    "Laliberte, M. (2009). A Model for Calculating the Heat Capacity of Aqueous Solutions, with Updated Density and Viscosity Data. J. Chem. Eng. Data 54(6), 1725-1760. doi:10.1021/je8008123",
+    "Perry's Chemical Engineers' Handbook, 7th ed. (Perry & Green) - Table 2-96 Sodium Sulfate density, from International Critical Tables, Vol. III, p. 81",
+    "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions (viscosity at 20 degC)",
+    "Steiger, M. & Asmussen, S. (2008). Crystallization of sodium sulfate phases in porous materials: the phase diagram Na2SO4-H2O. Geochim. Cosmochim. Acta 72, 4291-4306. doi:10.1016/j.gca.2008.05.053 (solubility bounds for the tabulated range)"
+  ],
+  "temperature_range": {
+    "max_C": 60,
+    "min_C": 20,
+    "step_C": 5
+  },
+  "validation": [
+    {
+      "computed": 1110.56,
+      "conc_pct": 12,
+      "error_pct": 0.031,
+      "expected": 1110.9,
+      "property": "density",
+      "source_citation": "Perry, R.H. & Green, D.W. (eds.), Perry's Chemical Engineers' Handbook, 7th ed., Table 2-96 Sodium Sulfate (Na2SO4) (data from International Critical Tables, Vol. III, p. 81): 12 wt% Na2SO4 at 20 degC = 1.1109 g/cm3.",
+      "source_title": "Perry's Chemical Engineers' Handbook, 7th ed. (from International Critical Tables)",
+      "temp_C": 20,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    },
+    {
+      "computed": 1.524,
+      "conc_pct": 12,
+      "error_pct": 1.08,
+      "expected": 1.508,
+      "property": "viscosity",
+      "source_citation": "CRC Handbook of Chemistry and Physics, Concentrative Properties of Aqueous Solutions (data at 20 degC; primary data Wolf 1966, Sohnel & Novotny 1985), sodium sulfate: 12.0 mass % at 20 degC, eta = 1.508 mPa s. Viscosity tolerance is 3% because published solution-viscosity data and the correlation's viscosity term carry larger uncertainty than density.",
+      "source_title": "CRC Handbook of Chemistry and Physics - Concentrative Properties of Aqueous Solutions",
+      "temp_C": 20,
+      "tol_pct": 3.0,
+      "unit": "cP"
+    }
+  ],
+  "validity_note": "Laliberte (2009) aqueous-electrolyte correlation for Na2SO4-water, density and viscosity. Tabulated for 2-14 wt% over 20-60 degC. Sodium sulfate has an unusual solubility curve that collapses as it cools: stable saturation is only about 16 wt% Na2SO4 at 20 degC (as the decahydrate, Glauber's salt) and falls steeply below that, so the 20 degC floor and 14 wt% ceiling keep the whole table below saturation. Heat capacity is not tabulated: the correlation's Na2SO4 heat-capacity data begins at 25 degC, above this table's floor, so it is omitted rather than extrapolated. Concentrations are anhydrous Na2SO4; the decahydrate (Glauber's salt) is 44% Na2SO4 by mass. Values are for preliminary design; verify against vendor data for critical service.",
+  "water_ref_rho": 998.2
+}
