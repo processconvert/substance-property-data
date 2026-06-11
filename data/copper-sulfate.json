@@ -1,0 +1,338 @@
+{
+  "aliases": [
+    "Copper sulfate",
+    "Cupric sulfate",
+    "Blue vitriol",
+    "Bluestone"
+  ],
+  "axes": {
+    "conc_pct": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12
+    ],
+    "temp_C": [
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50,
+      55,
+      60
+    ]
+  },
+  "cas": "7758-98-7",
+  "category": "Salts",
+  "concentration_range": {
+    "max_pct": 12,
+    "min_pct": 2,
+    "step_pct": 2
+  },
+  "derived": [
+    "sg"
+  ],
+  "formula": "CuSO4",
+  "generated": "2026-06-07",
+  "grid": {
+    "cp": [
+      [
+        4093,
+        3997,
+        3901,
+        3807,
+        3713,
+        3619
+      ],
+      [
+        4093,
+        4002,
+        3911,
+        3821,
+        3731,
+        3643
+      ],
+      [
+        4093,
+        4005,
+        3917,
+        3829,
+        3743,
+        3657
+      ],
+      [
+        4093,
+        4006,
+        3920,
+        3835,
+        3750,
+        3667
+      ],
+      [
+        4093,
+        4008,
+        3923,
+        3839,
+        3755,
+        3673
+      ],
+      [
+        4094,
+        4009,
+        3925,
+        3842,
+        3759,
+        3678
+      ],
+      [
+        4094,
+        4010,
+        3927,
+        3844,
+        3762,
+        3681
+      ],
+      [
+        4095,
+        4012,
+        3928,
+        3846,
+        3764,
+        3683
+      ],
+      [
+        4097,
+        4013,
+        3930,
+        3848,
+        3766,
+        3686
+      ],
+      [
+        4099,
+        4015,
+        3932,
+        3850,
+        3769,
+        3688
+      ]
+    ],
+    "mu": [
+      [
+        1.261,
+        1.396,
+        1.546,
+        1.712,
+        1.895,
+        2.097
+      ],
+      [
+        1.097,
+        1.2,
+        1.314,
+        1.437,
+        1.572,
+        1.72
+      ],
+      [
+        0.966,
+        1.048,
+        1.137,
+        1.234,
+        1.339,
+        1.451
+      ],
+      [
+        0.86,
+        0.927,
+        0.999,
+        1.077,
+        1.161,
+        1.251
+      ],
+      [
+        0.771,
+        0.828,
+        0.888,
+        0.953,
+        1.022,
+        1.097
+      ],
+      [
+        0.698,
+        0.746,
+        0.797,
+        0.852,
+        0.911,
+        0.973
+      ],
+      [
+        0.635,
+        0.677,
+        0.722,
+        0.769,
+        0.82,
+        0.873
+      ],
+      [
+        0.581,
+        0.618,
+        0.658,
+        0.699,
+        0.743,
+        0.79
+      ],
+      [
+        0.535,
+        0.568,
+        0.603,
+        0.64,
+        0.679,
+        0.721
+      ],
+      [
+        0.495,
+        0.524,
+        0.556,
+        0.589,
+        0.624,
+        0.661
+      ]
+    ],
+    "rho": [
+      [
+        1019.7,
+        1040.9,
+        1062.9,
+        1085.6,
+        1109.0,
+        1133.1
+      ],
+      [
+        1018.7,
+        1039.8,
+        1061.7,
+        1084.2,
+        1107.5,
+        1131.4
+      ],
+      [
+        1017.4,
+        1038.5,
+        1060.2,
+        1082.6,
+        1105.8,
+        1129.6
+      ],
+      [
+        1015.9,
+        1036.9,
+        1058.5,
+        1080.8,
+        1103.8,
+        1127.5
+      ],
+      [
+        1014.2,
+        1035.0,
+        1056.6,
+        1078.8,
+        1101.7,
+        1125.3
+      ],
+      [
+        1012.3,
+        1033.0,
+        1054.5,
+        1076.6,
+        1099.4,
+        1122.9
+      ],
+      [
+        1010.2,
+        1030.8,
+        1052.2,
+        1074.2,
+        1096.9,
+        1120.3
+      ],
+      [
+        1007.9,
+        1028.5,
+        1049.7,
+        1071.6,
+        1094.3,
+        1117.5
+      ],
+      [
+        1005.5,
+        1026.0,
+        1047.1,
+        1068.9,
+        1091.5,
+        1114.7
+      ],
+      [
+        1002.9,
+        1023.3,
+        1044.4,
+        1066.1,
+        1088.5,
+        1111.6
+      ]
+    ]
+  },
+  "model": "thermo==0.4.0 (chemicals==1.3.0) - Laliberte 2009 electrolyte correlation",
+  "model_family": "laliberte",
+  "name": "Copper(II) sulfate",
+  "properties_available": [
+    "density",
+    "viscosity",
+    "heat_capacity",
+    "specific_gravity"
+  ],
+  "slug": "copper-sulfate",
+  "sources": [
+    "Laliberte, M. (2009). A Model for Calculating the Heat Capacity of Aqueous Solutions, with Updated Density and Viscosity Data. J. Chem. Eng. Data 54(6), 1725-1760. doi:10.1021/je8008123",
+    "CRC Handbook of Chemistry and Physics, 97th ed. (Haynes, ed., 2016) - Concentrative Properties of Aqueous Solutions (density and viscosity at 20 degC)",
+    "CRC Handbook of Chemistry and Physics - Aqueous Solubility of Inorganic Compounds at Various Temperatures (solubility bounds for the tabulated range)"
+  ],
+  "temperature_range": {
+    "max_C": 60,
+    "min_C": 15,
+    "step_C": 5
+  },
+  "validation": [
+    {
+      "computed": 1107.5,
+      "conc_pct": 10,
+      "error_pct": 0.045,
+      "expected": 1107.0,
+      "property": "density",
+      "source_citation": "Haynes, W.M. (ed.), CRC Handbook of Chemistry and Physics, 97th ed. (CRC Press, 2016), Concentrative Properties of Aqueous Solutions: Density, Refractive Index, Freezing Point Depression, and Viscosity, p. 5-120: 10.0 mass % CuSO4 at 20 degC = 1.1070 g/cm3 (primary data: Sohnel & Novotny 1985; Wolf 1966).",
+      "source_title": "CRC Handbook of Chemistry and Physics, 97th ed.",
+      "temp_C": 20,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    },
+    {
+      "computed": 1.572,
+      "conc_pct": 10,
+      "error_pct": 1.912,
+      "expected": 1.543,
+      "property": "viscosity",
+      "source_citation": "Haynes, W.M. (ed.), CRC Handbook of Chemistry and Physics, 97th ed. (CRC Press, 2016), Concentrative Properties of Aqueous Solutions, p. 5-120: 10.0 mass % CuSO4 at 20 degC, eta = 1.543 mPa s. Viscosity tolerance is 3% because published solution-viscosity data and the correlation's viscosity term carry larger uncertainty than density.",
+      "source_title": "CRC Handbook of Chemistry and Physics, 97th ed.",
+      "temp_C": 20,
+      "tol_pct": 3.0,
+      "unit": "cP"
+    }
+  ],
+  "validity_note": "Laliberte (2009) aqueous-electrolyte correlation for CuSO4-water. Tabulated for 2-12 wt% over 15-60 degC. The concentration ceiling stays below saturation at the cold end of the table: a saturated solution holds about 16 wt% CuSO4 at 15 degC, rising to about 29 wt% at 60 degC. Concentrations are anhydrous CuSO4; copper sulfate is usually sold as the pentahydrate (CuSO4.5H2O), which is 64% CuSO4 by mass, so convert before reading the table. Values are for preliminary design; verify against vendor data for critical service.",
+  "water_ref_rho": 998.2
+}

@@ -1,0 +1,228 @@
+{
+  "aliases": [
+    "Soda ash",
+    "Washing soda (decahydrate)",
+    "Disodium carbonate"
+  ],
+  "axes": {
+    "conc_pct": [
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14
+    ],
+    "temp_C": [
+      20,
+      25,
+      30,
+      35,
+      40
+    ]
+  },
+  "cas": "497-19-8",
+  "category": "Salts",
+  "concentration_range": {
+    "max_pct": 14,
+    "min_pct": 2,
+    "step_pct": 2
+  },
+  "derived": [
+    "sg"
+  ],
+  "formula": "Na2CO3",
+  "generated": "2026-06-07",
+  "grid": {
+    "cp": [
+      [
+        4081,
+        3993,
+        3916,
+        3850,
+        3792,
+        3742,
+        3698
+      ],
+      [
+        4080,
+        3992,
+        3916,
+        3850,
+        3793,
+        3742,
+        3698
+      ],
+      [
+        4079,
+        3992,
+        3917,
+        3851,
+        3794,
+        3743,
+        3700
+      ],
+      [
+        4079,
+        3993,
+        3918,
+        3853,
+        3795,
+        3745,
+        3701
+      ],
+      [
+        4080,
+        3994,
+        3920,
+        3855,
+        3797,
+        3747,
+        3703
+      ]
+    ],
+    "mu": [
+      [
+        1.114,
+        1.242,
+        1.393,
+        1.573,
+        1.791,
+        2.059,
+        2.391
+      ],
+      [
+        0.986,
+        1.096,
+        1.224,
+        1.376,
+        1.56,
+        1.783,
+        2.059
+      ],
+      [
+        0.88,
+        0.975,
+        1.086,
+        1.216,
+        1.372,
+        1.562,
+        1.794
+      ],
+      [
+        0.792,
+        0.875,
+        0.971,
+        1.084,
+        1.219,
+        1.382,
+        1.58
+      ],
+      [
+        0.717,
+        0.79,
+        0.875,
+        0.974,
+        1.092,
+        1.233,
+        1.404
+      ]
+    ],
+    "rho": [
+      [
+        1019.2,
+        1040.2,
+        1061.2,
+        1082.3,
+        1103.6,
+        1125.1,
+        1147.0
+      ],
+      [
+        1017.8,
+        1038.6,
+        1059.5,
+        1080.5,
+        1101.7,
+        1123.2,
+        1145.1
+      ],
+      [
+        1016.2,
+        1036.8,
+        1057.5,
+        1078.4,
+        1099.6,
+        1121.1,
+        1143.0
+      ],
+      [
+        1014.4,
+        1034.8,
+        1055.4,
+        1076.2,
+        1097.4,
+        1118.9,
+        1140.8
+      ],
+      [
+        1012.4,
+        1032.6,
+        1053.1,
+        1073.9,
+        1095.0,
+        1116.4,
+        1138.4
+      ]
+    ]
+  },
+  "model": "thermo==0.4.0 (chemicals==1.3.0) - Laliberte 2009 electrolyte correlation",
+  "model_family": "laliberte",
+  "name": "Sodium carbonate",
+  "properties_available": [
+    "density",
+    "viscosity",
+    "heat_capacity",
+    "specific_gravity"
+  ],
+  "slug": "sodium-carbonate",
+  "sources": [
+    "Laliberte, M. (2009). A Model for Calculating the Heat Capacity of Aqueous Solutions, with Updated Density and Viscosity Data. J. Chem. Eng. Data 54(6), 1725-1760. doi:10.1021/je8008123",
+    "CRC Handbook of Chemistry and Physics, 97th ed. (Haynes, ed., 2016) - Concentrative Properties of Aqueous Solutions (density and viscosity at 20 degC)",
+    "CRC Handbook of Chemistry and Physics - Aqueous Solubility of Inorganic Compounds at Various Temperatures (solubility bounds for the tabulated range)"
+  ],
+  "temperature_range": {
+    "max_C": 40,
+    "min_C": 20,
+    "step_C": 5
+  },
+  "validation": [
+    {
+      "computed": 1103.57,
+      "conc_pct": 10,
+      "error_pct": 0.061,
+      "expected": 1102.9,
+      "property": "density",
+      "source_citation": "Haynes, W.M. (ed.), CRC Handbook of Chemistry and Physics, 97th ed. (CRC Press, 2016), Concentrative Properties of Aqueous Solutions, p. 5-129: 10.0 mass % Na2CO3 at 20 degC = 1.1029 g/cm3. Perry's Chemical Engineers' Handbook, 7th ed. (Table 2-86 Sodium Carbonate) brackets the same point with 8% = 1.0816 and 12% = 1.1244 at 20 degC.",
+      "source_title": "CRC Handbook of Chemistry and Physics, 97th ed.",
+      "temp_C": 20,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    },
+    {
+      "computed": 1.791,
+      "conc_pct": 10,
+      "error_pct": 2.126,
+      "expected": 1.754,
+      "property": "viscosity",
+      "source_citation": "Haynes, W.M. (ed.), CRC Handbook of Chemistry and Physics, 97th ed. (CRC Press, 2016), Concentrative Properties of Aqueous Solutions, p. 5-129: 10.0 mass % Na2CO3 at 20 degC, eta = 1.754 mPa s. Viscosity tolerance is 3% because published solution-viscosity data and the correlation's viscosity term carry larger uncertainty than density.",
+      "source_title": "CRC Handbook of Chemistry and Physics, 97th ed.",
+      "temp_C": 20,
+      "tol_pct": 3.0,
+      "unit": "cP"
+    }
+  ],
+  "validity_note": "Laliberte (2009) aqueous-electrolyte correlation for Na2CO3-water. Tabulated for 2-14 wt% over 20-40 degC. Sodium carbonate solubility falls steeply toward low temperature (about 18 wt% at 20 degC but only 11 wt% at 10 degC), so the table floor is held at 20 degC and the ceiling at 14 wt% to keep every tabulated point below saturation with margin. Concentrations are anhydrous Na2CO3 (soda ash); washing soda is the decahydrate, 37% Na2CO3 by mass. Values are for preliminary design; verify against vendor data for critical service.",
+  "water_ref_rho": 998.2
+}
