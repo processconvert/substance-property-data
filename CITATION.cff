@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: "ProcessConvert Substance Property Data"
+message: "If you use this dataset, please cite it and the underlying papers."
+type: dataset
+authors:
+  - name: "ProcessConvert"
+    website: "https://www.processconvert.com"
+url: "https://www.processconvert.com/substances"
+repository-code: "https://github.com/processconvert/substance-property-data"
+license: CC-BY-4.0
+references:
+  - type: article
+    title: "A Model for Calculating the Heat Capacity of Aqueous Solutions, with Updated Density and Viscosity Data"
+    authors:
+      - family-names: "Laliberté"
+        given-names: "Marc"
+    journal: "Journal of Chemical & Engineering Data"
+    volume: 54
+    issue: 6
+    year: 2009
+  - type: book
+    title: "Properties of Secondary Working Fluids for Indirect Systems"
+    authors:
+      - family-names: "Melinder"
+        given-names: "Åke"
+    year: 2010
