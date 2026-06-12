@@ -1,0 +1,350 @@
+{
+  "aliases": [
+    "He",
+    "helium-4",
+    "GHe",
+    "gaseous helium"
+  ],
+  "axes": {
+    "pressure_bar": [
+      1,
+      2,
+      5,
+      10,
+      20,
+      50,
+      100,
+      200,
+      300
+    ],
+    "temp_C": [
+      -20,
+      0,
+      15,
+      25,
+      50,
+      75,
+      100
+    ]
+  },
+  "boundary_note": "Every tabulated state is single-phase. A grid cell is left blank only where the state at that pressure and temperature would be two-phase or liquid - at or above the saturation pressure at that temperature - and the explorer will not interpolate across such a cell. Because the critical temperature of helium is -267.95 degC, below the -20 degC floor of this grid, every (pressure, temperature) point tabulated here is a supercritical single-phase fluid, so no cell is blank.",
+  "cas": "7440-59-7",
+  "category": "Gases",
+  "coolprop_fluid": "Helium",
+  "derived": [],
+  "formula": "He",
+  "gas_kind": "pure",
+  "generated": "2026-06-07",
+  "grid": {
+    "cp": [
+      [
+        5193,
+        5193,
+        5194,
+        5194,
+        5195,
+        5198,
+        5203,
+        5209,
+        5213
+      ],
+      [
+        5193,
+        5193,
+        5194,
+        5194,
+        5195,
+        5197,
+        5199,
+        5204,
+        5207
+      ],
+      [
+        5193,
+        5193,
+        5193,
+        5194,
+        5194,
+        5196,
+        5198,
+        5201,
+        5203
+      ],
+      [
+        5193,
+        5193,
+        5193,
+        5194,
+        5194,
+        5195,
+        5197,
+        5199,
+        5200
+      ],
+      [
+        5193,
+        5193,
+        5193,
+        5193,
+        5193,
+        5194,
+        5194,
+        5195,
+        5195
+      ],
+      [
+        5193,
+        5193,
+        5193,
+        5193,
+        5193,
+        5193,
+        5193,
+        5192,
+        5191
+      ],
+      [
+        5193,
+        5193,
+        5193,
+        5193,
+        5193,
+        5192,
+        5191,
+        5190,
+        5188
+      ]
+    ],
+    "mu": [
+      [
+        17.753,
+        17.758,
+        17.774,
+        17.8,
+        17.851,
+        18.001,
+        18.237,
+        18.666,
+        19.05
+      ],
+      [
+        18.694,
+        18.699,
+        18.712,
+        18.735,
+        18.779,
+        18.907,
+        19.11,
+        19.481,
+        19.814
+      ],
+      [
+        19.388,
+        19.392,
+        19.404,
+        19.424,
+        19.462,
+        19.575,
+        19.753,
+        20.081,
+        20.377
+      ],
+      [
+        19.846,
+        19.849,
+        19.86,
+        19.877,
+        19.912,
+        20.014,
+        20.177,
+        20.476,
+        20.748
+      ],
+      [
+        20.971,
+        20.974,
+        20.984,
+        21.0,
+        21.032,
+        21.125,
+        21.274,
+        21.551,
+        21.803
+      ],
+      [
+        22.073,
+        22.076,
+        22.085,
+        22.1,
+        22.13,
+        22.217,
+        22.356,
+        22.615,
+        22.854
+      ],
+      [
+        23.154,
+        23.156,
+        23.165,
+        23.179,
+        23.206,
+        23.288,
+        23.418,
+        23.663,
+        23.889
+      ]
+    ],
+    "rho": [
+      [
+        0.1901,
+        0.3799,
+        0.9481,
+        1.8909,
+        3.7604,
+        9.2458,
+        18.0006,
+        34.2147,
+        48.9421
+      ],
+      [
+        0.1761,
+        0.3521,
+        0.8789,
+        1.7532,
+        3.4882,
+        8.5875,
+        16.7533,
+        31.9627,
+        45.8724
+      ],
+      [
+        0.167,
+        0.3338,
+        0.8333,
+        1.6624,
+        3.3086,
+        8.1523,
+        15.9258,
+        30.4595,
+        43.812
+      ],
+      [
+        0.1614,
+        0.3226,
+        0.8054,
+        1.607,
+        3.1988,
+        7.8859,
+        15.4181,
+        29.5336,
+        42.5383
+      ],
+      [
+        0.1489,
+        0.2977,
+        0.7432,
+        1.4832,
+        2.9537,
+        7.2902,
+        14.2802,
+        27.4479,
+        39.6564
+      ],
+      [
+        0.1382,
+        0.2763,
+        0.69,
+        1.3772,
+        2.7435,
+        6.7783,
+        13.2987,
+        25.6374,
+        37.1402
+      ],
+      [
+        0.129,
+        0.2578,
+        0.6439,
+        1.2853,
+        2.5612,
+        6.3335,
+        12.4435,
+        24.0509,
+        34.9241
+      ]
+    ]
+  },
+  "identity": {
+    "critical_p_bar": 2.276,
+    "critical_temp_C": -267.95,
+    "molar_mass_g_mol": 4.0026,
+    "normal_boiling_point_C": -268.93,
+    "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, helium (He, CAS 7440-59-7): molar mass, critical point and normal boiling point. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7440597&Action=Page",
+    "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems"
+  },
+  "model": "CoolProp==6.6.0 - reference Helmholtz equation of state for Helium (single-phase density, isobaric heat capacity and dynamic viscosity)",
+  "model_family": "coolprop_pure",
+  "name": "Helium",
+  "properties_available": [
+    "density",
+    "heat_capacity",
+    "viscosity"
+  ],
+  "slug": "helium",
+  "sources": [
+    "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems (REFPROP-derived isothermal tables), helium (CAS 7440-59-7)",
+    "CoolProp 6.6.0 - reference Helmholtz equation of state for Helium (Ortiz-Vega, Hall, Arp & Lemmon, 2019); dynamic viscosity from the Arp, McCarty & Friend, 1998 model"
+  ],
+  "validation": [
+    {
+      "computed": 0.1614,
+      "error_pct": 0.002,
+      "expected": 0.1614,
+      "pressure_bar": 1,
+      "property": "density",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, helium (He, CAS 7440-59-7), isothermal table at 298.15 K: density at 1 bar = 0.16139 kg/m3. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7440597&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    },
+    {
+      "computed": 42.5383,
+      "error_pct": 0.001,
+      "expected": 42.538,
+      "pressure_bar": 300,
+      "property": "density",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, helium (He, CAS 7440-59-7), isothermal table at 298.15 K: density at 300 bar = 42.538 kg/m3. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7440597&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    },
+    {
+      "computed": 5193.2,
+      "error_pct": 0.0,
+      "expected": 5193.2,
+      "pressure_bar": 1,
+      "property": "heat_capacity",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, helium (He, CAS 7440-59-7), isothermal table at 298.15 K: isobaric heat capacity Cp at 1 bar = 5193.2 J/kg.K. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7440597&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 2.0,
+      "unit": "J/kg.K"
+    },
+    {
+      "computed": 19.846,
+      "error_pct": 0.002,
+      "expected": 19.846,
+      "pressure_bar": 1,
+      "property": "viscosity",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, helium (He, CAS 7440-59-7), isothermal table at 298.15 K: dynamic viscosity at 1 bar = 19.846 uPa.s. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7440597&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 2.0,
+      "unit": "uPa.s"
+    }
+  ],
+  "validity_note": "CoolProp reference Helmholtz equation of state (Ortiz-Vega, Hall, Arp & Lemmon, 2019) for helium; dynamic viscosity from the Arp, McCarty & Friend, 1998 model. Single-phase density, isobaric heat capacity and dynamic viscosity, tabulated on a 1-300 bar (absolute) by -20 to 100 degC grid; two-phase, saturation and liquid states are out of scope for this page. The correlation is not extrapolated beyond the tabulated range. Values are for preliminary design; verify against vendor or reference data for critical service.",
+  "viscosity_unit": "uPa.s"
+}

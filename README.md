@@ -1,6 +1,6 @@
 # Substance Property Data
 
-Computed property data for industrial process chemicals, as machine-readable JSON: concentration × temperature grids (density, dynamic viscosity, specific heat capacity) for aqueous solutions — with freezing-point tables for the freeze-protection fluids and °Brix for sucrose — and saturation tables (pressure, liquid and vapour density) for refrigerants and pure fluids, including bubble/dew-point data for zeotropic blends.
+Computed property data for industrial process chemicals, as machine-readable JSON: concentration × temperature grids (density, dynamic viscosity, specific heat capacity) for aqueous solutions — with freezing-point tables for the freeze-protection fluids and °Brix for sucrose; saturation tables (pressure, liquid and vapour density) for refrigerants and pure fluids, including bubble/dew-point data for zeotropic blends; and single-phase pressure × temperature grids (density, isobaric heat capacity, dynamic viscosity) for compressed industrial and utility gases, up to 700 bar for hydrogen.
 
 Published and maintained by [ProcessConvert](https://www.processconvert.com), where each substance has an interactive property explorer:
 https://www.processconvert.com/substances
@@ -46,8 +46,8 @@ https://www.processconvert.com/substances
 | Zinc chloride | ZnCl₂ | 7646-85-7 | 5–50 wt% | 15–70 °C | ρ | Laliberté (2009) |
 | Sodium nitrate | NaNO₃ | 7631-99-4 | 2–40 wt% | 10–60 °C | ρ, μ, cp | Laliberté (2009) |
 | Potassium nitrate | KNO₃ | 7757-79-1 | 2–18 wt% | 15–60 °C | ρ, μ, cp | Laliberté (2009) |
-| Ammonium nitrate | NH₄NO₃ | 6484-52-2 | see file | 25 °C up — see file | ρ, μ | Laliberté (2009) |
-| Calcium nitrate | Ca(NO₃)₂ | 10124-37-5 | see file | 25 °C up — see file | ρ, μ | Laliberté (2009) |
+| Ammonium nitrate | NH₄NO₃ | 6484-52-2 | see file | see file | ρ, μ | Laliberté (2009) |
+| Calcium nitrate | Ca(NO₃)₂ | 10124-37-5 | see file | see file | ρ, μ | Laliberté (2009) |
 | Sodium bicarbonate | NaHCO₃ | 144-55-8 | 1–8 wt% | 10–50 °C | ρ | Laliberté (2009) |
 | Manganese sulfate | MnSO₄ | 7785-87-7 | see file | 20–25 °C | ρ, μ | Laliberté (2009) |
 | Barium chloride | BaCl₂ | 10361-37-2 | see file | see file | ρ, μ | Laliberté (2009) |
@@ -72,7 +72,22 @@ Saturation tables on a single temperature axis. Single-component fluids carry on
 
 All files also carry saturated liquid and vapour density columns (bubble-point liquid / dew-point vapour for blends).
 
-Each file declares its own valid ranges; values are tabulated only inside the published validity region of the underlying model, bounded below saturation for the aqueous salts and below the critical point for the pure fluids. No extrapolation. Honest-omission conventions: where a property column is absent from a table above, the model provides no usable coefficients for that property over the tabulated range — the value is omitted rather than approximated; and for the sub-zero heat-transfer fluids, grid cells below the solution's freezing line at that concentration are `null`.
+## Compressed & utility gases
+
+Single-phase properties on a pressure (bar absolute) × temperature (°C) grid: density (kg/m³), isobaric heat capacity (J/kg·K) and dynamic viscosity (µPa·s), computed from each fluid's reference Helmholtz-energy equation of state. Every tabulated state is single-phase; any grid cell that would fall at or inside the two-phase region is `null` (for the fluids below, the whole window is supercritical, so no cell is null). Each file carries a cited identity block (molar mass, critical point, normal boiling point).
+
+| Gas | Formula | CAS | Pressure | Temperature | Properties | Reference EoS |
+|---|---|---|---|---|---|---|
+| Nitrogen | N₂ | 7727-37-9 | 1–500 bar | −20–100 °C | ρ, cp, μ | Span et al. (2000) |
+| Oxygen | O₂ | 7782-44-7 | 1–200 bar | −20–100 °C | ρ, cp, μ | Schmidt & Wagner (1985) |
+| Hydrogen | H₂ | 1333-74-0 | 1–700 bar (incl. 350/700 bar storage pressures) | −20–100 °C | ρ, cp, μ | Leachman et al. (2009) |
+| Methane | CH₄ | 74-82-8 | 1–200 bar | −20–100 °C | ρ, cp, μ | Setzmann & Wagner (1991) |
+| Argon | Ar | 7440-37-1 | 1–300 bar | −20–100 °C | ρ, cp, μ | Tegeler, Span & Wagner (1999) |
+| Helium | He | 7440-59-7 | 1–300 bar | −20–100 °C | ρ, cp, μ | Ortiz-Vega et al. (2019) |
+
+Air (as a pseudo-pure mixture) is planned; it is held pending an approved citable validation source and will be added under the same format.
+
+Each file declares its own valid ranges; values are tabulated only inside the published validity region of the underlying model, bounded below saturation for the aqueous salts, below the critical point for the saturation tables, and single-phase for the gas grids. No extrapolation. Honest-omission conventions: where a property column is absent from a table above, the model provides no usable coefficients for that property over the tabulated range — the value is omitted rather than approximated; for the sub-zero heat-transfer fluids, grid cells below the solution's freezing line at that concentration are `null`.
 
 ## How the values are produced
 
@@ -80,7 +95,7 @@ No value in this repository is hand-authored. Grids are computed by a determinis
 
 - **Laliberté, M. (2009).** "A Model for Calculating the Heat Capacity of Aqueous Solutions, with Updated Density and Viscosity Data." *Journal of Chemical & Engineering Data*, 54(6), 1725–1760 — via the `thermo`/`chemicals` Python libraries.
 - **Melinder, Å. (2010).** *Properties of Secondary Working Fluids for Indirect Systems*, IIR — via CoolProp incompressible solutions.
-- **CoolProp reference Helmholtz-energy equations of state and mixture models** (Bell et al., 2014, *Ind. Eng. Chem. Res.* 53(6)) for the pure fluids and refrigerant blends, with saturation points checked against NIST WebBook (SRD 69) published values for single-component fluids and named manufacturer engineering tables (REFPROP-derived) for blends.
+- **CoolProp reference Helmholtz-energy equations of state, mixture models and transport-property correlations** (Bell et al., 2014, *Ind. Eng. Chem. Res.* 53(6)) for the pure fluids, refrigerant blends and compressed gases — saturation and compressed-state points checked against NIST WebBook (SRD 69) published values for single-component fluids, and named manufacturer engineering tables (REFPROP-derived) for blends.
 
 Every file carries `validation` entries: independently cited reference points (property, state point, expected value, tolerance, source citation — CRC Handbook 97th ed., Perry's, ICT, NBS Circular 440, NIST WebBook, named manufacturer saturation tables) that the generated data is checked against before publication. A value that fails that check is not published. Full methodology: https://www.processconvert.com/methodology
 
@@ -101,7 +116,7 @@ model, sources, validation,
 validity_note, generated         provenance and checks
 ```
 
-**Pure fluids** — one JSON per fluid:
+**Pure fluids (saturation)** — one JSON per fluid:
 
 ```text
 name, formula, cas, designation  identification (refrigerant designation)
@@ -115,22 +130,35 @@ model, sources, validation,
 validity_note, generated         provenance and checks
 ```
 
+**Compressed gases** — one JSON per gas:
+
+```text
+name, formula, cas               identification
+axes                             pressure_bar (absolute), temp_C
+grid                             rho / cp / mu arrays, rows = pressure, cols = temperature
+                                 (mu in µPa·s; any two-phase/liquid state is null)
+identity                         molar mass, critical T and P, normal boiling point (cited)
+boundary_note                    single-phase rule as applied to this fluid
+model, sources, validation,
+validity_note, generated         provenance and checks
+```
+
 ### Example (Python)
 
 ```python
 import json
 
-with open("data/r-410a.json") as f:
+with open("data/hydrogen.json") as f:
     s = json.load(f)
 
-temps = s["axes"]["temp_C"]
-i = temps.index(25)
+p = s["axes"]["pressure_bar"].index(700)
+t = s["axes"]["temp_C"].index(25)
 
-# R-410A at 25 °C: bubble and dew pressure (kPa absolute)
-print(s["sat"]["p_bubble_kPa"][i], s["sat"]["p_dew_kPa"][i])
+# Hydrogen density at 700 bar, 25 °C (kg/m³)
+print(s["grid"]["rho"][p][t])
 ```
 
-Interpolation between points is appropriate inside the declared ranges (bilinear for the aqueous grids, linear along the saturation line for pure fluids); do not interpolate across `null` cells and do not extrapolate beyond the declared ranges or toward the critical point.
+Interpolation between points is appropriate inside the declared ranges (bilinear for the concentration and pressure grids, linear along the saturation line for pure fluids); do not interpolate across `null` cells and do not extrapolate beyond the declared ranges or toward the critical point.
 
 ## Intended use and limitations
 

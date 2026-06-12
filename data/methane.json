@@ -1,0 +1,328 @@
+{
+  "aliases": [
+    "CH4",
+    "natural gas (pure component)",
+    "marsh gas",
+    "R-50"
+  ],
+  "axes": {
+    "pressure_bar": [
+      1,
+      2,
+      5,
+      10,
+      20,
+      50,
+      100,
+      200
+    ],
+    "temp_C": [
+      -20,
+      0,
+      15,
+      25,
+      50,
+      75,
+      100
+    ]
+  },
+  "boundary_note": "Every tabulated state is single-phase. A grid cell is left blank only where the state at that pressure and temperature would be two-phase or liquid - at or above the saturation pressure at that temperature - and the explorer will not interpolate across such a cell. Because the critical temperature of methane is -82.59 degC, below the -20 degC floor of this grid, every (pressure, temperature) point tabulated here is a supercritical single-phase fluid, so no cell is blank.",
+  "cas": "74-82-8",
+  "category": "Gases",
+  "coolprop_fluid": "Methane",
+  "derived": [],
+  "formula": "CH4",
+  "gas_kind": "pure",
+  "generated": "2026-06-07",
+  "grid": {
+    "cp": [
+      [
+        2149,
+        2158,
+        2186,
+        2235,
+        2345,
+        2802,
+        4009,
+        4111
+      ],
+      [
+        2181,
+        2188,
+        2211,
+        2250,
+        2335,
+        2653,
+        3370,
+        3899
+      ],
+      [
+        2210,
+        2216,
+        2236,
+        2269,
+        2341,
+        2596,
+        3125,
+        3697
+      ],
+      [
+        2232,
+        2237,
+        2255,
+        2286,
+        2350,
+        2573,
+        3018,
+        3570
+      ],
+      [
+        2293,
+        2298,
+        2313,
+        2337,
+        2388,
+        2555,
+        2865,
+        3320
+      ],
+      [
+        2365,
+        2369,
+        2380,
+        2400,
+        2442,
+        2573,
+        2804,
+        3168
+      ],
+      [
+        2443,
+        2447,
+        2457,
+        2473,
+        2507,
+        2614,
+        2795,
+        3089
+      ]
+    ],
+    "mu": [
+      [
+        9.725,
+        9.737,
+        9.776,
+        9.85,
+        10.03,
+        10.91,
+        13.997,
+        23.701
+      ],
+      [
+        10.39,
+        10.402,
+        10.442,
+        10.515,
+        10.686,
+        11.432,
+        13.649,
+        20.883
+      ],
+      [
+        10.877,
+        10.889,
+        10.929,
+        11.001,
+        11.165,
+        11.843,
+        13.691,
+        19.615
+      ],
+      [
+        11.196,
+        11.209,
+        11.249,
+        11.32,
+        11.48,
+        12.122,
+        13.792,
+        19.044
+      ],
+      [
+        11.978,
+        11.991,
+        12.03,
+        12.099,
+        12.25,
+        12.821,
+        14.183,
+        18.242
+      ],
+      [
+        12.738,
+        12.751,
+        12.789,
+        12.856,
+        12.999,
+        13.518,
+        14.681,
+        17.982
+      ],
+      [
+        13.479,
+        13.491,
+        13.528,
+        13.592,
+        13.728,
+        14.206,
+        15.231,
+        18.018
+      ]
+    ],
+    "rho": [
+      [
+        0.7645,
+        1.5337,
+        3.8699,
+        7.8622,
+        16.2439,
+        45.1659,
+        108.4457,
+        217.7813
+      ],
+      [
+        0.7081,
+        1.4195,
+        3.574,
+        7.2343,
+        14.826,
+        39.9765,
+        90.0402,
+        186.6819
+      ],
+      [
+        0.6709,
+        1.3445,
+        3.3811,
+        6.8292,
+        13.9324,
+        36.9757,
+        80.8557,
+        167.7537
+      ],
+      [
+        0.6483,
+        1.2988,
+        3.2639,
+        6.5848,
+        13.4002,
+        35.2668,
+        75.9919,
+        157.0944
+      ],
+      [
+        0.5979,
+        1.1972,
+        3.0045,
+        6.047,
+        12.2459,
+        31.7255,
+        66.5959,
+        135.9285
+      ],
+      [
+        0.5547,
+        1.1105,
+        2.784,
+        5.5935,
+        11.2877,
+        28.9274,
+        59.7022,
+        120.3973
+      ],
+      [
+        0.5174,
+        1.0356,
+        2.5941,
+        5.2053,
+        10.4769,
+        26.6413,
+        54.3472,
+        108.5414
+      ]
+    ]
+  },
+  "identity": {
+    "critical_p_bar": 45.992,
+    "critical_temp_C": -82.59,
+    "molar_mass_g_mol": 16.0428,
+    "normal_boiling_point_C": -161.48,
+    "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, methane (CH4, CAS 74-82-8): molar mass, critical point and normal boiling point. https://webbook.nist.gov/cgi/fluid.cgi?ID=C74828&Action=Page",
+    "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems"
+  },
+  "model": "CoolProp==6.6.0 - reference Helmholtz equation of state for Methane (single-phase density, isobaric heat capacity and dynamic viscosity)",
+  "model_family": "coolprop_pure",
+  "name": "Methane",
+  "properties_available": [
+    "density",
+    "heat_capacity",
+    "viscosity"
+  ],
+  "slug": "methane",
+  "sources": [
+    "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems (REFPROP-derived isothermal tables), methane (CAS 74-82-8)",
+    "CoolProp 6.6.0 - reference Helmholtz equation of state for Methane (Setzmann & Wagner, 1991); dynamic viscosity from the Quinones-Cisneros & Deiters, 2006 model"
+  ],
+  "validation": [
+    {
+      "computed": 0.6483,
+      "error_pct": 0.0,
+      "expected": 0.6483,
+      "pressure_bar": 1,
+      "property": "density",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, methane (CH4, CAS 74-82-8), isothermal table at 298.15 K: density at 1 bar = 0.64828 kg/m3. https://webbook.nist.gov/cgi/fluid.cgi?ID=C74828&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    },
+    {
+      "computed": 157.0944,
+      "error_pct": 0.003,
+      "expected": 157.09,
+      "pressure_bar": 200,
+      "property": "density",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, methane (CH4, CAS 74-82-8), isothermal table at 298.15 K: density at 200 bar = 157.09 kg/m3. https://webbook.nist.gov/cgi/fluid.cgi?ID=C74828&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    },
+    {
+      "computed": 2231.6,
+      "error_pct": 0.0,
+      "expected": 2231.6,
+      "pressure_bar": 1,
+      "property": "heat_capacity",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, methane (CH4, CAS 74-82-8), isothermal table at 298.15 K: isobaric heat capacity Cp at 1 bar = 2231.6 J/kg.K. https://webbook.nist.gov/cgi/fluid.cgi?ID=C74828&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 2.0,
+      "unit": "J/kg.K"
+    },
+    {
+      "computed": 11.196,
+      "error_pct": 1.085,
+      "expected": 11.076,
+      "pressure_bar": 1,
+      "property": "viscosity",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, methane (CH4, CAS 74-82-8), isothermal table at 298.15 K: dynamic viscosity at 1 bar = 11.076 uPa.s. https://webbook.nist.gov/cgi/fluid.cgi?ID=C74828&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 2.0,
+      "unit": "uPa.s"
+    }
+  ],
+  "validity_note": "CoolProp reference Helmholtz equation of state (Setzmann & Wagner, 1991) for methane; dynamic viscosity from the Quinones-Cisneros & Deiters, 2006 model. Single-phase density, isobaric heat capacity and dynamic viscosity, tabulated on a 1-200 bar (absolute) by -20 to 100 degC grid; two-phase, saturation and liquid states are out of scope for this page. The correlation is not extrapolated beyond the tabulated range. Values are for preliminary design; verify against vendor or reference data for critical service.",
+  "viscosity_unit": "uPa.s"
+}

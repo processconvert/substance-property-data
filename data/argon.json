@@ -1,0 +1,349 @@
+{
+  "aliases": [
+    "Ar",
+    "GAR",
+    "gaseous argon"
+  ],
+  "axes": {
+    "pressure_bar": [
+      1,
+      2,
+      5,
+      10,
+      20,
+      50,
+      100,
+      200,
+      300
+    ],
+    "temp_C": [
+      -20,
+      0,
+      15,
+      25,
+      50,
+      75,
+      100
+    ]
+  },
+  "boundary_note": "Every tabulated state is single-phase. A grid cell is left blank only where the state at that pressure and temperature would be two-phase or liquid - at or above the saturation pressure at that temperature - and the explorer will not interpolate across such a cell. Because the critical temperature of argon is -122.46 degC, below the -20 degC floor of this grid, every (pressure, temperature) point tabulated here is a supercritical single-phase fluid, so no cell is blank.",
+  "cas": "7440-37-1",
+  "category": "Gases",
+  "coolprop_fluid": "Argon",
+  "derived": [],
+  "formula": "Ar",
+  "gas_kind": "pure",
+  "generated": "2026-06-07",
+  "grid": {
+    "cp": [
+      [
+        522,
+        524,
+        529,
+        539,
+        558,
+        623,
+        745,
+        933,
+        960
+      ],
+      [
+        522,
+        523,
+        528,
+        536,
+        551,
+        602,
+        692,
+        840,
+        890
+      ],
+      [
+        522,
+        523,
+        527,
+        534,
+        547,
+        590,
+        665,
+        790,
+        845
+      ],
+      [
+        522,
+        523,
+        526,
+        533,
+        545,
+        584,
+        651,
+        763,
+        818
+      ],
+      [
+        521,
+        522,
+        525,
+        530,
+        540,
+        571,
+        623,
+        711,
+        763
+      ],
+      [
+        521,
+        522,
+        524,
+        529,
+        537,
+        562,
+        604,
+        675,
+        721
+      ],
+      [
+        521,
+        522,
+        524,
+        527,
+        534,
+        556,
+        590,
+        649,
+        689
+      ]
+    ],
+    "mu": [
+      [
+        19.693,
+        19.713,
+        19.777,
+        19.889,
+        20.141,
+        21.133,
+        23.625,
+        31.03,
+        40.14
+      ],
+      [
+        21.016,
+        21.035,
+        21.093,
+        21.195,
+        21.423,
+        22.294,
+        24.393,
+        30.388,
+        37.765
+      ],
+      [
+        21.987,
+        22.005,
+        22.059,
+        22.155,
+        22.367,
+        23.165,
+        25.043,
+        30.308,
+        36.697
+      ],
+      [
+        22.624,
+        22.641,
+        22.693,
+        22.785,
+        22.987,
+        23.743,
+        25.497,
+        30.372,
+        36.232
+      ],
+      [
+        24.182,
+        24.198,
+        24.246,
+        24.329,
+        24.511,
+        25.178,
+        26.683,
+        30.797,
+        35.663
+      ],
+      [
+        25.696,
+        25.71,
+        25.754,
+        25.83,
+        25.995,
+        26.59,
+        27.907,
+        31.463,
+        35.643
+      ],
+      [
+        27.167,
+        27.18,
+        27.22,
+        27.29,
+        27.441,
+        27.978,
+        29.146,
+        32.272,
+        35.947
+      ]
+    ],
+    "rho": [
+      [
+        1.9003,
+        3.8055,
+        9.5499,
+        19.2206,
+        38.9252,
+        100.8975,
+        212.3432,
+        437.9257,
+        614.7635
+      ],
+      [
+        1.7606,
+        3.5245,
+        8.8358,
+        17.7529,
+        35.8274,
+        91.8643,
+        189.9895,
+        386.2058,
+        550.0512
+      ],
+      [
+        1.6686,
+        3.3397,
+        8.3676,
+        16.7956,
+        33.8276,
+        86.214,
+        176.6508,
+        355.9909,
+        510.015
+      ],
+      [
+        1.6125,
+        3.227,
+        8.0825,
+        16.2143,
+        32.6206,
+        82.8631,
+        168.9415,
+        338.8049,
+        486.6453
+      ],
+      [
+        1.4874,
+        2.976,
+        7.4489,
+        14.9269,
+        29.9647,
+        75.629,
+        152.7431,
+        303.409,
+        437.4543
+      ],
+      [
+        1.3804,
+        2.7614,
+        6.9085,
+        13.8327,
+        27.7241,
+        69.6552,
+        139.7644,
+        275.7569,
+        398.3115
+      ],
+      [
+        1.2877,
+        2.5758,
+        6.4417,
+        12.8905,
+        25.8053,
+        64.6198,
+        129.0616,
+        253.4121,
+        366.399
+      ]
+    ]
+  },
+  "identity": {
+    "critical_p_bar": 48.63,
+    "critical_temp_C": -122.46,
+    "molar_mass_g_mol": 39.948,
+    "normal_boiling_point_C": -185.85,
+    "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, argon (Ar, CAS 7440-37-1): molar mass, critical point and normal boiling point. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7440371&Action=Page",
+    "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems"
+  },
+  "model": "CoolProp==6.6.0 - reference Helmholtz equation of state for Argon (single-phase density, isobaric heat capacity and dynamic viscosity)",
+  "model_family": "coolprop_pure",
+  "name": "Argon",
+  "properties_available": [
+    "density",
+    "heat_capacity",
+    "viscosity"
+  ],
+  "slug": "argon",
+  "sources": [
+    "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems (REFPROP-derived isothermal tables), argon (CAS 7440-37-1)",
+    "CoolProp 6.6.0 - reference Helmholtz equation of state for Argon (Tegeler, Span & Wagner, 1999); dynamic viscosity from the Lemmon & Jacobsen, 2004 model"
+  ],
+  "validation": [
+    {
+      "computed": 1.6125,
+      "error_pct": 0.001,
+      "expected": 1.6125,
+      "pressure_bar": 1,
+      "property": "density",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, argon (Ar, CAS 7440-37-1), isothermal table at 298.15 K: density at 1 bar = 1.6125 kg/m3. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7440371&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    },
+    {
+      "computed": 486.6453,
+      "error_pct": 0.001,
+      "expected": 486.65,
+      "pressure_bar": 300,
+      "property": "density",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, argon (Ar, CAS 7440-37-1), isothermal table at 298.15 K: density at 300 bar = 486.65 kg/m3. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7440371&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    },
+    {
+      "computed": 521.5,
+      "error_pct": 0.0,
+      "expected": 521.5,
+      "pressure_bar": 1,
+      "property": "heat_capacity",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, argon (Ar, CAS 7440-37-1), isothermal table at 298.15 K: isobaric heat capacity Cp at 1 bar = 521.54 J/kg.K. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7440371&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 2.0,
+      "unit": "J/kg.K"
+    },
+    {
+      "computed": 22.624,
+      "error_pct": 0.001,
+      "expected": 22.624,
+      "pressure_bar": 1,
+      "property": "viscosity",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, argon (Ar, CAS 7440-37-1), isothermal table at 298.15 K: dynamic viscosity at 1 bar = 22.624 uPa.s. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7440371&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 2.0,
+      "unit": "uPa.s"
+    }
+  ],
+  "validity_note": "CoolProp reference Helmholtz equation of state (Tegeler, Span & Wagner, 1999) for argon; dynamic viscosity from the Lemmon & Jacobsen, 2004 model. Single-phase density, isobaric heat capacity and dynamic viscosity, tabulated on a 1-300 bar (absolute) by -20 to 100 degC grid; two-phase, saturation and liquid states are out of scope for this page. The correlation is not extrapolated beyond the tabulated range. Values are for preliminary design; verify against vendor or reference data for critical service.",
+  "viscosity_unit": "uPa.s"
+}

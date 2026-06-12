@@ -1,0 +1,328 @@
+{
+  "aliases": [
+    "O2",
+    "dioxygen",
+    "GOX",
+    "gaseous oxygen"
+  ],
+  "axes": {
+    "pressure_bar": [
+      1,
+      2,
+      5,
+      10,
+      20,
+      50,
+      100,
+      200
+    ],
+    "temp_C": [
+      -20,
+      0,
+      15,
+      25,
+      50,
+      75,
+      100
+    ]
+  },
+  "boundary_note": "Every tabulated state is single-phase. A grid cell is left blank only where the state at that pressure and temperature would be two-phase or liquid - at or above the saturation pressure at that temperature - and the explorer will not interpolate across such a cell. Because the critical temperature of oxygen is -118.57 degC, below the -20 degC floor of this grid, every (pressure, temperature) point tabulated here is a supercritical single-phase fluid, so no cell is blank.",
+  "cas": "7782-44-7",
+  "category": "Gases",
+  "coolprop_fluid": "Oxygen",
+  "derived": [],
+  "formula": "O2",
+  "gas_kind": "pure",
+  "generated": "2026-06-07",
+  "grid": {
+    "cp": [
+      [
+        915,
+        918,
+        925,
+        937,
+        963,
+        1048,
+        1210,
+        1467
+      ],
+      [
+        917,
+        919,
+        925,
+        935,
+        955,
+        1022,
+        1141,
+        1340
+      ],
+      [
+        918,
+        920,
+        925,
+        934,
+        952,
+        1008,
+        1107,
+        1273
+      ],
+      [
+        920,
+        921,
+        926,
+        934,
+        950,
+        1001,
+        1089,
+        1238
+      ],
+      [
+        924,
+        925,
+        929,
+        935,
+        949,
+        989,
+        1057,
+        1173
+      ],
+      [
+        929,
+        930,
+        933,
+        938,
+        949,
+        983,
+        1037,
+        1130
+      ],
+      [
+        935,
+        935,
+        938,
+        943,
+        952,
+        980,
+        1024,
+        1101
+      ]
+    ],
+    "mu": [
+      [
+        17.981,
+        18.004,
+        18.073,
+        18.19,
+        18.431,
+        19.244,
+        21.133,
+        27.678
+      ],
+      [
+        19.143,
+        19.165,
+        19.233,
+        19.346,
+        19.577,
+        20.334,
+        21.953,
+        27.077
+      ],
+      [
+        19.993,
+        20.015,
+        20.081,
+        20.191,
+        20.416,
+        21.139,
+        22.616,
+        27.021
+      ],
+      [
+        20.55,
+        20.571,
+        20.636,
+        20.745,
+        20.965,
+        21.668,
+        23.069,
+        27.102
+      ],
+      [
+        21.91,
+        21.931,
+        21.993,
+        22.098,
+        22.308,
+        22.968,
+        24.22,
+        27.567
+      ],
+      [
+        23.228,
+        23.248,
+        23.308,
+        23.408,
+        23.61,
+        24.233,
+        25.377,
+        28.26
+      ],
+      [
+        24.507,
+        24.526,
+        24.583,
+        24.68,
+        24.873,
+        25.465,
+        26.525,
+        29.076
+      ]
+    ],
+    "rho": [
+      [
+        1.5223,
+        3.0485,
+        7.6512,
+        15.4024,
+        31.2072,
+        81.0303,
+        171.1143,
+        354.9083
+      ],
+      [
+        1.4103,
+        2.8234,
+        7.0786,
+        14.2243,
+        28.7152,
+        73.7133,
+        152.7973,
+        311.8208
+      ],
+      [
+        1.3366,
+        2.6753,
+        6.7032,
+        13.4562,
+        27.108,
+        69.1477,
+        141.9264,
+        286.8783
+      ],
+      [
+        1.2917,
+        2.585,
+        6.4747,
+        12.9899,
+        26.1384,
+        66.4438,
+        135.6609,
+        272.7598
+      ],
+      [
+        1.1915,
+        2.3839,
+        5.967,
+        11.9576,
+        24.0062,
+        60.6148,
+        122.5331,
+        243.822
+      ],
+      [
+        1.1057,
+        2.212,
+        5.5338,
+        11.0804,
+        22.2084,
+        55.809,
+        112.0468,
+        221.3315
+      ],
+      [
+        1.0315,
+        2.0633,
+        5.1599,
+        10.3252,
+        20.6696,
+        51.7628,
+        103.418,
+        203.222
+      ]
+    ]
+  },
+  "identity": {
+    "critical_p_bar": 50.43,
+    "critical_temp_C": -118.57,
+    "molar_mass_g_mol": 31.9988,
+    "normal_boiling_point_C": -182.96,
+    "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, oxygen (O2, CAS 7782-44-7): molar mass, critical point and normal boiling point. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7782447&Action=Page",
+    "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems"
+  },
+  "model": "CoolProp==6.6.0 - reference Helmholtz equation of state for Oxygen (single-phase density, isobaric heat capacity and dynamic viscosity)",
+  "model_family": "coolprop_pure",
+  "name": "Oxygen",
+  "properties_available": [
+    "density",
+    "heat_capacity",
+    "viscosity"
+  ],
+  "slug": "oxygen",
+  "sources": [
+    "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems (REFPROP-derived isothermal tables), oxygen (CAS 7782-44-7)",
+    "CoolProp 6.6.0 - reference Helmholtz equation of state for Oxygen (Schmidt & Wagner, 1985); dynamic viscosity from the Lemmon & Jacobsen, 2004 model"
+  ],
+  "validation": [
+    {
+      "computed": 1.2917,
+      "error_pct": 0.003,
+      "expected": 1.2917,
+      "pressure_bar": 1,
+      "property": "density",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, oxygen (O2, CAS 7782-44-7), isothermal table at 298.15 K: density at 1 bar = 1.2917 kg/m3. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7782447&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    },
+    {
+      "computed": 272.7598,
+      "error_pct": 0.0,
+      "expected": 272.76,
+      "pressure_bar": 200,
+      "property": "density",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, oxygen (O2, CAS 7782-44-7), isothermal table at 298.15 K: density at 200 bar = 272.76 kg/m3. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7782447&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    },
+    {
+      "computed": 919.6,
+      "error_pct": 0.0,
+      "expected": 919.6,
+      "pressure_bar": 1,
+      "property": "heat_capacity",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, oxygen (O2, CAS 7782-44-7), isothermal table at 298.15 K: isobaric heat capacity Cp at 1 bar = 919.61 J/kg.K. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7782447&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 2.0,
+      "unit": "J/kg.K"
+    },
+    {
+      "computed": 20.55,
+      "error_pct": 0.0,
+      "expected": 20.55,
+      "pressure_bar": 1,
+      "property": "viscosity",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, oxygen (O2, CAS 7782-44-7), isothermal table at 298.15 K: dynamic viscosity at 1 bar = 20.55 uPa.s. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7782447&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 2.0,
+      "unit": "uPa.s"
+    }
+  ],
+  "validity_note": "CoolProp reference Helmholtz equation of state (Schmidt & Wagner, 1985) for oxygen; dynamic viscosity from the Lemmon & Jacobsen, 2004 model. Single-phase density, isobaric heat capacity and dynamic viscosity, tabulated on a 1-200 bar (absolute) by -20 to 100 degC grid; two-phase, saturation and liquid states are out of scope for this page. The correlation is not extrapolated beyond the tabulated range. Values are for preliminary design; verify against vendor or reference data for critical service.",
+  "viscosity_unit": "uPa.s"
+}

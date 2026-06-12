@@ -1,0 +1,372 @@
+{
+  "aliases": [
+    "N2",
+    "dinitrogen",
+    "GAN",
+    "gaseous nitrogen"
+  ],
+  "axes": {
+    "pressure_bar": [
+      1,
+      2,
+      5,
+      10,
+      20,
+      50,
+      100,
+      200,
+      300,
+      500
+    ],
+    "temp_C": [
+      -20,
+      0,
+      15,
+      25,
+      50,
+      75,
+      100
+    ]
+  },
+  "boundary_note": "Every tabulated state is single-phase. A grid cell is left blank only where the state at that pressure and temperature would be two-phase or liquid - at or above the saturation pressure at that temperature - and the explorer will not interpolate across such a cell. Because the critical temperature of nitrogen is -146.96 degC, below the -20 degC floor of this grid, every (pressure, temperature) point tabulated here is a supercritical single-phase fluid, so no cell is blank.",
+  "cas": "7727-37-9",
+  "category": "Gases",
+  "coolprop_fluid": "Nitrogen",
+  "derived": [],
+  "formula": "N2",
+  "gas_kind": "pure",
+  "generated": "2026-06-07",
+  "grid": {
+    "cp": [
+      [
+        1042,
+        1044,
+        1051,
+        1064,
+        1089,
+        1167,
+        1293,
+        1448,
+        1484,
+        1461
+      ],
+      [
+        1041,
+        1043,
+        1050,
+        1060,
+        1080,
+        1143,
+        1241,
+        1374,
+        1421,
+        1421
+      ],
+      [
+        1041,
+        1043,
+        1048,
+        1057,
+        1075,
+        1129,
+        1213,
+        1330,
+        1380,
+        1393
+      ],
+      [
+        1041,
+        1043,
+        1048,
+        1056,
+        1073,
+        1122,
+        1198,
+        1306,
+        1356,
+        1376
+      ],
+      [
+        1042,
+        1043,
+        1047,
+        1054,
+        1067,
+        1107,
+        1168,
+        1258,
+        1306,
+        1337
+      ],
+      [
+        1042,
+        1043,
+        1047,
+        1052,
+        1064,
+        1096,
+        1146,
+        1223,
+        1268,
+        1303
+      ],
+      [
+        1043,
+        1044,
+        1047,
+        1052,
+        1061,
+        1089,
+        1131,
+        1196,
+        1237,
+        1275
+      ]
+    ],
+    "mu": [
+      [
+        15.655,
+        15.672,
+        15.722,
+        15.811,
+        16.007,
+        16.748,
+        18.47,
+        23.079,
+        28.267,
+        38.605
+      ],
+      [
+        16.629,
+        16.643,
+        16.689,
+        16.769,
+        16.944,
+        17.596,
+        19.071,
+        22.966,
+        27.346,
+        36.401
+      ],
+      [
+        17.339,
+        17.353,
+        17.395,
+        17.47,
+        17.632,
+        18.229,
+        19.56,
+        23.049,
+        26.969,
+        35.182
+      ],
+      [
+        17.805,
+        17.818,
+        17.858,
+        17.929,
+        18.084,
+        18.648,
+        19.898,
+        23.16,
+        26.823,
+        34.536
+      ],
+      [
+        18.94,
+        18.951,
+        18.988,
+        19.051,
+        19.189,
+        19.686,
+        20.768,
+        23.57,
+        26.723,
+        33.378
+      ],
+      [
+        20.037,
+        20.048,
+        20.081,
+        20.138,
+        20.262,
+        20.705,
+        21.656,
+        24.107,
+        26.877,
+        32.71
+      ],
+      [
+        21.101,
+        21.111,
+        21.141,
+        21.193,
+        21.305,
+        21.704,
+        22.551,
+        24.724,
+        27.194,
+        32.382
+      ]
+    ],
+    "rho": [
+      [
+        1.3319,
+        2.6657,
+        6.6787,
+        13.404,
+        26.9829,
+        68.503,
+        138.2371,
+        263.5941,
+        357.5096,
+        477.2725
+      ],
+      [
+        1.234,
+        2.4692,
+        6.181,
+        12.3875,
+        24.8676,
+        62.6464,
+        125.2478,
+        238.6198,
+        327.5246,
+        447.0514
+      ],
+      [
+        1.1696,
+        2.3399,
+        5.8544,
+        11.7237,
+        23.498,
+        58.9429,
+        117.2486,
+        223.187,
+        308.3113,
+        426.6245
+      ],
+      [
+        1.1303,
+        2.261,
+        5.6555,
+        11.3203,
+        22.6699,
+        56.7333,
+        112.5474,
+        214.1213,
+        296.8069,
+        413.9816
+      ],
+      [
+        1.0426,
+        2.0853,
+        5.2133,
+        10.4262,
+        20.8443,
+        51.932,
+        102.4973,
+        194.7897,
+        271.8016,
+        385.429
+      ],
+      [
+        0.9676,
+        1.9351,
+        4.8359,
+        9.6654,
+        19.3006,
+        47.9379,
+        94.2901,
+        179.0794,
+        251.0742,
+        360.664
+      ],
+      [
+        0.9027,
+        1.8051,
+        4.5099,
+        9.0097,
+        17.9762,
+        44.5523,
+        87.4279,
+        166.009,
+        233.6019,
+        339.0465
+      ]
+    ]
+  },
+  "identity": {
+    "critical_p_bar": 33.958,
+    "critical_temp_C": -146.96,
+    "molar_mass_g_mol": 28.0135,
+    "normal_boiling_point_C": -195.8,
+    "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, nitrogen (N2, CAS 7727-37-9): molar mass, critical point and normal boiling point. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7727379&Action=Page",
+    "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems"
+  },
+  "model": "CoolProp==6.6.0 - reference Helmholtz equation of state for Nitrogen (single-phase density, isobaric heat capacity and dynamic viscosity)",
+  "model_family": "coolprop_pure",
+  "name": "Nitrogen",
+  "properties_available": [
+    "density",
+    "heat_capacity",
+    "viscosity"
+  ],
+  "slug": "nitrogen",
+  "sources": [
+    "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems (REFPROP-derived isothermal tables), nitrogen (CAS 7727-37-9)",
+    "CoolProp 6.6.0 - reference Helmholtz equation of state for Nitrogen (Span, Lemmon, Jacobsen, Yokozeki & Penoncello, 2000); dynamic viscosity from the Lemmon & Jacobsen, 2004 model"
+  ],
+  "validation": [
+    {
+      "computed": 1.1303,
+      "error_pct": 0.003,
+      "expected": 1.1303,
+      "pressure_bar": 1,
+      "property": "density",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, nitrogen (N2, CAS 7727-37-9), isothermal table at 298.15 K: density at 1 bar = 1.1303 kg/m3. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7727379&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    },
+    {
+      "computed": 214.1213,
+      "error_pct": 0.001,
+      "expected": 214.12,
+      "pressure_bar": 200,
+      "property": "density",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, nitrogen (N2, CAS 7727-37-9), isothermal table at 298.15 K: density at 200 bar = 214.12 kg/m3. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7727379&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 1.0,
+      "unit": "kg/m3"
+    },
+    {
+      "computed": 1041.3,
+      "error_pct": 0.003,
+      "expected": 1041.3,
+      "pressure_bar": 1,
+      "property": "heat_capacity",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, nitrogen (N2, CAS 7727-37-9), isothermal table at 298.15 K: isobaric heat capacity Cp at 1 bar = 1041.3 J/kg.K. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7727379&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 2.0,
+      "unit": "J/kg.K"
+    },
+    {
+      "computed": 17.805,
+      "error_pct": 0.002,
+      "expected": 17.805,
+      "pressure_bar": 1,
+      "property": "viscosity",
+      "source_citation": "NIST Chemistry WebBook, SRD 69, Thermophysical Properties of Fluid Systems, nitrogen (N2, CAS 7727-37-9), isothermal table at 298.15 K: dynamic viscosity at 1 bar = 17.805 uPa.s. https://webbook.nist.gov/cgi/fluid.cgi?ID=C7727379&Action=Page",
+      "source_title": "NIST Chemistry WebBook, SRD 69 - Thermophysical Properties of Fluid Systems",
+      "temp_C": 25,
+      "tol_pct": 2.0,
+      "unit": "uPa.s"
+    }
+  ],
+  "validity_note": "CoolProp reference Helmholtz equation of state (Span, Lemmon, Jacobsen, Yokozeki & Penoncello, 2000) for nitrogen; dynamic viscosity from the Lemmon & Jacobsen, 2004 model. Single-phase density, isobaric heat capacity and dynamic viscosity, tabulated on a 1-500 bar (absolute) by -20 to 100 degC grid; two-phase, saturation and liquid states are out of scope for this page. The correlation is not extrapolated beyond the tabulated range. Values are for preliminary design; verify against vendor or reference data for critical service.",
+  "viscosity_unit": "uPa.s"
+}
