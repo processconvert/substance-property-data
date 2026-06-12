@@ -1,6 +1,6 @@
 # Substance Property Data
 
-Computed property data for industrial process chemicals, as machine-readable JSON: concentration × temperature grids (density, dynamic viscosity, specific heat capacity) for aqueous solutions — with freezing-point tables for the freeze-protection fluids and °Brix for sucrose; saturation tables (pressure, liquid and vapour density) for refrigerants and pure fluids, including bubble/dew-point data for zeotropic blends; and single-phase pressure × temperature grids (density, isobaric heat capacity, dynamic viscosity) for compressed industrial and utility gases, up to 700 bar for hydrogen.
+Computed property data for industrial process chemicals, as machine-readable JSON: concentration × temperature grids (density, dynamic viscosity, specific heat capacity) for aqueous solutions — with freezing-point tables for the freeze-protection fluids and °Brix for sucrose; saturation tables (pressure, liquid and vapour density) for refrigerants and pure fluids, including bubble/dew-point data for zeotropic blends; single-phase pressure × temperature grids (density, isobaric heat capacity, dynamic viscosity) for compressed industrial and utility gases, up to 700 bar for hydrogen; and water/steam tables from the IAPWS-95 formulation — a full saturation table (0–370 °C, with enthalpy and latent heat) and a superheated-steam grid to 200 bar and 600 °C.
 
 Published and maintained by [ProcessConvert](https://www.processconvert.com), where each substance has an interactive property explorer:
 https://www.processconvert.com/substances
@@ -87,6 +87,14 @@ Single-phase properties on a pressure (bar absolute) × temperature (°C) grid: 
 
 Air (as a pseudo-pure mixture) is planned; it is held pending an approved citable validation source and will be added under the same format.
 
+## Water & steam
+
+One file (`data/water-steam.json`) from the **IAPWS-95** reference formulation (Wagner & Pruß 2002, via CoolProp), checked against IAPWS-IF97 published verification values and NIST WebBook:
+
+- **Saturation table** — 0–370 °C (5° steps to 100 °C, 10° steps above; the critical point, 373.946 °C / 22,064 kPa, is stated and the table stops short of it). Columns: saturation pressure (kPa), saturated liquid and vapour density (kg/m³), liquid and vapour enthalpy and the latent heat of vaporisation h_fg (kJ/kg), liquid and vapour entropy (kJ/kg·K).
+- **Superheated grid** — 1–200 bar (absolute) × 100–600 °C: density, enthalpy and entropy. Any grid cell at or below the saturation temperature for that pressure is `null` (the state there is saturated or liquid water, not superheated steam).
+- **Reference-state note:** enthalpy and entropy follow the IAPWS convention — internal energy and entropy are zero for saturated liquid at the triple point (0.01 °C). Values from tables built on a different datum are not directly comparable.
+
 Each file declares its own valid ranges; values are tabulated only inside the published validity region of the underlying model, bounded below saturation for the aqueous salts, below the critical point for the saturation tables, and single-phase for the gas grids. No extrapolation. Honest-omission conventions: where a property column is absent from a table above, the model provides no usable coefficients for that property over the tabulated range — the value is omitted rather than approximated; for the sub-zero heat-transfer fluids, grid cells below the solution's freezing line at that concentration are `null`.
 
 ## How the values are produced
@@ -139,6 +147,20 @@ grid                             rho / cp / mu arrays, rows = pressure, cols = t
                                  (mu in µPa·s; any two-phase/liquid state is null)
 identity                         molar mass, critical T and P, normal boiling point (cited)
 boundary_note                    single-phase rule as applied to this fluid
+model, sources, validation,
+validity_note, generated         provenance and checks
+```
+
+**Water & steam** — one JSON (`water-steam.json`):
+
+```text
+name, formula, cas               identification
+saturation.temp_C                saturation temperature axis (°C)
+saturation                       p_sat_kPa / rho_liq / rho_vap / h_f / h_g / h_fg / s_f / s_g
+superheated.axes                 pressure_bar (absolute) × temp_C
+superheated.grid                 rho / h / s arrays (cells at or below saturation are null)
+datum                            IAPWS reference-state provenance (u = s = 0, sat. liquid, triple point)
+critical                         critical temperature (°C) and pressure (kPa)
 model, sources, validation,
 validity_note, generated         provenance and checks
 ```
