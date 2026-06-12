@@ -1,6 +1,6 @@
 # Substance Property Data
 
-Computed property data for industrial process chemicals, as machine-readable JSON: concentration × temperature grids (density, dynamic viscosity, specific heat capacity) for aqueous solutions — with freezing-point tables for the freeze-protection fluids and °Brix for sucrose; saturation tables (pressure, liquid and vapour density) for refrigerants and pure fluids, including bubble/dew-point data for zeotropic blends; single-phase pressure × temperature grids (density, isobaric heat capacity, dynamic viscosity) for compressed industrial and utility gases, up to 700 bar for hydrogen; and water/steam tables from the IAPWS-95 formulation — a full saturation table (0–370 °C, with enthalpy and latent heat) and a superheated-steam grid to 200 bar and 600 °C.
+Computed property data for industrial process chemicals, as machine-readable JSON: concentration × temperature grids (density, dynamic viscosity, specific heat capacity) for aqueous solutions — with freezing-point tables for the freeze-protection fluids and °Brix for sucrose; saturation tables (pressure, liquid and vapour density) for refrigerants and pure fluids, including bubble/dew-point data for zeotropic blends; single-phase pressure × temperature grids (density, isobaric heat capacity, dynamic viscosity) for compressed industrial and utility gases, up to 700 bar for hydrogen; water/steam tables from the IAPWS-95 formulation — a full saturation table (0–370 °C, with enthalpy and latent heat) and a superheated-steam grid to 200 bar and 600 °C; and a humid-air psychrometric grid (humidity ratio, wet bulb, dew point, enthalpy) from the ASHRAE RP-1485 formulation.
 
 Published and maintained by [ProcessConvert](https://www.processconvert.com), where each substance has an interactive property explorer:
 https://www.processconvert.com/substances
@@ -95,6 +95,14 @@ One file (`data/water-steam.json`) from the **IAPWS-95** reference formulation (
 - **Superheated grid** — 1–200 bar (absolute) × 100–600 °C: density, enthalpy and entropy. Any grid cell at or below the saturation temperature for that pressure is `null` (the state there is saturated or liquid water, not superheated steam).
 - **Reference-state note:** enthalpy and entropy follow the IAPWS convention — internal energy and entropy are zero for saturated liquid at the triple point (0.01 °C). Values from tables built on a different datum are not directly comparable.
 
+## Humid air (psychrometrics)
+
+One file (`data/humid-air.json`) from the **ASHRAE RP-1485** real-moist-air formulation (Herrmann, Kretzschmar & Gatley 2009, via CoolProp `HAPropsSI`):
+
+- **Grid:** dry-bulb 0–50 °C (5° steps) × relative humidity 10–100 % (10 % steps), at sea-level pressure (101.325 kPa). Columns: humidity ratio W (g water vapour / kg dry air), thermodynamic wet-bulb temperature (°C), dew-point temperature (°C), and moist-air specific enthalpy (kJ / kg dry air).
+- **Reference-state note:** enthalpy is per kilogram of dry air on the ASHRAE convention — the enthalpy of dry air and of liquid water are both zero at 0 °C.
+- Sub-zero dew points at the cold–dry corner are over-water values (indicative); the ice line is not included in this version.
+
 Each file declares its own valid ranges; values are tabulated only inside the published validity region of the underlying model, bounded below saturation for the aqueous salts, below the critical point for the saturation tables, and single-phase for the gas grids. No extrapolation. Honest-omission conventions: where a property column is absent from a table above, the model provides no usable coefficients for that property over the tabulated range — the value is omitted rather than approximated; for the sub-zero heat-transfer fluids, grid cells below the solution's freezing line at that concentration are `null`.
 
 ## How the values are produced
@@ -161,6 +169,17 @@ superheated.axes                 pressure_bar (absolute) × temp_C
 superheated.grid                 rho / h / s arrays (cells at or below saturation are null)
 datum                            IAPWS reference-state provenance (u = s = 0, sat. liquid, triple point)
 critical                         critical temperature (°C) and pressure (kPa)
+model, sources, validation,
+validity_note, generated         provenance and checks
+```
+
+**Humid air** — one JSON (`humid-air.json`):
+
+```text
+name                             identification (moist air)
+axes                             temp_db_C (dry bulb), rh_percent; pressure fixed at 101.325 kPa
+grid                             W (g/kg dry air) / t_wb / t_dp / h (kJ/kg dry air) arrays
+datum                            ASHRAE reference state (dry air and liquid water enthalpy zero at 0 °C)
 model, sources, validation,
 validity_note, generated         provenance and checks
 ```
